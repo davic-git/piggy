@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggy</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- HEADER -->
+  <header class="header">
+    <div class="header__logo">
+      <a href="index.html"><img src="./PIGGY-logo.png" alt="Logo-piggy" class="header__logo-img"></a>
+    </div>
+
+    <div class="header__actions">
+      <a href="languages.html" class="header__action-link">
+        <button class="header__lang-btn">
+          <img src="./menu-bandeiras/bandeiradobrasi.webp" alt="Português" class="header__lang-img">
+        </button>
+      </a>
+
+      <a href="" class="header__action-link">
+        <button class="header__action-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        </button>
+      </a>
+
+      <a href="" class="header__action-link">
+        <button class="header__action-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-icon lucide-bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
+        </button>
+      </a>
+
+      <a href="login.html" class="header__action-link">
+        <button class="header__action-profile">
+          <img src="./images/pawel-nolbert-P60WHK5CvUE-unsplash.jpg" alt="Profile-image" class="header__profile-img">
+          <div class="header__profile-alternate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up-icon lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+        </button>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="sidebar__nav">
+
+        <ul class="sidebar__group">
+          <p class="sidebar__group-label">PRINCIPAL</p>
+          <a href="index.html">
+            <li class="sidebar__item sidebar__item--active">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.07874 16.1354H14.8937" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.40002 13.713C2.40002 8.082 3.01402 8.475 6.31902 5.41C7.76502 4.246 10.015 2 11.958 2C13.9 2 16.195 4.235 17.654 5.41C20.959 8.475 21.572 8.082 21.572 13.713C21.572 22 19.613 22 11.986 22C4.35903 22 2.40002 22 2.40002 13.713Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Dashboard
+            </li>
+          </a>
+
+          <li class="sidebar__item">
+            <svg width="22" height="22" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd">
+                <g transform="translate(1.000000, 1.000000)" fill="currentColor">
+                  <path d="M15.436,0 C19.063,0 21.5,2.546 21.5,6.335 L21.5,15.165 C21.5,18.954 19.063,21.5 15.436,21.5 L6.064,21.5 C2.437,21.5 0,18.954 0,15.165 L0,6.335 C0,2.546 2.437,0 6.064,0 L15.436,0 Z M15.436,1.5 L6.064,1.5 C3.292,1.5 1.5,3.397 1.5,6.335 L1.5,15.165 C1.5,18.103 3.292,20 6.064,20 L15.436,20 C18.209,20 20,18.103 20,15.165 L20,6.335 C20,3.397 18.209,1.5 15.436,1.5 Z M6.1211,8.2025 C6.5351,8.2025 6.8711,8.5385 6.8711,8.9525 L6.8711,15.8125 C6.8711,16.2265 6.5351,16.5625 6.1211,16.5625 C5.7071,16.5625 5.3711,16.2265 5.3711,15.8125 L5.3711,8.9525 C5.3711,8.5385 5.7071,8.2025 6.1211,8.2025 Z M10.7881,4.9185 C11.2021,4.9185 11.5381,5.2545 11.5381,5.6685 L11.5381,15.8115 C11.5381,16.2255 11.2021,16.5615 10.7881,16.5615 C10.3741,16.5615 10.0381,16.2255 10.0381,15.8115 L10.0381,5.6685 C10.0381,5.2545 10.3741,4.9185 10.7881,4.9185 Z M15.3784,11.8275 C15.7924,11.8275 16.1284,12.1635 16.1284,12.5775 L16.1284,15.8115 C16.1284,16.2255 15.7924,16.5615 15.3784,16.5615 C14.9644,16.5615 14.6284,16.2255 14.6284,15.8115 L14.6284,12.5775 C14.6284,12.1635 14.9644,11.8275 15.3784,11.8275 Z"/>
+                </g>
+              </g>
+            </svg>
+            Análises
+          </li>
+
+          <li class="sidebar__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3 4 7l4 4"/><path d="M4 7h16"/>
+              <path d="m16 21 4-4-4-4"/><path d="M20 17H4"/>
+            </svg>
+            Transações
+          </li>
+
+          <li class="sidebar__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 13V2l8 4-8 4"/>
+              <path d="M20.561 10.222a9 9 0 1 1-12.55-5.29"/>
+              <path d="M8.002 9.997a5 5 0 1 0 8.9 2.02"/>
+            </svg>
+            Metas
+          </li>
+
+          <a href="piggy.html">
+              <li class="sidebar__item">
+                Piggy
+              </li>
+          </a>
+
+          <li class="sidebar__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt-text-icon lucide-receipt-text"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>
+            Faturas
+          </li>
+
+        </ul>
+
+        <ul class="sidebar__group">
+          <p class="sidebar__group-label">GERENCIAMENTO</p>
+          <li class="sidebar__item">
+            <svg width="22" height="22" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g transform="translate(2.999141, 3.000000)" stroke="currentColor" stroke-width="1.5">
+                  <path d="M0.000858865205,3.5 C0.000858865205,0.874787053 0.0289681101,0 3.50085887,0 C6.9727494,0 7.00085887,0.874787053 7.00085887,3.5 C7.00085887,6.12521295 7.01193168,7 3.50085887,7 C-0.010214169,7 0.000858865205,6.12521295 0.000858865205,3.5 Z"/>
+                  <path d="M11.0008589,3.5 C11.0008589,0.874787053 11.0289681,0 14.5008589,0 C17.9727494,0 18.0008589,0.874787053 18.0008589,3.5 C18.0008589,6.12521295 18.0119317,7 14.5008589,7 C10.9897858,7 11.0008589,6.12521295 11.0008589,3.5 Z"/>
+                  <path d="M0.000858865205,14.5 C0.000858865205,11.8747871 0.0289681101,11 3.50085887,11 C6.9727494,11 7.00085887,11.8747871 7.00085887,14.5 C7.00085887,17.1252129 7.01193168,18 3.50085887,18 C-0.010214169,18 0.000858865205,17.1252129 0.000858865205,14.5 Z"/>
+                  <path d="M11.0008589,14.5 C11.0008589,11.8747871 11.0289681,11 14.5008589,11 C17.9727494,11 18.0008589,11.8747871 18.0008589,14.5 C18.0008589,17.1252129 18.0119317,18 14.5008589,18 C10.9897858,18 11.0008589,17.1252129 11.0008589,14.5 Z"/>
+                </g>
+              </g>
+            </svg>
+            Categorias
+          </li>
+
+          <li class="sidebar__item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-icon lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+            Assinaturas</li>
+
+          <li class="sidebar__item"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-ccw-icon lucide-refresh-ccw"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+            Recorrente</li>
+        </ul>
+
+        <ul class="sidebar__group">
+          <p class="sidebar__group-label">GERAL</p>
+
+          <li class="sidebar__item"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+            Ajustes</li>
+
+          <li class="sidebar__item"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            Ajuda</li>
+
+          <li class="sidebar__item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/>
+              <path d="M10 19v-3.96 3.15"/><path d="M7 19h5"/>
+              <rect width="6" height="10" x="16" y="12" rx="2"/>
+            </svg>
+            Dispositivos
+          </li>
+
+          <li class="sidebar__item logout"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+            Logout</li>
+        </ul>
+      </nav>
+
+      <button class="sidebar__collapse-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        Recolher menu
+      </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- Page header -->
+      <div class="page-header">
+        <h1 class="page-header__title">Piggy</h1>
+      </div>
+
+      <section class="piggy-card__welcome">
+        <h2 class="piggy-card__welcome-title">Parabéns, Kadu!</h2>
+        <p class="piggy-card__welcome-message">Você está no caminho certo para alcançar seus objetivos financeiros!</p>
+        <div class="piggy-card__customizable">
+          <img src="./piggys-dashboard/piggy-mascote-dashboard.png" alt="Piggy Mascote">
+          <button class="piggy-card__customize-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

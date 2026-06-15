@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="login-page">
+        <div class="login-container">
+            <h2>Entre na sua conta</h2>
+            <form id="loginForm">
+                <div class="name-group">
+                    <div class="input-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Digite seu nome" required>
+                        <div class="error" id="nameError"></div>
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="surname">Sobrenome</label>
+                        <input type="text" id="surname" placeholder="Digite seu sobrenome" required>
+                        <div class="error" id="surnameError"></div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" placeholder="(XX) XXXXX-XXXX" maxlength="15" pattern="\(\d{2}\)\s\d{5}-\d{4}" required>
+                    <div class="error" id="phoneError" ></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="email@gmail.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$" required>
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" minlength="8" maxlength="25" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$% ^&*-]).{8,}$" required>
+                    <div class="error" id="passwordError"></div>
+                </div>
+                <div class="input checkbox">
+                    <label>
+                        <input type="checkbox" id="rememberMe"> Eu aceito os termos de uso
+                    </label>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>
