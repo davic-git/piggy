@@ -996,10 +996,126 @@ ul { list-style: none; }
 .piggy-card__welcome {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
-  border-radius: 999px;
+  border-radius: 25px;
   padding: 20px 20px 0 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.piggy-card__welcome-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 320px;
+  max-width: 320px;
+}
+
+.piggy-card__welcome-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.piggy-card__welcome-message {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.piggy-card__customizable {
+  border-radius: 25px;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.piggy-card__customize-btn {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 999px;
+  border: 1px solid var(--border-card);
+  color: var(--text);
+}
+
+.piggy-cards__fast-points {
+  display: flex;
+  flex-direction: row;
+  height: 130px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.piggy-cards__fast-points-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-card);
+  border-radius: 25px;
+  padding: 30px;
+  background: var(--bg-card);
+}
+
+.piggy-cards_points-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.piggy-cards_points-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.piggy-cards_points-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.piggy-cards_points-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.piggy-card__welcome-btn {
+  width: 100%;
+  height: 40px;
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.green {
+  color: var(--success);
+  font-size: 28px;
+}
+
+.green-minus {
+  color: var(--success);
+  font-size: 14px;
 }

@@ -39,7 +39,7 @@
                 </div>
                 <div class="input-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" placeholder="Digite sua senha" minlength="8" maxlength="25" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$% ^&*-]).{8,}$" required>
+                    <input type="password" id="password" placeholder="Digite sua senha" minlength="8" maxlength="25" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$% ^&*-]).{8,}$" title= "A senha deve conter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiasis." required> 
                     <div class="error" id="passwordError"></div>
                 </div>
                 <div class="input checkbox">
@@ -47,7 +47,7 @@
                         <input type="checkbox" id="rememberMe"> Eu aceito os termos de uso
                     </label>
                 </div>
-                <button type="submit">Entrar</button>
+                <a href="index.html"><button type="submit">Entrar</button></a>
             </form>
         </div>
     </main>

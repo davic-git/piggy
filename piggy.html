@@ -53,7 +53,7 @@
         <ul class="sidebar__group">
           <p class="sidebar__group-label">PRINCIPAL</p>
           <a href="index.html">
-            <li class="sidebar__item sidebar__item--active">
+            <li class="sidebar__item">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.07874 16.1354H14.8937" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.40002 13.713C2.40002 8.082 3.01402 8.475 6.31902 5.41C7.76502 4.246 10.015 2 11.958 2C13.9 2 16.195 4.235 17.654 5.41C20.959 8.475 21.572 8.082 21.572 13.713C21.572 22 19.613 22 11.986 22C4.35903 22 2.40002 22 2.40002 13.713Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -91,7 +91,7 @@
           </li>
 
           <a href="piggy.html">
-              <li class="sidebar__item">
+              <li class="sidebar__item sidebar__item--active">
                 Piggy
               </li>
           </a>
@@ -163,16 +163,80 @@
       <!-- Page header -->
       <div class="page-header">
         <h1 class="page-header__title">Piggy</h1>
+        <p class="page-header__subtitle">Gerencie suas metas financeiras com o Piggy</p>
       </div>
 
       <section class="piggy-card__welcome">
-        <h2 class="piggy-card__welcome-title">Parabéns, Kadu!</h2>
-        <p class="piggy-card__welcome-message">Você está no caminho certo para alcançar seus objetivos financeiros!</p>
+        <div class="piggy-card__welcome-card">
+          <h2 class="piggy-card__welcome-title">Parabéns, Davi!</h2>
+          <p class="piggy-card__welcome-message">Você está no caminho certo para alcançar seus objetivos financeiros!</p>
+          <button class="btn btn--primary piggy-card__welcome-btn">Ver seus piggys</button>
+        </div>
         <div class="piggy-card__customizable">
           <img src="./piggys-dashboard/piggy-mascote-dashboard.png" alt="Piggy Mascote">
           <button class="piggy-card__customize-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
           </button>
+        </div>
+      </section>
+
+      <section class="piggy-cards__fast-points">
+        
+        <div class="piggy-cards__fast-points-card">
+          <div><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-wallet-icon lucide-wallet">
+              <path
+                d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
+              <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
+            </svg>
+          </div>
+          <div class="piggy-cards_points-container">
+            <h3 class="piggy-cards_points-title">Saldo total investido</h3>
+            <p class="piggy-cards_points-value">R$10.000,00</p>
+            <p class="piggy-cards_points-subtitle">Falta pouco para concluir o esperado!</p>
+          </div>
+        </div>
+        
+        <div class="piggy-cards__fast-points-card">
+          <div class="piggy-cards_points-container">
+            <h3 class="piggy-cards_points-title">Rendimento total</h3>
+            <p class="piggy-cards_points-value green">R$10.000,00</p>
+            <p class="piggy-cards_points-subtitle green-minus">(+14,32%)</p>
+          </div>
+        </div>
+        
+        <div class="piggy-cards__fast-points-card">
+          <div class="piggy-cards_points-container">
+            <h3 class="piggy-cards_points-title">Rendimento diário</h3>
+            <p class="piggy-cards_points-value green">R$10.000,00</p>
+            <p class="piggy-cards_points-subtitle green-minus">(+1,16%)</p>
+          </div>
+        </div>
+
+        <div class="piggy-cards__fast-points-card">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-piggy-bank-icon lucide-piggy-bank">
+              <path
+                d="M11 17h3v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a3.16 3.16 0 0 0 2-2h1a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-1a5 5 0 0 0-2-4V3a4 4 0 0 0-3.2 1.6l-.3.4H11a6 6 0 0 0-6 6v1a5 5 0 0 0 2 4v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z" />
+              <path d="M16 10h.01" />
+              <path d="M2 8v1a2 2 0 0 0 2 2h1" />
+            </svg>
+          </div>
+          
+          <div class="piggy-cards_points-container">
+            <div class="piggy-cards_points-title-container">
+              <h3 class="piggy-cards_points-title">Porquinhos ativos</h3>
+              <p class="piggy-cards_points-value">4</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-chevron-right-icon lucide-chevron-right">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </div>
         </div>
       </section>
 
