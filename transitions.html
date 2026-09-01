@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações financeiras | Piggy</title>
+  <meta name="description" content="Consulte entradas, saídas, saldos e movimentações financeiras no Piggy.">
+  <meta name="theme-color" content="#07121f">
+  <meta property="og:title" content="Transações financeiras | Piggy">
+  <meta property="og:description" content="Consulte entradas, saídas, saldos e movimentações financeiras no Piggy.">
+  <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./PIGGY-logo.png" type="image/png">
+</head>
+<body class="report-page transitions-page">
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" class="header__logo" aria-label="Piggy — ir para o dashboard">
+      <img src="./PIGGY-logo.png" alt="Piggy" class="header__logo-img" width="140" height="36" decoding="async">
+    </a>
+
+    <button type="button" class="mobile-menu-btn" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false">
+      <span class="material-symbols-rounded icon-size-24" aria-hidden="true">menu</span>
+    </button>
+
+    <div class="header__actions">
+      <a href="languages.html" class="header__lang-btn header__action-link" aria-label="Alterar idioma e região">
+        <img src="./menu-bandeiras/bandeiradobrasi.webp" alt="" class="header__lang-img" width="28" height="20" decoding="async">
+      </a>
+      <button type="button" class="header__action-btn" aria-label="Mensagens"><span class="material-symbols-rounded icon-size-24" aria-hidden="true">mail</span></button>
+      <button type="button" class="header__action-btn" aria-label="Notificações"><span class="material-symbols-rounded icon-size-24" aria-hidden="true">notifications</span></button>
+      <a href="login.html" class="header__action-profile header__action-link" aria-label="Abrir perfil">
+        <img src="./images/pawel-nolbert-P60WHK5CvUE-unsplash.jpg" alt="" class="header__profile-img" width="60" height="60" decoding="async">
+        <span class="header__profile-alternate" aria-hidden="true"><span class="material-symbols-rounded icon-size-20" aria-hidden="true">unfold_more</span></span>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <nav class="sidebar__nav">
+        <div class="sidebar__group" role="list">
+          <p class="sidebar__group-label">PRINCIPAL</p>
+          <a href="index.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">home</span><span class="sidebar__item-label">Dashboard</span></a>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">analytics</span><span class="sidebar__item-label">Análises</span></button>
+          <a href="transitions.html" class="sidebar__item sidebar__item--active" aria-current="page"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">swap_horiz</span><span class="sidebar__item-label">Transações</span></a>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">track_changes</span><span class="sidebar__item-label">Metas</span></button>
+          <a href="piggy.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">savings</span><span class="sidebar__item-label">Piggy</span></a>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">receipt_long</span><span class="sidebar__item-label">Faturas</span></button>
+        </div>
+
+        <div class="sidebar__group" role="list">
+          <p class="sidebar__group-label">GERENCIAMENTO</p>
+          <a href="categorias.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">grid_view</span><span class="sidebar__item-label">Categorias</span></a>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">layers</span><span class="sidebar__item-label">Assinaturas</span></button>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">sync</span><span class="sidebar__item-label">Recorrente</span></button>
+        </div>
+
+        <div class="sidebar__group" role="list">
+          <p class="sidebar__group-label">GERAL</p>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">settings</span><span class="sidebar__item-label">Ajustes</span></button>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">help</span><span class="sidebar__item-label">Ajuda</span></button>
+          <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">devices</span><span class="sidebar__item-label">Dispositivos</span></button>
+          <button type="button" class="sidebar__item logout" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">logout</span><span class="sidebar__item-label">Sair</span></button>
+        </div>
+      </nav>
+
+      <button type="button" class="sidebar__collapse-btn" aria-label="Recolher menu" aria-expanded="true">
+        <span class="material-symbols-rounded icon-size-18" aria-hidden="true">chevron_left</span><span class="sidebar__collapse-label">Recolher menu</span>
+      </button>
+    </aside>
+    <button type="button" class="sidebar-backdrop" aria-label="Fechar menu" tabindex="-1"></button>
+    <main class="main" id="main-content">
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>Transações</h1>
+
+            <p>Gerencie todas as suas movimentações financeiras.</p>
+
+        </div>
+
+        <div class="header-actions">
+
+            <input
+                type="search"
+                name="transaction-search"
+                aria-label="Pesquisar transação"
+                placeholder="Pesquisar transação..."
+            >
+
+            <button type="button" class="btn btn--outline" data-placeholder-action="true">
+                Filtrar
+            </button>
+
+            <button type="button" class="btn btn--primary" data-placeholder-action="true">
+                Nova Transação
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Cards -->
+
+    <section class="cards">
+
+        <article class="card">
+            <span class="material-symbols-rounded" aria-hidden="true">
+                account_balance_wallet
+            </span>
+
+            <div>
+
+                <small>Saldo consolidado</small>
+
+                <h2>R$ 28.520,40</h2>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <span class="material-symbols-rounded" aria-hidden="true">
+                trending_up
+            </span>
+
+            <div>
+
+                <small>Entradas</small>
+
+                <h2>R$ 11.300</h2>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <span class="material-symbols-rounded" aria-hidden="true">
+                trending_down
+            </span>
+
+            <div>
+
+                <small>Saídas</small>
+
+                <h2>R$ 6.890</h2>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <span class="material-symbols-rounded" aria-hidden="true">
+                receipt_long
+            </span>
+
+            <div>
+
+                <small>Transações</small>
+
+                <h2>158</h2>
+
+            </div>
+
+        </article>
+
+    </section>
+
+    <!-- Moedas -->
+
+    <section class="wallets">
+
+        <article class="wallet">
+
+            <div>
+
+                <h3>🇧🇷 Real</h3>
+
+                <small>BRL</small>
+
+            </div>
+
+            <h2>R$ 3.520,50</h2>
+
+        </article>
+
+        <article class="wallet">
+
+            <div>
+
+                <h3>🇺🇸 Dólar</h3>
+
+                <small>USD</small>
+
+            </div>
+
+            <h2>$ 1,250.90</h2>
+
+        </article>
+
+        <article class="wallet">
+
+            <div>
+
+                <h3>🇪🇺 Euro</h3>
+
+                <small>EUR</small>
+
+            </div>
+
+            <h2>€ 820,00</h2>
+
+        </article>
+
+    </section>
+
+    <!-- gráficos -->
+
+    <section class="charts">
+
+        <article class="chart-card">
+
+            <h2>Entradas x Saídas</h2>
+
+            <canvas id="incomeExpense" role="img" aria-label="Comparação mensal entre entradas e saídas"></canvas>
+
+        </article>
+
+        <article class="chart-card">
+
+            <h2>Evolução Mensal</h2>
+
+            <canvas id="monthlyChart" role="img" aria-label="Evolução mensal do saldo"></canvas>
+
+        </article>
+
+    </section>
+
+    <!-- BRL -->
+
+    <section class="transactions">
+
+        <div class="table-header">
+
+            <h2>🇧🇷 Transações em Real</h2>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Data</th>
+
+                    <th>Categoria</th>
+
+                    <th>Descrição</th>
+
+                    <th>Entrada</th>
+
+                    <th>Saída</th>
+
+                    <th>Saldo</th>
+
+                    <th></th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>02/07</td>
+
+                    <td>Moradia</td>
+
+                    <td>Aluguel</td>
+
+                    <td>-</td>
+
+                    <td>R$ 1.200</td>
+
+                    <td>R$ 4.550</td>
+
+                    <td><button type="button" aria-label="Ações da transação Aluguel" data-placeholder-action="true">•••</button></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- USD -->
+
+    <section class="transactions">
+
+        <div class="table-header">
+
+            <h2>🇺🇸 Transações em Dólar</h2>
+
+        </div>
+
+        <table>
+          <thead><tr><th>Data</th><th>Categoria</th><th>Descrição</th><th>Entrada</th><th>Saída</th><th>Saldo</th><th></th></tr></thead>
+          <tbody><tr><td>05/07</td><td>Receita</td><td>Projeto internacional</td><td>$ 780</td><td>—</td><td>$ 1,250.90</td><td><button type="button" aria-label="Ações da transação Projeto internacional" data-placeholder-action="true">•••</button></td></tr></tbody>
+        </table>
+
+    </section>
+
+    <!-- EUR -->
+
+    <section class="transactions">
+
+        <div class="table-header">
+
+            <h2>🇪🇺 Transações em Euro</h2>
+
+        </div>
+
+        <table>
+          <thead><tr><th>Data</th><th>Categoria</th><th>Descrição</th><th>Entrada</th><th>Saída</th><th>Saldo</th><th></th></tr></thead>
+          <tbody><tr><td>08/07</td><td>Viagem</td><td>Reserva de hospedagem</td><td>—</td><td>€ 180</td><td>€ 820,00</td><td><button type="button" aria-label="Ações da transação Reserva de hospedagem" data-placeholder-action="true">•••</button></td></tr></tbody>
+        </table>
+
+    </section>
+
+</main>
+  </div>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/reports.js" defer></script>
+</body>
+</html>
