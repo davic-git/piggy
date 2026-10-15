@@ -1,0 +1,122 @@
+/* Recorrentes / Desktop — conteúdo 633:2639. Base compartilhada em global.css. */
+.content--recurrent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-inline: auto;
+  color: #fff;
+  font: 400 12px/16px var(--font-ui);
+  font-variation-settings: "CRSV" 0, "SHRP" 0;
+}
+.content--recurrent *,
+.content--recurrent *::before,
+.content--recurrent *::after { box-sizing: border-box; }
+.content--recurrent :is(h2, p, ul, dl, dd) { margin: 0; }
+.content--recurrent img { display: block; flex-shrink: 0; }
+.content--recurrent [hidden] { display: none !important; }
+.page--recurrent .page-title,
+.page--recurrent .page-title-description { margin: 0; }
+.page--recurrent .recurrent-create { width: 164px; gap: 2px; padding-inline: 10px; background: var(--primary); font-size: 14px; line-height: 20px; white-space: nowrap; }
+.recurrent-create > span { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; flex-shrink: 0; }
+.page--recurrent .header .recurrent-create { width: 166px; }
+
+/* Resumo. Os espaços de ícone estão vazios no próprio frame. */
+.recurrent-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.recurrent-kpi { display: flex; align-items: center; gap: 8px; height: 128px; padding: 19px; }
+.recurrent-kpi-space { width: 60px; height: 60px; flex-shrink: 0; }
+.recurrent-kpi > div { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.recurrent-kpi h2 { display: flex; align-items: center; height: 20px; color: var(--panel-muted); font-size: 13px; line-height: 18px; font-weight: 600; }
+.recurrent-kpi strong { font-size: 28px; line-height: 34px; font-weight: 700; white-space: nowrap; }
+.recurrent-kpi p { font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap; }
+
+/* Próximos lançamentos e previsão. */
+.recurrent-overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; height: 334px; }
+.recurrent-upcoming, .recurrent-forecast { display: flex; flex-direction: column; gap: 16px; color: #fff; }
+.recurrent-upcoming { padding: 19px; }
+.recurrent-card-header { display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; height: 40px; border: 1px solid #000; border-radius: 16px; }
+.recurrent-card-header > div { display: flex; flex: 1; flex-direction: column; gap: 2px; min-width: 0; }
+.recurrent-card-header h2 { font-size: 16px; line-height: 24px; font-weight: 600; }
+.recurrent-card-header p { font-size: 11px; line-height: 14px; }
+.recurrent-period { height: 28px; min-height: 28px; gap: 6px; padding-inline: 10px; background: var(--primary); font-size: 11px; line-height: 14px; filter: drop-shadow(0 4px 2px rgb(0 0 0 / 25%)); }
+.recurrent-period img { transform: rotate(90deg); }
+.recurrent-upcoming-list { display: flex; flex: 1; flex-direction: column; justify-content: center; gap: 8px; padding: 0; list-style: none; }
+.recurrent-upcoming-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-family: Inter, var(--font-body); }
+.recurrent-date, .recurrent-upcoming-icon { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 0 0 45px; height: 45px; border: 1px solid var(--panel-border); border-radius: 8px; }
+.recurrent-date { gap: 4px; }
+.recurrent-date strong { font-size: 14px; line-height: 18px; font-weight: 600; }
+.recurrent-date span { font-size: 10px; line-height: 12px; font-weight: 500; }
+.recurrent-upcoming-identity { display: flex; flex-direction: column; justify-content: center; gap: 6px; width: 150px; flex-shrink: 0; }
+.recurrent-upcoming-identity strong { font-size: 18px; line-height: 12px; font-weight: 500; }
+.recurrent-upcoming-identity small { font-size: 11px; line-height: 12px; font-weight: 500; }
+.recurrent-type { width: 70px; height: 24px; padding: 0; border: 0; border-radius: 8px; font: 500 11px/12px Inter, var(--font-body); flex-shrink: 0; }
+.recurrent-type--expense { color: #e60012; background: rgb(230 0 18 / 40%); }
+.recurrent-type--income { color: #4ade80; background: rgb(74 222 128 / 40%); }
+.recurrent-amount { display: flex; align-items: center; width: 140px; height: 20px; flex-shrink: 0; font-size: 14px; line-height: 12px; font-weight: 500; }
+.recurrent-amount--expense { color: #e60012; }
+.recurrent-amount--income { color: #4ade80; }
+.recurrent-view-all { display: flex; align-items: center; justify-content: space-between; height: 16px; color: #fff; text-decoration: none; font: 500 12px/16px Inter, var(--font-body); }
+.recurrent-view-all:focus-visible { outline: 2px solid var(--border-color-focus); outline-offset: 4px; }
+.recurrent-forecast .recurrent-card-header { height: 28px; }
+.recurrent-forecast-summary { display: flex; flex-direction: column; gap: 4px; }
+.recurrent-forecast-summary strong { font-size: 28px; line-height: 34px; font-weight: 700; }
+.recurrent-forecast-summary small { font-size: 11px; line-height: 14px; }
+.recurrent-breakdown { display: flex; flex-direction: column; gap: 12px; }
+.recurrent-breakdown > div { display: flex; align-items: center; justify-content: space-between; height: 24px; }
+.recurrent-breakdown > div:first-child { align-items: flex-start; }
+.recurrent-breakdown dt { display: flex; align-items: center; min-height: 24px; padding-left: 32px; font-size: 13px; line-height: 14px; font-weight: 500; }
+.recurrent-breakdown dd { font-size: 14px; line-height: 14px; font-weight: 600; }
+.recurrent-distribution { display: flex; flex: 1; flex-direction: column; gap: 8px; font-size: 11px; line-height: 14px; }
+.recurrent-flow-bar { display: flex; gap: 2px; height: 8px; }
+.recurrent-flow-bar span { height: 8px; border-radius: 999px; }
+.recurrent-flow-bar span:first-child { width: 22.19%; background: #e60012; }
+.recurrent-flow-bar span:last-child { flex: 1; background: #009c00; }
+
+/* Lista, busca e filtros. */
+.recurrent-section { display: flex; flex-direction: column; gap: 16px; }
+.recurrent-section-header { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.recurrent-section-header h2 { font-size: 24px; line-height: 32px; font-weight: 700; }
+.recurrent-section-header p { margin-top: 4px; font-size: 13px; line-height: 18px; }
+.recurrent-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 44px; }
+.recurrent-filters, .recurrent-search-sort, .recurrent-sorts { display: flex; align-items: center; gap: 8px; }
+.recurrent-search-sort, .recurrent-sorts { gap: 12px; min-width: 0; }
+.recurrent-search-sort .ui-search { width: 240px; }
+.recurrent-filters .ui-button, .recurrent-sorts .ui-button { white-space: nowrap; }
+.recurrent-filters .ui-button[aria-pressed="true"] { box-shadow: inset 0 0 0 1px rgb(255 255 255 / 35%); }
+.recurrent-sorts .ui-button { padding-inline: 12px; border-radius: 10px; font-weight: 400; background: var(--panel-bg); }
+.recurrent-sorts .ui-button:nth-child(1) { width: 107px; }
+.recurrent-sorts .ui-button:nth-child(2) { width: 118px; }
+.recurrent-sorts .ui-button:nth-child(3) { width: 123px; }
+.recurrent-sorts .ui-button:nth-child(4) { width: 104px; }
+.recurrent-sorts .ui-button[aria-pressed="true"] { border-color: var(--border-color-focus); background: var(--bg-card-selected); }
+.recurrent-table-card { display: flex; flex-direction: column; gap: 12px; padding: 24px; color: #fff; }
+.recurrent-table { width: 100%; table-layout: fixed; border-collapse: collapse; text-align: center; }
+.rec-col-selection { width: 2.5035%; }
+.rec-col-icon { width: 3.8943%; }
+.rec-col-name { width: 30.1808%; }
+.rec-col-category { width: 10.1530%; }
+.rec-col-type { width: 8.2058%; }
+.rec-col-value { width: 10.1530%; }
+.rec-col-frequency { width: 10.7093%; }
+.rec-col-date { width: 10.1530%; }
+.rec-col-status { width: 8.4840%; }
+.rec-col-actions { width: 5.5633%; }
+.recurrent-table :is(th, td) { padding: 0 16px 0 0; font-size: 12px; line-height: 16px; font-weight: 400; vertical-align: middle; }
+.recurrent-table :is(th, td):last-child { padding-right: 34px; }
+.recurrent-table thead th { height: 40px; padding-bottom: 12px; font-size: 11px; line-height: 12px; font-weight: 600; }
+.recurrent-table tbody tr { height: 60px; }
+.recurrent-table tbody tr:has(input:checked) { background: var(--bg-card-selected); }
+.recurrent-table tbody th strong { display: block; font-size: 13px; line-height: 18px; font-weight: 600; }
+.recurrent-table small { display: block; margin-top: 2px; font-size: 11px; line-height: 14px; font-weight: 400; }
+.recurrent-next-date time { font-weight: 600; white-space: nowrap; }
+.recurrent-checkbox { appearance: none; display: block; width: 20px; height: 20px; margin: 0; border: 1px solid var(--panel-border); border-radius: 4px; background: transparent; cursor: pointer; }
+.recurrent-checkbox:checked { appearance: auto; accent-color: var(--primary); }
+.recurrent-checkbox:focus-visible { outline: 2px solid var(--border-color-focus); outline-offset: 2px; }
+.recurrent-table-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: var(--panel-border); }
+.recurrent-status { background: rgb(0 156 0 / 30%); font-size: 12px; line-height: 16px; font-weight: 400; }
+.recurrent-more { width: 46px; height: 46px; min-height: 46px; padding: 0; border: 0; }
+.recurrent-empty { padding: 24px; text-align: center; color: var(--panel-muted); }
+.recurrent-table-footer { display: flex; align-items: center; justify-content: space-between; height: 40px; }
+.recurrent-pagination { display: flex; align-items: center; gap: 8px; }
+.recurrent-pagination .ui-button { width: 24px; height: 24px; min-height: 24px; padding: 0; border-radius: 4px; font-size: 12px; font-weight: 700; }
+.recurrent-pagination [aria-current="page"] { background: var(--primary); }
+.recurrent-pagination button:first-child img { transform: scaleX(-1); }

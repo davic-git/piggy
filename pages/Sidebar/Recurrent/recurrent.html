@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Recorrentes | Piggy</title>
+  
+  <meta name="description" content="Acompanhe suas receitas, despesas e lançamentos recorrentes no Piggy.">
+  
+  <meta name="theme-color" content="#07121f">
+  
+  <meta property="og:title" content="Recorrentes | Piggy">
+  
+  <meta property="og:description" content="Acompanhe suas receitas, despesas e lançamentos recorrentes no Piggy.">
+  
+  <meta property="og:type" content="website">
+
+  <!-- LINKS -->
+
+  <link rel="stylesheet" href="../../../global.css">
+
+  <link rel="stylesheet" href="recurrent.css">
+
+  <link rel="icon" href="../../../PIGGY-logo.png" type="image/png">
+</head>
+
+<body class="page page--recurrent">
+
+  <!--- SIDEBAR -->
+  <aside class="sidebar">
+
+    <header class="sidebar-header">
+      
+      <a href="" class="logo">
+        <img src="" alt="">
+      </a>
+
+      <button class="collapse-btn"><i data-lucide="chevron-left" class="sidebar-icon"></i></button>
+
+    </header>
+
+    <nav class="sidebar-navigation">
+      
+      <div class="overview-group">
+
+        <h2 class="sidebar-group_name">VISÃO GERAL</h2>
+      
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Dashboard/index.html">
+              <span class="sidebar-icon_container"><i data-lucide="home" class="sidebar-icon"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Analyses/analyses.html">
+              <span class="sidebar-icon_container"><i data-lucide="bar-chart-2" class="sidebar-icon"></i></span>
+              <span>Análises</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="finance-group">
+
+        <h2 class="sidebar-group_name">FINANÇAS</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Transactions/transitions.html">
+              <span class="sidebar-icon_container"><i data-lucide="credit-card" class="sidebar-icon"></i></span>
+              <span>Transações</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Invoices/invoices.html">
+              <span class="sidebar-icon_container"><i data-lucide="file-text" class="sidebar-icon"></i></span>
+              <span>Faturas</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Categories/categorias.html">
+              <span class="sidebar-icon_container"><i data-lucide="pie-chart" class="sidebar-icon"></i></span>
+              <span>Categorias</span>
+            </a>
+          </li>
+          
+          <li class="active">
+            <a href="../Recurrent/recurrent.html" aria-current="page">
+              <span class="sidebar-icon_container"><i data-lucide="repeat" class="sidebar-icon"></i></span>
+              <span>Recorrentes</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="planning-group">
+        
+        <h2 class="sidebar-group_name">PLANEJAMENTO</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Piggy/piggy.html">
+              <span class="sidebar-icon_container"><i data-lucide="piggy-bank" class="sidebar-icon"></i></span>
+              <span>Piggy</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Goals/goals.html">
+              <span class="sidebar-icon_container"><i data-lucide="target" class="sidebar-icon"></i></span>
+              <span>Metas</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <footer class="sidebar-footer">
+      <ul class="sidebar-items">
+        <li>
+          <a href="../Settings/settings.html">
+            <span class="sidebar-icon_container"><i data-lucide="settings" class="sidebar-icon"></i></span>
+            <span>Configurações</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="../Help/help.html">
+            <span class="sidebar-icon_container"><i data-lucide="help-circle" class="sidebar-icon"></i></span>
+            <span>Ajuda</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="profile">
+        <img src="../../../images/sidebar/avatar.jpg" alt="Avatar" class="avatar">
+
+        <div class="profile-info">
+        
+            <p class="profile-user">Davi</p>
+            <p class="profile-email">davi@example.com</p>
+
+        </div>
+      </button>
+    </footer>
+
+  </aside>
+
+  <div class="content-area">
+
+    <header class="header">
+
+      <div class="header-title">
+        
+        <h1 class="page-title">Recorrentes</h1>
+        <p class="page-title-description">Entenda melhor seus hábitos financeiros</p>
+
+      </div>
+
+      <div class="header-actions">
+
+        <button type="button" class="ui-button recurrent-create" disabled title="Disponível quando a gestão de recorrências estiver conectada"><span><img src="../../../images/recurrent/plus.svg" alt=""></span>Nova recorrência</button>
+        
+        <button type="button" class="search" aria-label="Buscar recorrências">
+          <i data-lucide="search" class="header-action-icon"></i>
+        </button>
+        
+        <button type="button" class="notifications" aria-label="Notificações">
+          <i data-lucide="bell" class="header-action-icon"></i>
+        </button>
+
+        <button type="button" class="language" aria-label="Idioma">
+          <i data-lucide="globe" class="header-action-icon"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+    <main class="main">
+      <!-- Recorrentes / Desktop, conteúdo 633:2639. Valores ilustrativos do Figma, sem integração financeira. -->
+      <div class="content content--recurrent">
+        <section class="recurrent-summary" aria-label="Resumo das recorrências">
+          <article class="ui-card recurrent-kpi"><span class="recurrent-kpi-space" aria-hidden="true"></span><div><h2>Recorrências ativas</h2><strong>9</strong><p>7 despesas • 2 receitas</p></div></article>
+          <article class="ui-card recurrent-kpi"><span class="recurrent-kpi-space" aria-hidden="true"></span><div><h2>Despesas mensais</h2><strong>R$ 1.875,00</strong><p>Previsão para este mês</p></div></article>
+          <article class="ui-card recurrent-kpi"><span class="recurrent-kpi-space" aria-hidden="true"></span><div><h2>Receitas mensais</h2><strong>R$ 5.200,00</strong><p>Previsão para este mês</p></div></article>
+          <article class="ui-card recurrent-kpi"><span class="recurrent-kpi-space" aria-hidden="true"></span><div><h2>Saldo previsto</h2><strong>+R$ 3.325,00</strong><p>Receitas menos despesas</p></div></article>
+        </section>
+
+        <div class="recurrent-overview">
+          <section class="ui-card ui-card--transparent recurrent-upcoming" aria-labelledby="upcoming-title">
+            <header class="recurrent-card-header"><div><h2 id="upcoming-title">Próximos lançamentos</h2><p>Eventos previstos para os próximos 30 dias</p></div><button type="button" class="ui-button recurrent-period" disabled title="O protótipo apresenta apenas o período de 30 dias">30 dias<img src="../../../images/recurrent/period-chevron.svg" alt=""></button></header>
+            <ul class="recurrent-upcoming-list">
+              <li class="recurrent-upcoming-row"><time class="recurrent-date" datetime="2026-09-22"><strong>22</strong><span>Set</span></time><span class="recurrent-upcoming-icon"><img src="../../../images/recurrent/lightbulb.svg" alt=""></span><div class="recurrent-upcoming-identity"><strong>Luz</strong><small>Moradia</small></div><span class="ui-chip recurrent-type recurrent-type--expense">Despesa</span><span class="recurrent-amount recurrent-amount--expense">-R$200</span></li>
+              <li class="recurrent-upcoming-row"><time class="recurrent-date" datetime="2026-09-22"><strong>22</strong><span>Set</span></time><span class="recurrent-upcoming-icon"><img src="../../../images/recurrent/lightbulb.svg" alt=""></span><div class="recurrent-upcoming-identity"><strong>Trabalho</strong><small>trabalho</small></div><span class="ui-chip recurrent-type recurrent-type--income">Receita</span><span class="recurrent-amount recurrent-amount--income">+R$2370</span></li>
+              <li class="recurrent-upcoming-row"><time class="recurrent-date" datetime="2026-09-22"><strong>22</strong><span>Set</span></time><span class="recurrent-upcoming-icon"><img src="../../../images/recurrent/lightbulb.svg" alt=""></span><div class="recurrent-upcoming-identity"><strong>Luz</strong><small>Moradia</small></div><span class="ui-chip recurrent-type recurrent-type--expense">Despesa</span><span class="recurrent-amount recurrent-amount--expense">-R$1200</span></li>
+              <li class="recurrent-upcoming-row"><time class="recurrent-date" datetime="2026-09-22"><strong>22</strong><span>Set</span></time><span class="recurrent-upcoming-icon"><img src="../../../images/recurrent/lightbulb.svg" alt=""></span><div class="recurrent-upcoming-identity"><strong>Freelancer</strong><small>Trabalho</small></div><span class="ui-chip recurrent-type recurrent-type--income">Receita</span><span class="recurrent-amount recurrent-amount--income">+R$2000</span></li>
+            </ul>
+            <a class="recurrent-view-all" href="#recurrences-title">Ver todos os lançamentos<img src="../../../images/recurrent/arrow.svg" alt=""></a>
+          </section>
+          <section class="ui-card ui-card--transparent recurrent-forecast" aria-labelledby="forecast-title">
+            <header class="recurrent-card-header"><h2 id="forecast-title">Próximos lançamentos</h2><button type="button" class="ui-button recurrent-period" disabled title="O protótipo apresenta apenas o período de 30 dias">30 dias<img src="../../../images/recurrent/period-chevron.svg" alt=""></button></header>
+            <div class="recurrent-forecast-summary"><p>Saldo previsto</p><strong>+R$ 3.325,00</strong><small>Considerando as recorrências cadastradas</small></div>
+            <dl class="recurrent-breakdown"><div><dt>Receitas</dt><dd>R$ 4.370,00</dd></div><div><dt>Despesas</dt><dd>R$ 1400,00</dd></div></dl>
+            <div class="recurrent-distribution"><p>Distribuição do fluxo previsto</p><div class="recurrent-flow-bar" role="img" aria-label="Distribuição ilustrativa das despesas e receitas previstas"><span></span><span></span></div></div>
+          </section>
+        </div>
+
+        <section class="recurrent-section" aria-labelledby="recurrences-title">
+          <header class="recurrent-section-header"><div><h2 id="recurrences-title" tabindex="-1">Suas recorrências</h2><p>Visualize e gerencie seus lançamentos periódicos.</p></div><button type="button" class="ui-button recurrent-create" disabled title="Disponível quando a gestão de recorrências estiver conectada"><span><img src="../../../images/recurrent/plus.svg" alt=""></span>Nova recorrência</button></header>
+          <div class="recurrent-controls">
+            <div class="recurrent-filters" role="group" aria-label="Filtrar por status"><button type="button" class="ui-button ui-button--compact" data-status-filter="all" aria-pressed="true">Todas<span class="ui-count">4</span></button><button type="button" class="ui-button ui-button--compact" data-status-filter="active" aria-pressed="false">Ativas<span class="ui-count">4</span></button><button type="button" class="ui-button ui-button--compact" data-status-filter="paused" aria-pressed="false">Pausadas<span class="ui-count">0</span></button><button type="button" class="ui-button ui-button--compact" data-status-filter="closed" aria-pressed="false">Encerradas<span class="ui-count">0</span></button></div>
+            <div class="recurrent-search-sort">
+              <label class="ui-search"><img src="../../../images/goals/search.svg" alt=""><span class="ui-sr-only">Buscar recorrência</span><input id="recurrent-search" type="search" placeholder="Buscar recorrência..." autocomplete="off"></label>
+              <div class="recurrent-sorts" role="group" aria-label="Ordenar recorrências">
+                <button type="button" class="ui-button ui-button--outline" data-sort="date" aria-pressed="false">Mais próximas</button>
+                <button type="button" class="ui-button ui-button--outline" data-sort="highest" aria-pressed="false">Maior valor</button>
+                <button type="button" class="ui-button ui-button--outline" data-sort="lowest" aria-pressed="false">Menor valor</button>
+                <button type="button" class="ui-button ui-button--outline" disabled title="Datas de criação não disponíveis no protótipo">Mais recentes</button>
+              </div>
+            </div>
+          </div>
+          <div class="ui-card ui-card--transparent recurrent-table-card">
+            <table class="recurrent-table">
+              <caption class="ui-sr-only">Recorrências ilustrativas do protótipo</caption>
+              <colgroup><col class="rec-col-selection"><col class="rec-col-icon"><col class="rec-col-name"><col class="rec-col-category"><col class="rec-col-type"><col class="rec-col-value"><col class="rec-col-frequency"><col class="rec-col-date"><col class="rec-col-status"><col class="rec-col-actions"></colgroup>
+              <thead><tr><th scope="col"><span class="ui-sr-only">Selecionar</span></th><th scope="col">Ícone</th><th scope="col">Recorrência</th><th scope="col">Categoria</th><th scope="col">Tipo</th><th scope="col">Valor</th><th scope="col">Frequência</th><th scope="col">Próxima data</th><th scope="col">Status</th><th scope="col">Ações</th></tr></thead>
+              <tbody>
+                <tr data-recurrence data-status="active" data-date="2026-10-21" data-amount="650">
+                  <td><input class="recurrent-checkbox" type="checkbox" aria-label="Selecionar Aluguel"></td>
+                  <td><span class="recurrent-table-icon"><img src="../../../images/recurrent/home.svg" alt=""></span></td>
+                  <th scope="row"><strong>Aluguel</strong><small>Pagamento mensal</small></th>
+                  <td>Moradia</td><td>Despesa</td><td>R$ 650,00</td><td>Mensal</td>
+                  <td class="recurrent-next-date"><time datetime="2026-10-21">21 Out. 2026</time><small>Próximo lançamento</small></td>
+                  <td><span class="ui-chip ui-chip--status recurrent-status">Ativo</span></td>
+                  <td><button type="button" class="ui-button ui-button--outline recurrent-more" disabled aria-label="Opções de Aluguel" title="Disponível quando a gestão de recorrências estiver conectada"><img src="../../../images/recurrent/more.svg" alt=""></button></td>
+                </tr>
+                <tr data-recurrence data-status="active" data-date="2026-09-28" data-amount="1280">
+                  <td><input class="recurrent-checkbox" type="checkbox" aria-label="Selecionar Bares"></td>
+                  <td><span class="recurrent-table-icon"><img src="../../../images/recurrent/bar.svg" alt=""></span></td>
+                  <th scope="row"><strong>Bares</strong><small>Pagamento semanal</small></th>
+                  <td>Restaurante</td><td>Despesa</td><td>R$ 1.280,00</td><td>Semanal</td>
+                  <td class="recurrent-next-date"><time datetime="2026-09-28">28 Set. 2026</time><small>Próximo lançamento</small></td>
+                  <td><span class="ui-chip ui-chip--status recurrent-status">Ativo</span></td>
+                  <td><button type="button" class="ui-button ui-button--outline recurrent-more" disabled aria-label="Opções de Bares" title="Disponível quando a gestão de recorrências estiver conectada"><img src="../../../images/recurrent/more.svg" alt=""></button></td>
+                </tr>
+                <tr data-recurrence data-status="active" data-date="2026-10-21" data-amount="250">
+                  <td><input class="recurrent-checkbox" type="checkbox" aria-label="Selecionar Internet"></td>
+                  <td><span class="recurrent-table-icon"><img src="../../../images/recurrent/wifi.svg" alt=""></span></td>
+                  <th scope="row"><strong>Internet</strong><small>Pagamento mensal</small></th>
+                  <td>Moradia</td><td>Despesa</td><td>R$ 250,00</td><td>Mensal</td>
+                  <td class="recurrent-next-date"><time datetime="2026-10-21">21 Out. 2026</time><small>Próximo lançamento</small></td>
+                  <td><span class="ui-chip ui-chip--status recurrent-status">Ativo</span></td>
+                  <td><button type="button" class="ui-button ui-button--outline recurrent-more" disabled aria-label="Opções de Internet" title="Disponível quando a gestão de recorrências estiver conectada"><img src="../../../images/recurrent/more.svg" alt=""></button></td>
+                </tr>
+                <tr data-recurrence data-status="active" data-date="2026-10-21" data-amount="250">
+                  <td><input class="recurrent-checkbox" type="checkbox" aria-label="Selecionar Internet (segunda recorrência)"></td>
+                  <td><span class="recurrent-table-icon"><img src="../../../images/recurrent/wifi.svg" alt=""></span></td>
+                  <th scope="row"><strong>Internet</strong><small>Pagamento mensal</small></th>
+                  <td>Moradia</td><td>Despesa</td><td>R$ 250,00</td><td>Mensal</td>
+                  <td class="recurrent-next-date"><time datetime="2026-10-21">21 Out. 2026</time><small>Próximo lançamento</small></td>
+                  <td><span class="ui-chip ui-chip--status recurrent-status">Ativo</span></td>
+                  <td><button type="button" class="ui-button ui-button--outline recurrent-more" disabled aria-label="Opções de Internet" title="Disponível quando a gestão de recorrências estiver conectada"><img src="../../../images/recurrent/more.svg" alt=""></button></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="recurrent-empty" hidden>Nenhuma recorrência encontrada com esses filtros.</p>
+            <footer class="recurrent-table-footer"><p id="recurrent-results" role="status" aria-live="polite">Exibindo 4 de 4 recorrências</p><nav class="recurrent-pagination" aria-label="Paginação das recorrências">
+              <button class="ui-button ui-button--outline" type="button" disabled aria-label="Página anterior"><img src="../../../images/recurrent/previous.svg" alt=""></button>
+              <button class="ui-button" type="button" aria-current="page" disabled aria-label="Página 1">1</button>
+              <button class="ui-button ui-button--outline" type="button" disabled title="Página não disponível no protótipo" aria-label="Página 2 indisponível">2</button>
+              <button class="ui-button ui-button--outline" type="button" disabled title="Página não disponível no protótipo" aria-label="Página 3 indisponível">3</button>
+              <button class="ui-button ui-button--outline" type="button" disabled aria-label="Próxima página"><img src="../../../images/recurrent/next.svg" alt=""></button>
+            </nav></footer>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous" defer></script>
+  <script src="../../../js/script.js" defer></script>
+  <script src="../../../js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.lucide?.createIcons();
+      const rows = [...document.querySelectorAll('[data-recurrence]')];
+      const search = document.getElementById('recurrent-search');
+      const filters = [...document.querySelectorAll('[data-status-filter]')];
+      const sorts = [...document.querySelectorAll('[data-sort]')];
+      const body = document.querySelector('.recurrent-table tbody');
+      const empty = document.querySelector('.recurrent-empty');
+      const results = document.getElementById('recurrent-results');
+      const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
+      let status = 'all';
+      const refresh = () => {
+        const query = normalize(search.value.trim());
+        let visible = 0;
+        rows.forEach((row) => {
+          row.hidden = (status !== 'all' && row.dataset.status !== status) || !normalize(row.textContent).includes(query);
+          if (!row.hidden) visible += 1;
+        });
+        empty.hidden = visible !== 0;
+        results.textContent = `Exibindo ${visible} de ${rows.length} recorrências`;
+      };
+      filters.forEach((button) => button.addEventListener('click', () => {
+        status = button.dataset.statusFilter;
+        filters.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        refresh();
+      }));
+      sorts.forEach((button) => button.addEventListener('click', () => {
+        const mode = button.dataset.sort;
+        const ordered = [...rows].sort((a, b) => mode === 'date'
+          ? a.dataset.date.localeCompare(b.dataset.date)
+          : (Number(a.dataset.amount) - Number(b.dataset.amount)) * (mode === 'highest' ? -1 : 1));
+        ordered.forEach((row) => body.append(row));
+        sorts.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      }));
+      search.addEventListener('input', refresh);
+      document.querySelector('.header-actions .search').addEventListener('click', () => search.focus());
+      refresh();
+    });
+  </script>
+</body>
+</html>

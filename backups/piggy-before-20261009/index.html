@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Dashboard financeiro | Piggy</title>
+  
+  <meta name="description" content="Acompanhe gastos, economias, transações e metas financeiras no dashboard Piggy.">
+  
+  <meta name="theme-color" content="#07121f">
+  
+  <meta property="og:title" content="Dashboard financeiro | Piggy">
+  
+  <meta property="og:description" content="Acompanhe gastos, economias, transações e metas financeiras no dashboard Piggy.">
+  
+  <meta property="og:type" content="website">
+
+  <!-- LINKS -->
+
+  <link rel="stylesheet" href="../../../global.css">
+
+  <link rel="stylesheet" href="dashboard.css">
+
+  <link rel="stylesheet" href="dashboard-content.css">
+
+  <link rel="icon" href="../../../PIGGY-logo.png" type="image/png">
+</head>
+
+<body class="page page--dashboard">
+
+  <!--- SIDEBAR -->
+  <aside class="sidebar">
+
+    <header class="sidebar-header">
+      
+      <a href="" class="logo">
+        <img src="" alt="">
+      </a>
+
+      <button class="collapse-btn"><i data-lucide="chevron-left" class="sidebar-icon"></i></button>
+
+    </header>
+
+    <nav class="sidebar-navigation">
+      
+      <div class="overview-group">
+
+        <h2 class="sidebar-group_name">VISÃO GERAL</h2>
+      
+        <ul class="sidebar-items">
+          <li class="active">
+            <a href="../Dashboard/index.html" aria-current="page">
+              <span class="sidebar-icon_container"><i data-lucide="home" class="sidebar-icon"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Analyses/analyses.html">
+              <span class="sidebar-icon_container"><i data-lucide="bar-chart-2" class="sidebar-icon"></i></span>
+              <span>Análises</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="finance-group">
+
+        <h2 class="sidebar-group_name">FINANÇAS</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Transactions/transitions.html">
+              <span class="sidebar-icon_container"><i data-lucide="credit-card" class="sidebar-icon"></i></span>
+              <span>Transações</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Invoices/invoices.html">
+              <span class="sidebar-icon_container"><i data-lucide="file-text" class="sidebar-icon"></i></span>
+              <span>Faturas</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Categories/categorias.html">
+              <span class="sidebar-icon_container"><i data-lucide="pie-chart" class="sidebar-icon"></i></span>
+              <span>Categorias</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Recurrent/recurrent.html">
+              <span class="sidebar-icon_container"><i data-lucide="repeat" class="sidebar-icon"></i></span>
+              <span>Recorrentes</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="planning-group">
+        
+        <h2 class="sidebar-group_name">PLANEJAMENTO</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Piggy/piggy.html">
+              <span class="sidebar-icon_container"><i data-lucide="piggy-bank" class="sidebar-icon"></i></span>
+              <span>Piggy</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Goals/goals.html">
+              <span class="sidebar-icon_container"><i data-lucide="target" class="sidebar-icon"></i></span>
+              <span>Metas</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <footer class="sidebar-footer">
+      <ul class="sidebar-items">
+        <li>
+          <a href="../Settings/settings.html">
+            <span class="sidebar-icon_container"><i data-lucide="settings" class="sidebar-icon"></i></span>
+            <span>Configurações</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="../Help/help.html">
+            <span class="sidebar-icon_container"><i data-lucide="help-circle" class="sidebar-icon"></i></span>
+            <span>Ajuda</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="profile">
+        <img src="../../../images/sidebar/avatar.jpg" alt="Avatar" class="avatar">
+
+        <div class="profile-info">
+        
+            <p class="profile-user">Davi</p>
+            <p class="profile-email">davi@example.com</p>
+
+        </div>
+      </button>
+    </footer>
+
+  </aside>
+
+  <div class="content-area">
+
+    <header class="header">
+
+      <div class="header-title">
+        
+        <h1 class="page-title">Dashboard</h1>
+        <p class="page-title-description">Visão geral das suas finanças</p>
+
+      </div>
+
+      <div class="header-actions">
+
+        <button class="header-btn">
+          Período 
+          <span class="header-btn-icon-container">
+          <i data-lucide="filter" class="header-action-icon"></i>
+          </span>
+      </button>
+        
+        <button class="header-btn">
+          <span class="header-btn-icon-container">
+            <i data-lucide="plus" class="header-action-icon"></i>
+          </span>
+          Nova transação
+        </button>
+        
+        <button class="search">
+          <i data-lucide="search" class="header-action-icon"></i>
+        </button>
+        
+        <button class="notifications">
+          <i data-lucide="bell" class="header-action-icon"></i>
+        </button>
+
+        <button class="language">
+          <i data-lucide="globe" class="header-action-icon"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+    <main class="main">
+
+      <!-- Conteúdo estático do frame Dashboard / Desktop (Figma: 618:1769). -->
+      <div class="content content--dashboard dashboard-content">
+        <section class="dashboard-kpis" aria-label="Resumo financeiro">
+          <article class="dashboard-card dashboard-kpi dashboard-kpi--balance">
+            <div class="dashboard-kpi-heading"><h2>Saldo disponível</h2><img src="../../../images/dashboard/calendar.svg" alt=""></div>
+            <div class="dashboard-kpi-value"><strong>R$145,61</strong><p>Você economizou 10% esse mês!</p></div>
+            <a class="dashboard-card-link " href="../Analyses/analyses.html"><span>Ver economias</span><img src="../../../images/dashboard/chevron-kpi.svg" alt=""></a>
+          </article>
+          <article class="dashboard-card dashboard-kpi">
+            <div class="dashboard-kpi-heading"><h2>Gastos no mês</h2><img src="../../../images/dashboard/calendar.svg" alt=""></div>
+            <div class="dashboard-kpi-value"><strong>R$1432,42</strong><p>Você economizou 10% esse mês!</p></div>
+            <a class="dashboard-card-link " href="../Analyses/analyses.html"><span>Ver economias</span><img src="../../../images/dashboard/chevron-kpi.svg" alt=""></a>
+          </article>
+          <article class="dashboard-card dashboard-kpi">
+            <div class="dashboard-kpi-heading"><h2>Receitas no mês</h2><img src="../../../images/dashboard/calendar.svg" alt=""></div>
+            <div class="dashboard-kpi-value"><strong>R$13.468,08</strong><p>Você economizou 10% esse mês!</p></div>
+            <a class="dashboard-card-link " href="../Analyses/analyses.html"><span>Ver economias</span><img src="../../../images/dashboard/chevron-kpi.svg" alt=""></a>
+          </article>
+          <article class="dashboard-card dashboard-kpi">
+            <div class="dashboard-kpi-heading"><h2>Economia</h2><img src="../../../images/dashboard/calendar.svg" alt=""></div>
+            <div class="dashboard-kpi-value"><strong>R$802,90</strong><p>Você economizou 10% esse mês!</p></div>
+            <a class="dashboard-card-link " href="../Analyses/analyses.html"><span>Ver economias</span><img src="../../../images/dashboard/chevron-kpi.svg" alt=""></a>
+          </article>
+        </section>
+
+        <div class="dashboard-row dashboard-row--overview">
+          <section class="dashboard-card dashboard-categories" aria-labelledby="categories-title">
+            <div class="dashboard-card-heading"><h2 id="categories-title">Categorias de gastos</h2><a class="dashboard-outline-link" href="../Categories/categorias.html">Ver todas</a></div>
+            <ul class="dashboard-category-list">
+              <li class="dashboard-category">
+                <span class="dashboard-category-name"><span class="dashboard-category-icon"><img src="../../../images/dashboard/lightbulb.svg" alt=""></span>Luz</span>
+                <span class="dashboard-category-progress" aria-hidden="true"><span style="width: 100%"></span></span>
+                <span class="dashboard-category-value"><img src="../../../images/dashboard/warning.svg" alt=""><strong>100%</strong><span>R$90</span></span>
+              </li>
+              <li class="dashboard-category">
+                <span class="dashboard-category-name"><span class="dashboard-category-icon"><img src="../../../images/dashboard/car.svg" alt=""></span>Carro</span>
+                <span class="dashboard-category-progress" aria-hidden="true"><span style="width: 100%"></span></span>
+                <span class="dashboard-category-value"><img src="../../../images/dashboard/warning.svg" alt=""><strong>100%</strong><span>R$1600</span></span>
+              </li>
+              <li class="dashboard-category">
+                <span class="dashboard-category-name"><span class="dashboard-category-icon"><img src="../../../images/dashboard/house.svg" alt=""></span>IPTU</span>
+                <span class="dashboard-category-progress" aria-hidden="true"><span style="width: 87.8%"></span></span>
+                <span class="dashboard-category-value"><img src="../../../images/dashboard/warning.svg" alt=""><strong>90%</strong><span>R$1200</span></span>
+              </li>
+              <li class="dashboard-category">
+                <span class="dashboard-category-name"><span class="dashboard-category-icon"><img src="../../../images/dashboard/cart.svg" alt=""></span>Mercado</span>
+                <span class="dashboard-category-progress" aria-hidden="true"><span style="width: 75.1%"></span></span>
+                <span class="dashboard-category-value"><strong>77%</strong><span>R$1300</span></span>
+              </li>
+              <li class="dashboard-category">
+                <span class="dashboard-category-name"><span class="dashboard-category-icon"><img src="../../../images/dashboard/shirt.svg" alt=""></span>Roupas</span>
+                <span class="dashboard-category-progress" aria-hidden="true"><span style="width: 27.1%"></span></span>
+                <span class="dashboard-category-value"><strong>35%</strong><span>R$530</span></span>
+              </li>
+            </ul>
+            <p class="dashboard-note"><img src="../../../images/dashboard/info.svg" alt=""><span>Essas categorias representam 80% dos seus gastos</span></p>
+          </section>
+
+          <section class="dashboard-card dashboard-savings" aria-labelledby="savings-title">
+            <div class="dashboard-card-heading">
+              <h2 id="savings-title">Suas economias</h2>
+              <div class="dashboard-periods" aria-label="Período do gráfico">
+                <button type="button" disabled title="Filtro ainda não conectado a dados">1d</button>
+                <button type="button" disabled title="Filtro ainda não conectado a dados">1m</button>
+                <button type="button" disabled title="Filtro ainda não conectado a dados">6m</button>
+                <button type="button" disabled title="Filtro ainda não conectado a dados">1a</button>
+              </div>
+            </div>
+            <figure class="dashboard-chart" role="img" aria-label="Economias de janeiro a dezembro. O gráfico do protótipo cresce até outubro e recua em novembro e dezembro.">
+              <div class="dashboard-chart-canvas" aria-hidden="true">
+                <div class="dashboard-chart-y"><span>R$1000</span><span>R$750</span><span>R$500</span><span>R$250</span><span>0</span></div>
+                <div class="dashboard-chart-plot">
+                  <div class="dashboard-chart-grid">
+                    <img src="../../../images/dashboard/grid-horizontal.svg" alt="" class="dashboard-grid-horizontal" style="top: 0%">
+                    <img src="../../../images/dashboard/grid-horizontal.svg" alt="" class="dashboard-grid-horizontal" style="top: 25%">
+                    <img src="../../../images/dashboard/grid-horizontal.svg" alt="" class="dashboard-grid-horizontal" style="top: 50%">
+                    <img src="../../../images/dashboard/grid-horizontal.svg" alt="" class="dashboard-grid-horizontal" style="top: 75%">
+                    <img src="../../../images/dashboard/grid-baseline.svg" alt="" class="dashboard-grid-horizontal" style="top: 100%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 0%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 8.333333333333332%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 16.666666666666664%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 25%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 33.33333333333333%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 41.66666666666667%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 50%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 58.333333333333336%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 66.66666666666666%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 75%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 83.33333333333334%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 91.66666666666666%">
+                    <img src="../../../images/dashboard/grid-vertical.svg" alt="" class="dashboard-grid-vertical" style="left: 100%">
+                  </div>
+                  <div class="dashboard-chart-series">
+                    <img src="../../../images/dashboard/chart-area.svg" alt="" class="dashboard-chart-area">
+                    <img src="../../../images/dashboard/chart-line.svg" alt="" class="dashboard-chart-line">
+                    <span class="dashboard-chart-point" style="left: 4.17%; top: 81.71%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 12.5%; top: 62.65%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 20.83%; top: 57.42%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 29.17%; top: 47.65%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 37.5%; top: 57.18%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 45.83%; top: 64.6%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 54.17%; top: 50.26%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 62.5%; top: 39.53%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 70.83%; top: 22.43%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 79.17%; top: 13.77%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 87.5%; top: 24.97%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                    <span class="dashboard-chart-point" style="left: 95.83%; top: 39.55%"><img src="../../../images/dashboard/chart-ripple.svg" alt=""><img src="../../../images/dashboard/chart-point.svg" alt=""></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-chart-months" aria-hidden="true"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+            </figure>
+            <div class="dashboard-savings-insight"><span class="dashboard-insight-mascot"><img src="../../../images/dashboard/piggy-joia.png" alt=""></span><p>Este mês você economizou <strong>15%</strong> a mais que o mês passado! Parabéns!</p></div>
+          </section>
+        </div>
+
+        <div class="dashboard-row dashboard-row--activity">
+          <section class="dashboard-card dashboard-transactions" aria-labelledby="transactions-title">
+            <h2 id="transactions-title">Transações recentes</h2>
+            <table class="dashboard-transactions-table">
+              <thead><tr><th scope="col">Descrição</th><th scope="col">Data</th><th scope="col">Valor</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><div class="dashboard-transaction-description"><img src="../../../images/dashboard/transaction.svg" alt=""><span><span>Entrada Pix</span><strong>Pix recebido de Drogaria LTDA</strong></span></div></td>
+                  <td>Hoje, 09:</td>
+                  <td class="dashboard-positive">+R$12,67</td>
+                </tr>
+                <tr>
+                  <td><div class="dashboard-transaction-description"><img src="../../../images/dashboard/transaction.svg" alt=""><span><span>Débito De Cartão</span><strong>99 Tecnologia</strong></span></div></td>
+                  <td>Hoje, 10:45</td>
+                  <td class="dashboard-negative">-R$12,67</td>
+                </tr>
+                <tr>
+                  <td><div class="dashboard-transaction-description"><img src="../../../images/dashboard/transaction.svg" alt=""><span><span>Débito De Cartão</span><strong>Pix enviado para 99 Tecnologia</strong></span></div></td>
+                  <td>Ontem, 15:51</td>
+                  <td class="dashboard-negative">-R$12,67</td>
+                </tr>
+                <tr>
+                  <td><div class="dashboard-transaction-description"><img src="../../../images/dashboard/transaction.svg" alt=""><span><span>Crédito De Cartão</span><strong>Ebanx</strong></span></div></td>
+                  <td>10/09, 08:45</td>
+                  <td class="dashboard-negative">-R$12,67</td>
+                </tr>
+                <tr>
+                  <td><div class="dashboard-transaction-description"><img src="../../../images/dashboard/transaction.svg" alt=""><span><span>Entrada Pix</span><strong>Pix recebido de Alex Thurim</strong></span></div></td>
+                  <td>02/09, 21:13</td>
+                  <td class="dashboard-positive">+R$12,67</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="dashboard-card-link " href="../Transactions/transitions.html"><span>Ver transações</span><img src="../../../images/dashboard/chevron-card.svg" alt=""></a>
+          </section>
+
+          <section class="dashboard-card dashboard-goals" aria-labelledby="goals-title">
+            <h2 id="goals-title">Suas metas | {Nome}</h2>
+            <div class="dashboard-goals-body">
+              <ul class="dashboard-goals-list">
+                <li><span class="dashboard-goal-icon dashboard-goal-icon--car"><span><img src="../../../images/dashboard/goal-car.png" alt=""></span></span><span>Carro<strong>R$40.000</strong></span></li>
+                <li><span class="dashboard-goal-icon dashboard-goal-icon--travel"><span><img src="../../../images/dashboard/goal-travel.png" alt=""></span></span><span>Viagem<strong>R$40.000</strong></span></li>
+                <li><span class="dashboard-goal-icon dashboard-goal-icon--college"><span><img src="../../../images/dashboard/goal-college.png" alt=""></span></span><span>Faculdade<strong>R$40.000</strong></span></li>
+              </ul>
+              <div class="dashboard-goal-summary" aria-label="57% das metas concluídos">
+                <img src="../../../images/dashboard/goal-donut.png" alt="" width="96" height="96">
+                <div><strong>57%</strong><span>concluído</span></div>
+              </div>
+            </div>
+            <a class="dashboard-card-link " href="../Transactions/transitions.html"><span>Ver transações</span><img src="../../../images/dashboard/chevron-card.svg" alt=""></a>
+          </section>
+
+          <section class="dashboard-card dashboard-piggy" aria-labelledby="piggy-title">
+            <h2 id="piggy-title">Piggy</h2>
+            <div class="dashboard-piggy-body">
+              <div class="dashboard-piggy-copy"><h3>Olá, Davi!</h3><p>Que tal guardar seu dinheiro para pagar as contas sem preocupações, e focar nas suas metas?</p><a class="dashboard-primary-link" href="../Piggy/piggy.html">Ver dicas personalizadas</a></div>
+              <div class="dashboard-piggy-mascot"><img src="../../../images/dashboard/piggy-mascot.png" alt=""></div>
+            </div>
+            <a class="dashboard-card-link " href="../Piggy/piggy.html"><span>Ver Piggy</span><img src="../../../images/dashboard/chevron-card.svg" alt=""></a>
+          </section>
+        </div>
+
+        <div class="dashboard-row dashboard-row--planning">
+          <section class="dashboard-card dashboard-payments" aria-labelledby="payments-title">
+            <div class="dashboard-card-heading"><h2 id="payments-title">Próximos vencimentos | <small>Próximos 30 dias</small></h2><button class="dashboard-filter" type="button" disabled title="Filtro ainda não conectado a dados">Todos <img src="../../../images/dashboard/chevron-filter.svg" alt=""></button></div>
+            <ul class="dashboard-payments-list">
+              <li class="dashboard-payment">
+                <span class="dashboard-payment-date"><strong>18</strong><span>SET</span></span>
+                <span class="dashboard-payment-info"><strong>Internet</strong><span>Casa • Recorrente</span></span>
+                <span class="dashboard-payment-status">Em 2 dias</span>
+                <strong class="dashboard-payment-amount">R$109,90</strong>
+              </li>
+              <li class="dashboard-payment">
+                <span class="dashboard-payment-date"><strong>20</strong><span>SET</span></span>
+                <span class="dashboard-payment-info"><strong>Fatura do cartão</strong><span>Casa • Fatura</span></span>
+                <span class="dashboard-payment-status">Em 4 dias</span>
+                <strong class="dashboard-payment-amount">R$842,30</strong>
+              </li>
+              <li class="dashboard-payment">
+                <span class="dashboard-payment-date"><strong>24</strong><span>SET</span></span>
+                <span class="dashboard-payment-info"><strong>Netflix</strong><span>Assinatura</span></span>
+                <span class="dashboard-payment-status">Em 8 dias</span>
+                <strong class="dashboard-payment-amount">R$44,90</strong>
+              </li>
+              <li class="dashboard-payment">
+                <span class="dashboard-payment-date"><strong>28</strong><span>SET</span></span>
+                <span class="dashboard-payment-info"><strong>Energia elétrica</strong><span>Casa • Recorrente</span></span>
+                <span class="dashboard-payment-status">Em 12 dias</span>
+                <strong class="dashboard-payment-amount">R$187,45</strong>
+              </li>
+            </ul>
+            <a class="dashboard-card-link " href="../Transactions/transitions.html"><span>Ver transações</span><img src="../../../images/dashboard/chevron-payments.svg" alt=""></a>
+          </section>
+
+          <section class="dashboard-card dashboard-budget" aria-labelledby="budget-title">
+            <div class="dashboard-card-heading"><h2 id="budget-title">Orçamento do mês</h2><button class="dashboard-filter dashboard-filter--month" type="button" disabled title="Período exibido no protótipo">Setembro <img src="../../../images/dashboard/chevron-filter.svg" alt=""></button></div>
+            <div class="dashboard-budget-summary"><strong>R$3.480,00</strong><p>de R$ 5.000,00 utilizados</p></div>
+            <div class="dashboard-budget-progress"><div><span>Utilizado</span><span>69,6%</span></div><meter min="0" max="5000" value="3480" aria-label="Orçamento utilizado: 69,6%">69,6%</meter></div>
+            <dl class="dashboard-budget-stats"><div><dt>Utilizado</dt><dd>R$1.520</dd></div><div><dt>Dias restantes</dt><dd>12 dias</dd></div><div><dt>Por dia</dt><dd>R$126,67</dd></div></dl>
+            <p class="dashboard-note"><img src="../../../images/dashboard/info.svg" alt=""><span>Você está dentro do orçamento planejado.</span></p>
+            <a class="dashboard-card-link dashboard-card-link--neutral" href="../Categories/categorias.html"><span>Ajustar orçamento</span><img src="../../../images/dashboard/chevron-budget.svg" alt=""></a>
+          </section>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous" defer></script>
+  <script src="../../../js/script.js" defer></script>
+  <script src="../../../js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.lucide?.createIcons();
+    });
+  </script>
+</body>
+</html>

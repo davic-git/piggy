@@ -1,0 +1,842 @@
+/* =========================================
+   FONTS
+   ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  /* =========================================================
+     BACKGROUNDS / SURFACES
+     ========================================================= */
+
+  --bg:                     #0B1420; /* Background geral da aplicação */
+  --bg-sidebar:             #0E1926; /* Background da barra lateral */
+  --bg-card-default:        #132334; /* Background padrão de cards e containers */
+  --bg-card-elevated:       #192D42; /* Background de containers internos e superfícies elevadas */
+  --bg-card-hover:          #203750; /* Background de cards e superfícies em hover */
+  --bg-card-selected:       #102747; /* Background de cards, linhas ou itens selecionados */
+  --bg-disabled:            #1E3A5F; /* Background geral de elementos desabilitados */
+
+  --bg-modal:               #132334; /* Background de modais */
+  --bg-dropdown:            #192D42; /* Background de dropdowns, popovers e menus */
+  --bg-input:               #0B1420; /* Background padrão de inputs */
+  --bg-input-disabled:      #132334; /* Background de inputs desabilitados */
+
+  --bg-overlay:             rgba(0, 0, 0, 0.65); /* Overlay atrás de modais e drawers */
+
+
+  /* =========================================================
+     TEXT COLORS
+     ========================================================= */
+
+  --text:                   #F8FAFC; /* Títulos, valores e informações prioritárias */
+  --text-secondary:         #B8C7D9; /* Descrições e informações de apoio */
+  --text-muted:             #94A3B8; /* Labels, datas, placeholders e textos auxiliares */
+  --text-disabled:          #64748B; /* Textos e controles desabilitados */
+
+  --text-on-primary:        #FFFFFF; /* Texto sobre botões ou superfícies primárias */
+
+  --text-link:              #67D6FF; /* Links e ações textuais */
+  --text-link-hover:        #A5EAFF; /* Links em hover */
+
+  --text-positive:          #4ADE80; /* Receitas, rendimentos e resultados positivos */
+  --text-negative:          #FB7185; /* Despesas e resultados negativos */
+  --text-warning:           #FBBF24; /* Alertas, atenção e prioridade */
+  --text-info:              #93C5FD; /* Informações e estados informativos */
+
+
+  /* =========================================================
+     BRAND / PRIMARY COLORS
+     ========================================================= */
+
+  --primary:                #2563EB; /* Cor principal da marca e das ações */
+  --primary-hover:          #1D4ED8; /* Cor primária em hover */
+  --primary-pressed:        #1E40AF; /* Cor primária pressionada */
+
+  --accent-blue:            #3B82F6; /* Azul de apoio para gráficos e indicadores */
+  --accent-blue-light:      #60A5FA; /* Azul claro para séries e gráficos */
+  --accent-cyan:            #67D6FF; /* Links e interações secundárias */
+
+  --success:                #4ADE80; /* Resultado positivo */
+  --success-strong:         #22C55E; /* Verde mais forte para gráficos/progresso */
+
+  --danger:                 #FB7185; /* Despesas, resultados negativos e erros leves */
+  --danger-strong:          #DC2626; /* Ações destrutivas */
+  --danger-hover:           #B91C1C; /* Ação destrutiva em hover */
+  --danger-pressed:         #991B1B; /* Ação destrutiva pressionada */
+
+  --warning:                #FBBF24; /* Alertas, favoritos e prioridade */
+  --info:                   #93C5FD; /* Informações e estados neutros informativos */
+
+
+  /* =========================================================
+     BUTTON COLORS — PRIMARY
+     ========================================================= */
+
+  --bg-btn-primary:          #2563EB; /* Background do botão primário */
+  --bg-btn-primary-hover:    #1D4ED8; /* Background do botão primário em hover */
+  --bg-btn-primary-pressed:  #1E40AF; /* Background do botão primário pressionado */
+  --bg-btn-primary-disabled: #1E3A5F; /* Background do botão primário desabilitado */
+
+  --text-btn-primary:        #FFFFFF; /* Texto do botão primário */
+  --text-btn-disabled:       #94A3B8; /* Texto de botões desabilitados */
+
+
+  /* =========================================================
+     BUTTON COLORS — SECONDARY / OUTLINED
+     ========================================================= */
+
+  --bg-btn-secondary:          transparent; /* Background padrão do botão secundário */
+  --bg-btn-secondary-hover:    #203750;     /* Background do botão secundário em hover */
+  --bg-btn-secondary-pressed:  #192D42;     /* Background do botão secundário pressionado */
+  --bg-btn-secondary-disabled: transparent; /* Background do secundário desabilitado */
+
+  --text-btn-secondary:          #F8FAFC; /* Texto do botão secundário */
+  --text-btn-secondary-hover:    #F8FAFC; /* Texto em hover */
+  --text-btn-secondary-disabled: #64748B; /* Texto desabilitado */
+
+  --border-btn-secondary:          #52677E; /* Borda padrão */
+  --border-btn-secondary-hover:    #64748B; /* Borda em hover */
+  --border-btn-secondary-pressed:  #52677E; /* Borda pressionada */
+  --border-btn-secondary-disabled: #23364A; /* Borda desabilitada */
+
+
+  /* =========================================================
+     BUTTON COLORS — GHOST
+     ========================================================= */
+
+  --bg-btn-ghost:          transparent; /* Background padrão do botão Ghost */
+  --bg-btn-ghost-hover:    #203750;     /* Background em hover */
+  --bg-btn-ghost-pressed:  #192D42;     /* Background pressionado */
+
+  --text-btn-ghost:        #B8C7D9; /* Texto/ícone padrão */
+  --text-btn-ghost-hover:  #F8FAFC; /* Texto/ícone em hover */
+
+
+  /* =========================================================
+     BUTTON COLORS — DANGER
+     ========================================================= */
+
+  --bg-btn-danger:         #DC2626; /* Background de ações destrutivas */
+  --bg-btn-danger-hover:   #B91C1C; /* Background em hover */
+  --bg-btn-danger-pressed: #991B1B; /* Background pressionado */
+
+  --text-btn-danger:       #FFFFFF; /* Texto de botão destrutivo */
+
+
+  /* =========================================================
+     BORDERS
+     ========================================================= */
+
+  --border-color-subtle:   #23364A; /* Divisores internos e separações discretas */
+  --border-color-default:  #304357; /* Borda padrão de cards e componentes */
+  --border-color-strong:   #52677E; /* Borda de destaque e botões outlined */
+  --border-color-focus:    #93C5FD; /* Borda de elementos em foco */
+  --border-color-error:    #F87171; /* Borda de campos com erro */
+
+  --border-default:        1px solid #304357; /* Borda padrão */
+  --border-subtle:         1px solid #23364A; /* Borda sutil / divisores */
+  --border-strong:         1px solid #52677E; /* Borda de destaque */
+  --border-focus:          2px solid #93C5FD; /* Borda de foco */
+  --border-error:          1px solid #F87171; /* Borda de erro */
+
+
+  /* =========================================================
+     INPUTS / FORM CONTROLS
+     ========================================================= */
+
+  --input-bg:                 #0B1420; /* Background padrão */
+  --input-bg-disabled:        #132334; /* Background quando desabilitado */
+
+  --input-text:               #F8FAFC; /* Texto digitado */
+  --input-placeholder:        #94A3B8; /* Placeholder */
+  --input-text-disabled:      #64748B; /* Texto desabilitado */
+
+  --input-border:             #304357; /* Borda padrão */
+  --input-border-hover:       #52677E; /* Borda em hover */
+  --input-border-focus:       #93C5FD; /* Borda em foco */
+  --input-border-error:       #F87171; /* Borda de erro */
+  --input-border-disabled:    #23364A; /* Borda desabilitada */
+
+  --input-label:              #B8C7D9; /* Label do campo */
+  --input-helper:             #94A3B8; /* Helper text */
+  --input-error-text:         #FB7185; /* Mensagem de erro */
+
+
+  /* =========================================================
+     TABS / FILTERS
+     ========================================================= */
+
+  --tab-bg:                 transparent; /* Background padrão */
+  --tab-bg-hover:           #192D42;     /* Background em hover */
+  --tab-bg-active:          #2563EB;     /* Background da tab ativa */
+
+  --tab-text:               #B8C7D9; /* Texto padrão */
+  --tab-text-hover:         #F8FAFC; /* Texto em hover */
+  --tab-text-active:        #FFFFFF; /* Texto ativo */
+
+  --tab-border:             #304357; /* Borda padrão */
+  --tab-border-hover:       #52677E; /* Borda em hover */
+
+
+  /* =========================================================
+     BADGES / STATUS
+     ========================================================= */
+
+  /* Success / Receita / Ativo / Concluído */
+  --status-success-bg:      #123A2D;
+  --status-success-text:    #4ADE80;
+
+  /* Danger / Despesa / Erro */
+  --status-danger-bg:       #44252D;
+  --status-danger-text:     #FB7185;
+
+  /* Warning / Pausado / Prioridade */
+  --status-warning-bg:      #44351B;
+  --status-warning-text:    #FBBF24;
+
+  /* Info / Em andamento */
+  --status-info-bg:         #18365D;
+  --status-info-text:       #93C5FD;
+
+  /* Neutral / Encerrado / Arquivado */
+  --status-neutral-bg:      #263546;
+  --status-neutral-text:    #B8C7D9;
+
+
+  /* =========================================================
+     FINANCIAL SEMANTICS
+     ========================================================= */
+
+  --finance-income:         #4ADE80; /* Receitas */
+  --finance-expense:        #FB7185; /* Despesas */
+  --finance-neutral:        #F8FAFC; /* Valores financeiros neutros */
+  --finance-balance:        #60A5FA; /* Saldo ou série financeira neutra */
+  --finance-savings:        #22C55E; /* Economia positiva */
+  --finance-projection:     #93C5FD; /* Projeções futuras */
+
+
+  /* =========================================================
+     TABLES
+     ========================================================= */
+
+  --table-bg:               #132334; /* Background da tabela */
+  --table-header-bg:        #132334; /* Background do cabeçalho */
+
+  --table-header-text:      #94A3B8; /* Texto dos títulos das colunas */
+  --table-row-text:         #B8C7D9; /* Texto padrão das linhas */
+
+  --table-row-hover:        #192D42; /* Background da linha em hover */
+  --table-row-selected:     #102747; /* Background da linha selecionada */
+
+  --table-border:           #304357; /* Borda externa / cabeçalho */
+  --table-divider:          #23364A; /* Divisor entre linhas */
+
+
+  /* =========================================================
+     CHARTS / GRAPHS
+     ========================================================= */
+
+  --chart-income:           #4ADE80; /* Receita */
+  --chart-expense:          #FB7185; /* Despesa */
+  --chart-balance:          #60A5FA; /* Saldo ou linha neutra */
+  --chart-savings:          #22C55E; /* Economia */
+  --chart-projection:       #93C5FD; /* Projeção */
+
+  --chart-area-line:        #60A5FA; /* Linha do gráfico de área */
+  --chart-area-fill:        rgba(37, 99, 235, 0.20); /* Preenchimento do gráfico de área */
+
+  --chart-axis-text:        #94A3B8; /* Texto dos eixos */
+  --chart-grid:             #304357; /* Linhas da grade */
+
+  --chart-tooltip-bg:       #192D42; /* Background do tooltip */
+  --chart-tooltip-border:   #52677E; /* Borda do tooltip */
+  --chart-tooltip-text:     #F8FAFC; /* Texto do tooltip */
+
+
+  /* =========================================================
+     CATEGORY COLORS
+     Mantém a mesma categoria com a mesma cor em todo o sistema
+     ========================================================= */
+
+  --category-blue:          #3B82F6;
+  --category-green:         #22C55E;
+  --category-yellow:        #F59E0B;
+  --category-purple:        #A78BFA;
+  --category-cyan:          #22D3EE;
+  --category-red:           #FB7185;
+
+  /* Aliases para compatibilidade com nomes antigos */
+  --cat-blue:               var(--category-blue);
+  --cat-green:              var(--category-green);
+  --cat-yellow:             var(--category-yellow);
+  --cat-purple:             var(--category-purple);
+  --cat-teal:               var(--category-cyan);
+  --cat-grey:               #94A3B8;
+
+
+  /* =========================================================
+     PROGRESS BARS / PROGRESS RINGS
+     ========================================================= */
+
+  --progress-track:         #334155; /* Trilho de barras e círculos */
+
+  --progress-default:       #3B82F6; /* Progresso padrão */
+  --progress-success:       #22C55E; /* Progresso positivo/concluído */
+  --progress-warning:       #FBBF24; /* Progresso que exige atenção */
+  --progress-danger:        #FB7185; /* Progresso em estado crítico */
+
+  --progress-text:          #F8FAFC; /* Texto dentro de progress rings */
+
+
+  /* =========================================================
+     FAVORITES / PRIORITY
+     ========================================================= */
+
+  --favorite-bg:            transparent; /* Background da estrela inativa */
+  --favorite-bg-active:     #44351B;     /* Background da estrela ativa */
+
+  --favorite-icon:          #FBBF24; /* Cor da estrela */
+  --favorite-icon-active:   #FBBF24; /* Cor da estrela preenchida */
+
+  --priority-bg:            #44351B; /* Background de badge prioritário */
+  --priority-text:          #FBBF24; /* Texto de prioridade */
+
+
+  /* =========================================================
+     LINKS
+     ========================================================= */
+
+  --link:                   #67D6FF; /* Link padrão */
+  --link-hover:             #A5EAFF; /* Link em hover */
+
+
+  /* =========================================================
+     DROPDOWNS / POPOVERS / MENUS
+     ========================================================= */
+
+  --dropdown-bg:            #192D42; /* Background do dropdown */
+  --dropdown-border:        #304357; /* Borda do dropdown */
+
+  --dropdown-item-bg:       transparent;
+  --dropdown-item-text:     #B8C7D9;
+
+  --dropdown-item-hover-bg:   #203750;
+  --dropdown-item-hover-text: #F8FAFC;
+
+  --dropdown-item-active-bg:   #102747;
+  --dropdown-item-active-text: #93C5FD;
+
+  --dropdown-item-danger-text: #FB7185;
+
+
+  /* =========================================================
+     MODALS
+     ========================================================= */
+
+  --modal-bg:               #132334; /* Background do modal */
+  --modal-border:           #304357; /* Borda do modal */
+  --modal-overlay:          rgba(0, 0, 0, 0.65); /* Fundo atrás do modal */
+
+
+  /* =========================================================
+     FEEDBACK / ALERTS / TOASTS
+     ========================================================= */
+
+  /* Success */
+  --alert-success-bg:       #123A2D;
+  --alert-success-border:   #166534;
+  --alert-success-icon:     #4ADE80;
+
+  /* Error */
+  --alert-error-bg:         #44252D;
+  --alert-error-border:     #9F3145;
+  --alert-error-icon:       #FB7185;
+
+  /* Warning */
+  --alert-warning-bg:       #44351B;
+  --alert-warning-border:   #926B1D;
+  --alert-warning-icon:     #FBBF24;
+
+  /* Info */
+  --alert-info-bg:          #18365D;
+  --alert-info-border:      #315F9F;
+  --alert-info-icon:        #93C5FD;
+
+  /* Texto comum de mensagens */
+  --alert-text:             #F8FAFC;
+
+
+  /* =========================================================
+     ICON COLORS
+     ========================================================= */
+
+  --icon-primary:           #F8FAFC; /* Ícones principais */
+  --icon-secondary:         #B8C7D9; /* Ícones secundários */
+  --icon-muted:             #94A3B8; /* Ícones de menor prioridade */
+  --icon-disabled:          #64748B; /* Ícones desabilitados */
+
+  --icon-positive:          #4ADE80; /* Ícones positivos */
+  --icon-negative:          #FB7185; /* Ícones negativos */
+  --icon-warning:           #FBBF24; /* Ícones de atenção */
+  --icon-info:              #93C5FD; /* Ícones informativos */
+
+
+  /* =========================================================
+     NAVIGATION / SIDEBAR
+     ========================================================= */
+
+  --nav-bg:                 transparent; /* Item normal */
+  --nav-bg-hover:           #192D42;     /* Item em hover */
+  --nav-bg-active:          #2563EB;     /* Item ativo */
+
+  --nav-text:               #B8C7D9; /* Texto normal */
+  --nav-text-hover:         #F8FAFC; /* Texto em hover */
+  --nav-text-active:        #FFFFFF; /* Texto ativo */
+  --nav-text-disabled:      #64748B; /* Texto desabilitado */
+
+  --nav-icon:               #B8C7D9;
+  --nav-icon-hover:         #F8FAFC;
+  --nav-icon-active:        #FFFFFF;
+  --nav-icon-disabled:      #64748B;
+
+  --nav-section-label:      #94A3B8; /* VISÃO GERAL, FINANÇAS, etc. */
+
+
+  /* =========================================================
+     FOCUS / ACCESSIBILITY
+     ========================================================= */
+
+  --focus-color:            #93C5FD; /* Cor principal do foco */
+  --focus-ring:             rgba(147, 197, 253, 0.25); /* Halo externo de foco */
+
+
+  /* =========================================================
+     BASE COLORS
+     Use somente quando uma cor semântica não fizer sentido
+     ========================================================= */
+
+  --white:                  #FFFFFF;
+  --black:                  #000000;
+
+
+  /* =========================================================
+     FONTS
+     NÃO ALTERAR
+     ========================================================= */
+
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
+.page {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+
+  font-family: var(--font-body);
+
+  background-color: var(--bg);
+}
+
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+.sidebar {
+  max-width: 280px;
+  width: 280px;
+  min-width: 88px;
+
+  padding: 24px 20px;
+  gap: 24px;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--bg-sidebar);
+}
+
+/* -- SIDEBAR HEADER -- */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+
+  width: 100%;
+  height: 48px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.collapse-btn {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* -- SIDEBAR NAVIGATION -- */
+.sidebar-navigation {
+  width: 100%;
+  height: 100%;
+
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* -- SIDEBAR NAVIGATION GROUPS -- */
+.overview-group,
+.finance-group,
+.planning-group {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: auto;
+
+  gap: 8px;
+
+  padding: 0 12px;
+}
+
+/* -- SIDEBAR NAVIGATION GROUP LABELS -- */
+.sidebar-group_name {
+  width: 100%;
+  height: auto;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1rem;
+
+  color: var(--nav-section-label);
+}
+
+/* -- SIDEBAR NAVIGATION ITEMS -- */
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  width: 100%;
+  height: auto;
+
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-items li {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 48px;
+
+  padding: 0;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.sidebar-items li:hover {
+  background-color: var(--nav-bg-hover);
+}
+
+.sidebar-items li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  border-radius: inherit;
+  color: var(--nav-text);
+  text-decoration: none;
+}
+
+.sidebar-items li a:hover {
+  color: var(--nav-text-hover);
+}
+
+.sidebar-items li a:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.sidebar-icon_container {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  padding: 0;
+  margin: 0;
+
+}
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--nav-icon);
+}
+
+.active {
+  background-color: var(--nav-bg-active);
+}
+
+/* -- SIDEBAR FOOTER -- */
+.sidebar-footer {
+  width: 100%;
+  height: auto;
+  gap: 4px;
+
+  padding: 0 8px;
+}
+
+/* -- SIDEBAR FOOTER PROFILE -- */
+.profile {
+  width: 100%;
+  height: 64px;
+
+  gap: 12px;
+  padding: 0 8px;
+
+  display: flex;
+
+  background-color: transparent;
+  border: none;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+
+  gap: 2px;
+
+  width: 100%;
+  height: auto;
+
+  padding: 0;
+  margin: 0;
+
+  color: var(--text);
+}
+
+.profile-user {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.profile-email {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+
+
+/* =========================================
+   MAIN CONTENT AREA
+   ========================================= */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* -- HEADER -- */
+.header {
+  display: flex;
+  width: 100%;
+  height: 84px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: auto;
+
+  padding: 0 32px;
+}
+
+/* -- HEADER TITLE -- */
+.header-title {
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  gap: 2px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--text);
+
+  font-family: var(--font-display);
+}
+
+.page-title-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--text-secondary);
+
+  font-family: var(--font-display);
+}
+
+/* -- HEADER ACTIONS -- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0 5px;
+
+  width: auto;
+  height: 48px;
+}
+
+.header-btn {
+  width: auto;
+  height: 40px;
+  gap: 2px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+
+  border-radius: 12px;
+
+  background-color: var(--bg-btn-primary);
+}
+
+.header-btn:hover {
+  background-color: var(--bg-btn-primary-hover);
+}
+
+.header-btn:active {
+  background-color: var(--bg-btn-primary-pressed);
+}
+
+.header-btn-icon-container {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+}
+
+.header-action-icon {
+  width: 20px;
+  height: 20px;
+
+  color: var(--icon-primary);
+}
+
+.search,
+.notifications,
+.language {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background-color: var(--bg-btn-secondary);
+  border: 1px solid var(--border-btn-secondary);
+}
+
+.search:hover,
+.notifications:hover,
+.language:hover {
+  background-color: var(--bg-btn-secondary-hover);
+  border: 1px solid var(--border-btn-secondary-hover);
+
+}
+
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+.main {
+  padding: 32px;
+  margin: 0;
+
+  gap: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 1488px;
+  height: auto;
+  
+  padding: 0;
+  margin: 0;
+
+  gap: 16px;
+}

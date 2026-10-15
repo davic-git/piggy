@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="154" height="154" viewBox="0 0 154 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="stroke0_0_13" maskUnits="userSpaceOnUse" x="0" y="0" width="154" height="154" fill="black">
+<rect fill="white" width="154" height="154"/>
+<path d="M153 77C153 118.974 118.974 153 77 153C35.0264 153 1 118.974 1 77C1 35.0264 35.0264 1 77 1C118.974 1 153 35.0264 153 77ZM8.6 77C8.6 114.776 39.2237 145.4 77 145.4C114.776 145.4 145.4 114.776 145.4 77C145.4 39.2237 114.776 8.6 77 8.6C39.2237 8.6 8.6 39.2237 8.6 77Z"/>
+</mask>
+<path id="Progress Track" d="M153 77C153 118.974 118.974 153 77 153C35.0264 153 1 118.974 1 77C1 35.0264 35.0264 1 77 1C118.974 1 153 35.0264 153 77ZM8.6 77C8.6 114.776 39.2237 145.4 77 145.4C114.776 145.4 145.4 114.776 145.4 77C145.4 39.2237 114.776 8.6 77 8.6C39.2237 8.6 8.6 39.2237 8.6 77Z" stroke-width="2" stroke="#304357" mask="url(#stroke0_0_13)"/>
+</svg>

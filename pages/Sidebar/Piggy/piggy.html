@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Meus cofrinhos | Piggy</title>
+  
+  <meta name="description" content="Acompanhe seus cofrinhos, valores guardados e rendimentos no Piggy.">
+  
+  <meta name="theme-color" content="#07121f">
+  
+  <meta property="og:title" content="Meus cofrinhos | Piggy">
+  
+  <meta property="og:description" content="Acompanhe seus cofrinhos, valores guardados e rendimentos no Piggy.">
+  
+  <meta property="og:type" content="website">
+
+  <!-- LINKS -->
+
+  <link rel="stylesheet" href="../../../global.css">
+
+  <link rel="stylesheet" href="piggy.css">
+
+  <link rel="icon" href="../../../PIGGY-logo.png" type="image/png">
+</head>
+
+<body class="page page--piggy">
+
+  <!--- SIDEBAR -->
+  <aside class="sidebar">
+
+    <header class="sidebar-header">
+      
+      <a href="" class="logo">
+        <img src="" alt="">
+      </a>
+
+      <button class="collapse-btn"><i data-lucide="chevron-left" class="sidebar-icon"></i></button>
+
+    </header>
+
+    <nav class="sidebar-navigation">
+      
+      <div class="overview-group">
+
+        <h2 class="sidebar-group_name">VISÃO GERAL</h2>
+      
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Dashboard/index.html">
+              <span class="sidebar-icon_container"><i data-lucide="home" class="sidebar-icon"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Analyses/analyses.html">
+              <span class="sidebar-icon_container"><i data-lucide="bar-chart-2" class="sidebar-icon"></i></span>
+              <span>Análises</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="finance-group">
+
+        <h2 class="sidebar-group_name">FINANÇAS</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Transactions/transitions.html">
+              <span class="sidebar-icon_container"><i data-lucide="credit-card" class="sidebar-icon"></i></span>
+              <span>Transações</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Invoices/invoices.html">
+              <span class="sidebar-icon_container"><i data-lucide="file-text" class="sidebar-icon"></i></span>
+              <span>Faturas</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Categories/categorias.html">
+              <span class="sidebar-icon_container"><i data-lucide="pie-chart" class="sidebar-icon"></i></span>
+              <span>Categorias</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Recurrent/recurrent.html">
+              <span class="sidebar-icon_container"><i data-lucide="repeat" class="sidebar-icon"></i></span>
+              <span>Recorrentes</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="planning-group">
+        
+        <h2 class="sidebar-group_name">PLANEJAMENTO</h2>
+
+        <ul class="sidebar-items">
+          <li class="active">
+            <a href="../Piggy/piggy.html" aria-current="page">
+              <span class="sidebar-icon_container"><i data-lucide="piggy-bank" class="sidebar-icon"></i></span>
+              <span>Piggy</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Goals/goals.html">
+              <span class="sidebar-icon_container"><i data-lucide="target" class="sidebar-icon"></i></span>
+              <span>Metas</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <footer class="sidebar-footer">
+      <ul class="sidebar-items">
+        <li>
+          <a href="../Settings/settings.html">
+            <span class="sidebar-icon_container"><i data-lucide="settings" class="sidebar-icon"></i></span>
+            <span>Configurações</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="../Help/help.html">
+            <span class="sidebar-icon_container"><i data-lucide="help-circle" class="sidebar-icon"></i></span>
+            <span>Ajuda</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="profile">
+        <img src="../../../images/sidebar/avatar.jpg" alt="Avatar" class="avatar">
+
+        <div class="profile-info">
+        
+            <p class="profile-user">Davi</p>
+            <p class="profile-email">davi@example.com</p>
+
+        </div>
+      </button>
+    </footer>
+
+  </aside>
+
+  <div class="content-area">
+
+    <header class="header">
+
+      <div class="header-title">
+        
+        <h1 class="page-title">Piggy</h1>
+        <p class="page-title-description">Entenda melhor seus hábitos financeiros</p>
+
+      </div>
+
+      <div class="header-actions">
+
+        <button class="ui-button piggy-create" type="button" disabled title="Criação de cofrinhos ainda não disponível">
+          <span class="header-btn-icon-container">
+            <i data-lucide="plus" class="header-action-icon"></i>
+          </span>
+          Criar piggy
+        </button>
+        
+        <button class="search">
+          <i data-lucide="search" class="header-action-icon"></i>
+        </button>
+        
+        <button class="notifications">
+          <i data-lucide="bell" class="header-action-icon"></i>
+        </button>
+
+        <button class="language">
+          <i data-lucide="globe" class="header-action-icon"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+    <main class="main">
+
+      <!-- Prévia estática do frame Piggy / Desktop, conteúdo 633:2745. -->
+      <div class="content content--piggy">
+        <section class="ui-card piggy-hero" aria-labelledby="piggy-welcome">
+          <div class="piggy-hero-copy"><h2 id="piggy-welcome">Parabéns, Davi!</h2><p>Você já guardou R$ 18.823,75 em 4 Piggys.<br>Neste mês, seu dinheiro rendeu R$ 327,40.</p></div>
+          <div class="piggy-hero-visual"><img src="../../../images/piggy/hero-mascot.png" alt="" class="piggy-hero-mascot"><button class="ui-button ui-button--icon piggy-edit" type="button" disabled aria-label="Editar apresentação" title="Edição ainda não disponível"><img src="../../../images/piggy/edit.svg" alt=""></button></div>
+        </section>
+
+        <section class="piggy-summary" aria-label="Resumo dos cofrinhos">
+          <article class="ui-card piggy-kpi"><h2>Rendimento hoje</h2><strong>R$ 10,89</strong><p>+0,06% hoje</p></article>
+          <article class="ui-card piggy-kpi"><h2>Total Guardado</h2><strong>R$2.980,90</strong><p>Em todos os Piggys</p></article>
+          <article class="ui-card piggy-kpi"><h2>Rendimento acumulado</h2><strong>R$ 10,89</strong><p>+14,32% desde o início</p></article>
+          <article class="ui-card piggy-kpi piggy-kpi--active"><span class="piggy-kpi-icon piggy-icon-flipped"><img src="../../../images/piggy/piggy-outline.svg" alt=""></span><div><h2>Porquinhos ativos</h2><strong>4</strong><p>3 internacionais • 1 em reais</p></div></article>
+        </section>
+
+        <section class="piggy-accounts" aria-labelledby="piggy-accounts-title">
+          <input class="ui-sr-only piggy-filter-input" type="radio" name="piggy-filter" id="piggy-all" checked>
+          <input class="ui-sr-only piggy-filter-input" type="radio" name="piggy-filter" id="piggy-brl">
+          <input class="ui-sr-only piggy-filter-input" type="radio" name="piggy-filter" id="piggy-international">
+          <div class="piggy-section-heading">
+            <div><h2 id="piggy-accounts-title">Meus Piggys</h2><p>Acompanhe seus cofrinhos e rendimentos.</p></div>
+            <div class="piggy-filters" role="group" aria-label="Filtrar cofrinhos">
+              <label class="ui-button ui-button--compact" for="piggy-all">Todos <span class="ui-count">4</span></label>
+              <label class="ui-button ui-button--compact" for="piggy-brl">Em reais <span class="ui-count">1</span></label>
+              <label class="ui-button ui-button--compact" for="piggy-international">Internacionais <span class="ui-count">3</span></label>
+            </div>
+          </div>
+          <div class="piggy-accounts-track" tabindex="0" role="region" aria-label="Cofrinhos; use as setas para navegar horizontalmente">
+            <article class="ui-card piggy-account" data-currency="BRL" aria-label="Cofrinho em Real (BRL)">
+              <div class="piggy-account-header">
+                <span class="ui-chip"><img src="../../../images/piggy/flag-br.png" alt="" class="piggy-currency-flag"><span>Real (BRL)</span></span>
+                <button class="ui-button ui-button--icon piggy-more" type="button" disabled aria-label="Opções do cofrinho Real (BRL)" title="Opções ainda não disponíveis"><img src="../../../images/piggy/more.svg" alt=""></button>
+              </div>
+              <div class="piggy-account-art" aria-hidden="true"><span class="piggy-wordmark">PI<span class="piggy-wordmark-gap"></span>Y</span><img src="../../../images/piggy/piggy-solid.svg" alt="" class="piggy-wordmark-icon"></div>
+              <div class="piggy-account-balance"><h3>Piggy</h3><strong>R$ 3.670,90</strong></div>
+              <div class="piggy-account-yield"><span>Rendimento total</span><strong>R$ 467,20 (14,90%)</strong></div>
+              <div class="piggy-account-today"><span>Rendimento do dia</span><strong>+ R$ 5,50</strong></div>
+              <div class="piggy-account-actions"><button class="ui-button" type="button" disabled title="Depósitos ainda não conectados">Guardar</button><button class="ui-button ui-button--outline" type="button" disabled title="Retiradas ainda não conectadas">Retirar</button></div>
+            </article>
+            <article class="ui-card piggy-account" data-currency="USD" aria-label="Cofrinho em Dólar (USD)">
+              <div class="piggy-account-header">
+                <span class="ui-chip"><img src="../../../images/piggy/flag-us.png" alt="" class="piggy-currency-flag"><span>Dólar (USD)</span></span>
+                <button class="ui-button ui-button--icon piggy-more" type="button" disabled aria-label="Opções do cofrinho Dólar (USD)" title="Opções ainda não disponíveis"><img src="../../../images/piggy/more.svg" alt=""></button>
+              </div>
+              <div class="piggy-account-art" aria-hidden="true"><span class="piggy-currency-mascot piggy-currency-mascot--us"><img src="../../../images/piggy/mascot-us.png" alt=""></span></div>
+              <div class="piggy-account-balance"><h3>Piggy</h3><strong>R$ 3.670,90</strong></div>
+              <div class="piggy-account-yield"><span>Rendimento total</span><strong>R$ 467,20 (14,90%)</strong></div>
+              <div class="piggy-account-today"><span>Rendimento do dia</span><strong>+ R$ 5,50</strong></div>
+              <div class="piggy-account-actions"><button class="ui-button" type="button" disabled title="Depósitos ainda não conectados">Guardar</button><button class="ui-button ui-button--outline" type="button" disabled title="Retiradas ainda não conectadas">Retirar</button></div>
+            </article>
+            <article class="ui-card piggy-account" data-currency="UYU" aria-label="Cofrinho em Peso Uruguaio (UYU)">
+              <div class="piggy-account-header">
+                <span class="ui-chip"><img src="../../../images/piggy/flag-uy.png" alt="" class="piggy-currency-flag"><span>Peso Uruguaio (UYU)</span></span>
+                <button class="ui-button ui-button--icon piggy-more" type="button" disabled aria-label="Opções do cofrinho Peso Uruguaio (UYU)" title="Opções ainda não disponíveis"><img src="../../../images/piggy/more.svg" alt=""></button>
+              </div>
+              <div class="piggy-account-art" aria-hidden="true"><span class="piggy-currency-mascot piggy-currency-mascot--uy"><img src="../../../images/piggy/mascot-uy.png" alt=""></span></div>
+              <div class="piggy-account-balance"><h3>Piggy</h3><strong>R$ 3.670,90</strong></div>
+              <div class="piggy-account-yield"><span>Rendimento total</span><strong>R$ 467,20 (14,90%)</strong></div>
+              <div class="piggy-account-today"><span>Rendimento do dia</span><strong>+ R$ 5,50</strong></div>
+              <div class="piggy-account-actions"><button class="ui-button" type="button" disabled title="Depósitos ainda não conectados">Guardar</button><button class="ui-button ui-button--outline" type="button" disabled title="Retiradas ainda não conectadas">Retirar</button></div>
+            </article>
+            <article class="ui-card piggy-account" data-currency="EUR" aria-label="Cofrinho em Euro (EUR)">
+              <div class="piggy-account-header">
+                <span class="ui-chip"><img src="../../../images/piggy/flag-eu.png" alt="" class="piggy-currency-flag"><span>Euro (EUR)</span></span>
+                <button class="ui-button ui-button--icon piggy-more" type="button" disabled aria-label="Opções do cofrinho Euro (EUR)" title="Opções ainda não disponíveis"><img src="../../../images/piggy/more.svg" alt=""></button>
+              </div>
+              <div class="piggy-account-art" aria-hidden="true"><span class="piggy-currency-mascot piggy-currency-mascot--eu"><img src="../../../images/piggy/mascot-eu.png" alt=""><img src="../../../images/piggy/mascot-eu.png" alt=""></span></div>
+              <div class="piggy-account-balance"><h3>Piggy</h3><strong>R$ 3.670,90</strong></div>
+              <div class="piggy-account-yield"><span>Rendimento total</span><strong>R$ 467,20 (14,90%)</strong></div>
+              <div class="piggy-account-today"><span>Rendimento do dia</span><strong>+ R$ 5,50</strong></div>
+              <div class="piggy-account-actions"><button class="ui-button" type="button" disabled title="Depósitos ainda não conectados">Guardar</button><button class="ui-button ui-button--outline" type="button" disabled title="Retiradas ainda não conectadas">Retirar</button></div>
+            </article>
+            <article class="ui-card piggy-account" data-currency="EUR" aria-label="Cofrinho em Euro (EUR)">
+              <div class="piggy-account-header">
+                <span class="ui-chip"><img src="../../../images/piggy/flag-eu.png" alt="" class="piggy-currency-flag"><span>Euro (EUR)</span></span>
+                <button class="ui-button ui-button--icon piggy-more" type="button" disabled aria-label="Opções do cofrinho Euro (EUR)" title="Opções ainda não disponíveis"><img src="../../../images/piggy/more.svg" alt=""></button>
+              </div>
+              <div class="piggy-account-art" aria-hidden="true"><span class="piggy-currency-mascot piggy-currency-mascot--eu"><img src="../../../images/piggy/mascot-eu.png" alt=""><img src="../../../images/piggy/mascot-eu.png" alt=""></span></div>
+              <div class="piggy-account-balance"><h3>Piggy</h3><strong>R$ 3.670,90</strong></div>
+              <div class="piggy-account-yield"><span>Rendimento total</span><strong>R$ 467,20 (14,90%)</strong></div>
+              <div class="piggy-account-today"><span>Rendimento do dia</span><strong>+ R$ 5,50</strong></div>
+              <div class="piggy-account-actions"><button class="ui-button" type="button" disabled title="Depósitos ainda não conectados">Guardar</button><button class="ui-button ui-button--outline" type="button" disabled title="Retiradas ainda não conectadas">Retirar</button></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="piggy-explore" aria-labelledby="piggy-explore-title">
+          <h2 id="piggy-explore-title">Explore o Piggy</h2>
+          <div class="piggy-explore-grid">
+            <article class="ui-card piggy-explore-card">
+              <span class="piggy-explore-icon piggy-icon-flipped"><img src="../../../images/piggy/piggy-explore.svg" alt=""></span>
+              <div class="piggy-explore-copy"><h3>Crie seu próprio Piggy</h3><p>Organize seu dinheiro em um novo cofrinho, defina uma meta e acompanhe seu progresso.</p></div>
+              <button class="ui-button ui-button--icon piggy-explore-arrow" type="button" disabled aria-label="Crie seu próprio Piggy" title="Criação de cofrinhos ainda não disponível"><img src="../../../images/piggy/arrow.svg" alt=""></button>
+            </article>
+            <article class="ui-card piggy-explore-card">
+              <span class="piggy-explore-icon"><img src="../../../images/piggy/globe.svg" alt=""></span>
+              <div class="piggy-explore-copy"><h3>Piggys internacionais</h3><p>Guarde dinheiro em moedas estrangeiras e acompanhe o valor convertido em reais.</p></div>
+              <a class="ui-button ui-button--icon piggy-explore-arrow" href="#piggy-international" aria-label="Ver Piggys internacionais"><img src="../../../images/piggy/arrow.svg" alt=""></a>
+            </article>
+            <article class="ui-card piggy-explore-card">
+              <span class="piggy-explore-icon"><img src="../../../images/piggy/globe.svg" alt=""></span>
+              <div class="piggy-explore-copy"><h3>Piggys internacionais</h3><p>Guarde dinheiro em moedas estrangeiras e acompanhe o valor convertido em reais.</p></div>
+              <a class="ui-button ui-button--icon piggy-explore-arrow" href="#piggy-international" aria-label="Ver Piggys internacionais"><img src="../../../images/piggy/arrow.svg" alt=""></a>
+            </article>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous" defer></script>
+  <script src="../../../js/script.js" defer></script>
+  <script src="../../../js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.lucide?.createIcons();
+      document.querySelectorAll('.piggy-explore-arrow[href]').forEach((link) => {
+        link.addEventListener('click', () => {
+          document.getElementById('piggy-international').checked = true;
+          document.querySelector('.piggy-accounts-track').scrollLeft = 0;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

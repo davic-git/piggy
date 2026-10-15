@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Metas financeiras | Piggy</title>
+  
+  <meta name="description" content="Acompanhe suas metas, valores guardados, prazos e progresso no Piggy.">
+  
+  <meta name="theme-color" content="#07121f">
+  
+  <meta property="og:title" content="Metas financeiras | Piggy">
+  
+  <meta property="og:description" content="Acompanhe suas metas, valores guardados, prazos e progresso no Piggy.">
+  
+  <meta property="og:type" content="website">
+
+  <!-- LINKS -->
+
+  <link rel="stylesheet" href="../../../global.css">
+
+  <link rel="stylesheet" href="goals.css">
+
+  <link rel="icon" href="../../../PIGGY-logo.png" type="image/png">
+</head>
+
+<body class="page page--goals">
+
+  <!--- SIDEBAR -->
+  <aside class="sidebar">
+
+    <header class="sidebar-header">
+      
+      <a href="" class="logo">
+        <img src="" alt="">
+      </a>
+
+      <button class="collapse-btn"><i data-lucide="chevron-left" class="sidebar-icon"></i></button>
+
+    </header>
+
+    <nav class="sidebar-navigation">
+      
+      <div class="overview-group">
+
+        <h2 class="sidebar-group_name">VISÃO GERAL</h2>
+      
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Dashboard/index.html">
+              <span class="sidebar-icon_container"><i data-lucide="home" class="sidebar-icon"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Analyses/analyses.html">
+              <span class="sidebar-icon_container"><i data-lucide="bar-chart-2" class="sidebar-icon"></i></span>
+              <span>Análises</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="finance-group">
+
+        <h2 class="sidebar-group_name">FINANÇAS</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Transactions/transitions.html">
+              <span class="sidebar-icon_container"><i data-lucide="credit-card" class="sidebar-icon"></i></span>
+              <span>Transações</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Invoices/invoices.html">
+              <span class="sidebar-icon_container"><i data-lucide="file-text" class="sidebar-icon"></i></span>
+              <span>Faturas</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Categories/categorias.html">
+              <span class="sidebar-icon_container"><i data-lucide="pie-chart" class="sidebar-icon"></i></span>
+              <span>Categorias</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Recurrent/recurrent.html">
+              <span class="sidebar-icon_container"><i data-lucide="repeat" class="sidebar-icon"></i></span>
+              <span>Recorrentes</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="planning-group">
+        
+        <h2 class="sidebar-group_name">PLANEJAMENTO</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Piggy/piggy.html">
+              <span class="sidebar-icon_container"><i data-lucide="piggy-bank" class="sidebar-icon"></i></span>
+              <span>Piggy</span>
+            </a>
+          </li>
+          
+          <li class="active">
+            <a href="../Goals/goals.html" aria-current="page">
+              <span class="sidebar-icon_container"><i data-lucide="target" class="sidebar-icon"></i></span>
+              <span>Metas</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <footer class="sidebar-footer">
+      <ul class="sidebar-items">
+        <li>
+          <a href="../Settings/settings.html">
+            <span class="sidebar-icon_container"><i data-lucide="settings" class="sidebar-icon"></i></span>
+            <span>Configurações</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="../Help/help.html">
+            <span class="sidebar-icon_container"><i data-lucide="help-circle" class="sidebar-icon"></i></span>
+            <span>Ajuda</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="profile">
+        <img src="../../../images/sidebar/avatar.jpg" alt="Avatar" class="avatar">
+
+        <div class="profile-info">
+        
+            <p class="profile-user">Davi</p>
+            <p class="profile-email">davi@example.com</p>
+
+        </div>
+      </button>
+    </footer>
+
+  </aside>
+
+  <div class="content-area">
+
+    <header class="header">
+
+      <div class="header-title">
+        
+        <h1 class="page-title">Metas</h1>
+        <p class="page-title-description">Acompanhe seus objetivos, priorize o que importa e evolua com consistência.</p>
+
+      </div>
+
+      <div class="header-actions">
+
+        <button type="button" class="ui-button goals-header-action" disabled title="Disponível quando a gestão de metas estiver conectada">Criar meta</button>
+        <button type="button" class="ui-button goals-header-action" disabled title="Disponível quando a gestão de metas estiver conectada">Modelos</button>
+        
+        <button class="search">
+          <i data-lucide="search" class="header-action-icon"></i>
+        </button>
+        
+        <button class="notifications">
+          <i data-lucide="bell" class="header-action-icon"></i>
+        </button>
+
+        <button class="language">
+          <i data-lucide="globe" class="header-action-icon"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+    <main class="main">
+      <!-- Conteúdo visual do frame Metas / Desktop (633:2851). Valores do protótipo. -->
+      <div class="content content--goals">
+        <section class="goals-summary" aria-label="Resumo das metas">
+          <article class="ui-card goals-kpi goals-kpi--positive"><h2>Total guardado em metas</h2><strong>R$ 80.499,78</strong><p>Soma de todas as metas ativas</p></article>
+          <article class="ui-card goals-kpi"><h2>Metas ativas</h2><strong>3</strong><p>2 em andamento • 1 quase concluída</p></article>
+          <article class="ui-card goals-kpi"><h2>Favoritas</h2><strong>1</strong><p>Sua meta priorizada aparece em destaque</p></article>
+          <article class="ui-card goals-kpi"><h2>Aporte sugerido / mês</h2><strong>R$ 1.420,00</strong><p>Para manter suas metas no ritmo ideal</p></article>
+        </section>
+
+        <div class="goals-feature-row">
+          <section class="ui-card ui-card--borderless goals-featured" aria-labelledby="featured-goal-title">
+            <header class="goals-featured-heading"><h2>Metas em destaque</h2><span class="ui-chip ui-chip--status"><img src="../../../images/goals/star-badge.svg" alt="">Prioritária</span></header>
+            <div class="goals-featured-body">
+              <div class="goals-featured-copy">
+                <div><h3 id="featured-goal-title">Carro novo</h3><p>Sua meta principal para 2027. Continue nesse ritmo para antecipar sua conquista.</p></div>
+                <dl class="goals-featured-stats"><div><dt>Atual</dt><dd>R$22.500,00</dd></div><div><dt>Faltam</dt><dd>R$82.500,00</dd></div><div><dt>Meta</dt><dd>R$105.000,00</dd></div></dl>
+                <p class="goals-featured-tip"><img src="../../../images/dashboard/info.svg" alt="">Aporte sugerido: R$ 1.375,00/mês</p>
+              </div>
+              <div class="goal-progress-column">
+                <div class="goal-progress goal-progress--featured" role="img" aria-label="Meta Carro novo: 21% concluído">
+                  <span class="goals-car-mascot"><img src="../../../images/dashboard/goal-car.png" alt=""></span><strong class="goals-featured-percent">21%</strong>
+                  <img src="../../../images/goals/featured-arc.svg" alt="" class="goal-progress-arc"><img src="../../../images/goals/featured-track.svg" alt="" class="goal-progress-track">
+                </div>
+                <div class="goal-forecast"><p>Previsão de conclusão: Ago/2027</p><small>Último aporte: há 5 dias</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="ui-card ui-card--borderless goals-planner" aria-labelledby="goals-planner-title">
+            <div class="goals-planner-top">
+              <div class="goals-planner-copy"><div><h2 id="goals-planner-title">Planeje sua próxima meta</h2><p>Crie metas, priorize com estrela e acompanhe sua evolução.</p></div><button type="button" class="ui-button goals-create" disabled title="Disponível quando a gestão de metas estiver conectada">Criar meta</button></div>
+              <img src="../../../images/goals/planner.png" alt="" class="goals-planner-mascot">
+            </div>
+            <div class="goals-shortcuts">
+              <button type="button" class="goals-shortcut" data-shortcut="favorites"><span class="goals-shortcut-icons"><span><img src="../../../images/goals/star-small.svg" alt=""></span><span><img src="../../../images/goals/arrow-small.svg" alt=""></span></span><strong>Favoritas</strong><small>2 metas priorizadas</small></button>
+              <button type="button" class="goals-shortcut" data-shortcut="completed"><span class="goals-shortcut-icons"><span><img src="../../../images/goals/trophy.svg" alt=""></span><span><img src="../../../images/goals/arrow-small.svg" alt=""></span></span><strong>Concluídas</strong><small>8 metas alcançadas</small></button>
+            </div>
+          </section>
+        </div>
+
+        <section class="goals-controls" aria-label="Filtrar e ordenar metas">
+          <div class="goals-filters" role="group" aria-label="Situação"><button type="button" class="ui-button ui-button--compact" data-filter="all" aria-pressed="true">Todas<span class="ui-count">3</span></button><button type="button" class="ui-button ui-button--compact ui-button--outline" data-filter="all" aria-pressed="false">Todas<span class="ui-count">3</span></button><button type="button" class="ui-button ui-button--compact ui-button--outline" data-filter="active" aria-pressed="false">Em andamento<span class="ui-count">3</span></button><button type="button" class="ui-button ui-button--compact ui-button--outline" data-filter="completed" aria-pressed="false">Concluídas<span class="ui-count">3</span></button><button type="button" class="ui-button ui-button--compact ui-button--outline" data-filter="archived" aria-pressed="false">Arquivadas<span class="ui-count">3</span></button></div>
+          <div class="goals-search-sort"><label class="ui-search"><img src="../../../images/goals/search.svg" alt=""><input type="search" id="goals-search" aria-label="Buscar meta" placeholder="Buscar meta..."></label><div class="goals-sorts" role="group" aria-label="Ordenação"><button type="button" class="ui-button ui-button--outline" data-sort="deadline" aria-pressed="false">Mais próximas</button><button type="button" class="ui-button ui-button--outline" data-sort="progress-desc" aria-pressed="false">Maior progresso</button><button type="button" class="ui-button ui-button--outline" data-sort="progress-asc" aria-pressed="false">Menor progresso</button><button type="button" class="ui-button ui-button--outline" data-sort="recent" aria-pressed="false">Mais recentes</button></div></div>
+        </section>
+
+        <section class="goals-grid" id="goals-list" aria-label="Suas metas">
+          <article class="ui-card ui-card--borderless goal-card" data-name="Carro" data-status="active" data-progress="21.4" data-deadline="2027-08-01" data-last-contribution="5" data-favorite="true">
+            <header class="goal-card-heading">
+              <div class="goal-card-identity"><h2>Carro</h2><span class="ui-chip ui-chip--status">Em andamento</span></div>
+              <div class="goal-card-options"><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Meta favorita" title="Edição de prioridade ainda não disponível"><img src="../../../images/goals/star-filled.svg" alt=""></button><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Opções da meta Carro"><img src="../../../images/piggy/more.svg" alt=""></button></div>
+            </header>
+            <div class="goal-card-body">
+              <div class="goal-card-info">
+                <dl class="goal-stats"><div><dt>Atual</dt><dd>R$22.500,00</dd></div><div><dt>Falta</dt><dd>R$82.500,00</dd></div><div><dt>Meta</dt><dd>R$105.000,00</dd></div></dl>
+                <div class="goal-details"><p>Prazo: <strong>Ago/2027</strong></p><p>Aporte sugerido: R$ 1.375,00/mês</p><p>Último aporte: há 5 dias</p></div>
+              </div>
+              <div class="goal-progress-column">
+                <div class="goal-progress goal-progress--car" role="img" aria-label="21,4% concluído"><div class="goal-progress-text"><strong>21,4%</strong><span>Concluído</span></div><img src="../../../images/goals/car-arc.svg" alt="" class="goal-progress-arc"><img src="../../../images/goals/car-track.svg" alt="" class="goal-progress-track"></div>
+                <div class="goal-forecast"><p>Previsão: Agosto de 2027</p><small>Mantendo o ritmo de aportes</small></div>
+              </div>
+            </div>
+            <footer class="goal-card-footer"><button type="button" class="ui-button " disabled title="Disponível quando a gestão de metas estiver conectada">Aportar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Editar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Histórico</button></footer>
+          </article>
+          <article class="ui-card ui-card--borderless goal-card" data-name="PC" data-status="active" data-progress="18" data-deadline="2028-07-01" data-last-contribution="20" data-favorite="false">
+            <header class="goal-card-heading">
+              <div class="goal-card-identity"><h2>PC</h2><span class="ui-chip ui-chip--status">Em andamento</span></div>
+              <div class="goal-card-options"><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Marcar como favorita" title="Edição de prioridade ainda não disponível"><img src="../../../images/goals/star-outline.svg" alt=""></button><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Opções da meta PC"><img src="../../../images/piggy/more.svg" alt=""></button></div>
+            </header>
+            <div class="goal-card-body">
+              <div class="goal-card-info">
+                <dl class="goal-stats"><div><dt>Atual</dt><dd>R$2456,00</dd></div><div><dt>Falta</dt><dd>R$10.544,00</dd></div><div><dt>Meta</dt><dd>R$13.000,00</dd></div></dl>
+                <div class="goal-details"><p>Prazo: <strong>Jul/2028</strong></p><p>Aporte sugerido: R$ 505,00/mês</p><p>Último aporte: há 20 dias</p></div>
+              </div>
+              <div class="goal-progress-column">
+                <div class="goal-progress goal-progress--pc" role="img" aria-label="18% concluído"><div class="goal-progress-text"><strong>18%</strong><span>Concluído</span></div><img src="../../../images/goals/pc-arc.svg" alt="" class="goal-progress-arc"><img src="../../../images/goals/pc-track.svg" alt="" class="goal-progress-track"></div>
+                <div class="goal-forecast"><p>Previsão: Mar/2028</p><small>Mantendo o ritmo de aportes</small></div>
+              </div>
+            </div>
+            <footer class="goal-card-footer"><button type="button" class="ui-button " disabled title="Disponível quando a gestão de metas estiver conectada">Aportar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Editar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Histórico</button></footer>
+          </article>
+          <article class="ui-card ui-card--borderless goal-card" data-name="Mouse" data-status="completed" data-progress="100" data-deadline="2026-09-01" data-last-contribution="2" data-favorite="false">
+            <header class="goal-card-heading">
+              <div class="goal-card-identity"><h2>Mouse</h2><span class="ui-chip ui-chip--status">Concluído</span></div>
+              <div class="goal-card-options"><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Marcar como favorita" title="Edição de prioridade ainda não disponível"><img src="../../../images/goals/star-outline.svg" alt=""></button><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Opções da meta Mouse"><img src="../../../images/piggy/more.svg" alt=""></button></div>
+            </header>
+            <div class="goal-card-body">
+              <div class="goal-card-info">
+                <dl class="goal-stats"><div><dt>Atual</dt><dd>R$500,00</dd></div><div><dt>Falta</dt><dd>R$00,00</dd></div><div><dt>Meta</dt><dd>R$500,00</dd></div></dl>
+                <div class="goal-details"><p>Prazo: <strong>Set/2026</strong></p><p>Aporte sugerido: R$ 00,00/mês</p><p>Último aporte: há 2 dias</p></div>
+              </div>
+              <div class="goal-progress-column">
+                <div class="goal-progress goal-progress--complete" role="img" aria-label="100% concluído"><div class="goal-progress-text"><strong>100%</strong><span>Concluído</span></div><img src="../../../images/goals/complete-arc.svg" alt="" class="goal-progress-arc"><img src="../../../images/goals/pc-track.svg" alt="" class="goal-progress-track"></div>
+                <div class="goal-forecast"><p>Previsão: Você concluiu sua meta!</p><small>Parabéns!</small></div>
+              </div>
+            </div>
+            <footer class="goal-card-footer"><button type="button" class="ui-button " disabled title="Disponível quando a gestão de metas estiver conectada">Aportar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Editar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Histórico</button></footer>
+          </article>
+          <article class="ui-card ui-card--borderless goal-card" data-name="Viagem" data-status="active" data-progress="1.5" data-deadline="2027-03-01" data-last-contribution="1" data-favorite="false">
+            <header class="goal-card-heading">
+              <div class="goal-card-identity"><h2>Viagem</h2><span class="ui-chip ui-chip--status">Em andamento</span></div>
+              <div class="goal-card-options"><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Marcar como favorita" title="Edição de prioridade ainda não disponível"><img src="../../../images/goals/star-outline.svg" alt=""></button><button type="button" class="ui-button ui-button--icon goal-option" disabled aria-label="Opções da meta Viagem"><img src="../../../images/piggy/more.svg" alt=""></button></div>
+            </header>
+            <div class="goal-card-body">
+              <div class="goal-card-info">
+                <dl class="goal-stats"><div><dt>Atual</dt><dd>R$300,00</dd></div><div><dt>Falta</dt><dd>R$19.700,00</dd></div><div><dt>Meta</dt><dd>R$20.000,00</dd></div></dl>
+                <div class="goal-details"><p>Prazo: <strong>Mar/2027</strong></p><p>Aporte sugerido: R$ 3.284,00/mês</p><p>Último aporte: há 1 dia</p></div>
+              </div>
+              <div class="goal-progress-column">
+                <div class="goal-progress goal-progress--travel" role="img" aria-label="1,5% concluído"><div class="goal-progress-text"><strong>1,5%</strong><span>Concluído</span></div><img src="../../../images/goals/travel-arc.svg" alt="" class="goal-progress-arc"><img src="../../../images/goals/car-track.svg" alt="" class="goal-progress-track"></div>
+                <div class="goal-forecast"><p>Previsão: Vamos coletar quando houver informações suficientes para calculá-la.</p></div>
+              </div>
+            </div>
+            <footer class="goal-card-footer"><button type="button" class="ui-button " disabled title="Disponível quando a gestão de metas estiver conectada">Aportar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Editar</button><button type="button" class="ui-button ui-button--outline" disabled title="Disponível quando a gestão de metas estiver conectada">Histórico</button></footer>
+          </article>
+        </section>
+        <p class="goals-empty" role="status" hidden>Nenhuma meta desta prévia corresponde à busca ou ao filtro.</p>
+        <details class="goals-completed"><summary><span><strong>Metas concluídas e arquivadas</strong><small>8 concluídas • 2 arquivadas</small></span><img src="../../../images/goals/chevron.svg" alt=""></summary><div><p>A prévia inclui a meta Mouse concluída. O histórico completo de metas concluídas e arquivadas ainda não está conectado.</p><button type="button" class="ui-button ui-button--outline" data-shortcut="completed">Ver meta concluída</button></div></details>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous" defer></script>
+  <script src="../../../js/script.js" defer></script>
+  <script src="../../../js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.lucide?.createIcons();
+      const grid = document.getElementById('goals-list');
+      const cards = [...grid.querySelectorAll('.goal-card')];
+      const search = document.getElementById('goals-search');
+      const empty = document.querySelector('.goals-empty');
+      let filter = 'all';
+      let order = '';
+      const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
+      function renderGoals() {
+        const query = normalize(search.value.trim());
+        const sorted = [...cards].sort((a, b) => {
+          if (order === 'deadline') return a.dataset.deadline.localeCompare(b.dataset.deadline);
+          if (order === 'progress-desc') return Number(b.dataset.progress) - Number(a.dataset.progress);
+          if (order === 'progress-asc') return Number(a.dataset.progress) - Number(b.dataset.progress);
+          if (order === 'recent') return Number(a.dataset.lastContribution) - Number(b.dataset.lastContribution);
+          return 0;
+        });
+        let visible = 0;
+        sorted.forEach((card) => {
+          const matchStatus = filter === 'all' || (filter === 'favorites' ? card.dataset.favorite === 'true' : card.dataset.status === filter);
+          card.hidden = !matchStatus || !normalize(card.dataset.name).includes(query);
+          if (!card.hidden) visible++;
+          grid.append(card);
+        });
+        empty.hidden = visible !== 0;
+      }
+      document.querySelectorAll('[data-filter]').forEach((button) => {
+        button.addEventListener('click', () => {
+          filter = button.dataset.filter;
+          document.querySelectorAll('[data-filter]').forEach((item) => {
+            item.setAttribute('aria-pressed', String(item === button));
+            item.classList.toggle('ui-button--outline', item !== button);
+          });
+          renderGoals();
+        });
+      });
+      document.querySelectorAll('[data-sort]').forEach((button) => {
+        button.addEventListener('click', () => {
+          order = button.dataset.sort;
+          document.querySelectorAll('[data-sort]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+          renderGoals();
+        });
+      });
+      document.querySelectorAll('[data-shortcut]').forEach((button) => {
+        button.addEventListener('click', () => {
+          filter = button.dataset.shortcut;
+          search.value = '';
+          document.querySelectorAll('[data-filter]').forEach((item) => {
+            const selected = item.dataset.filter === filter;
+            item.setAttribute('aria-pressed', String(selected));
+            item.classList.toggle('ui-button--outline', !selected);
+          });
+          renderGoals();
+          document.querySelector('.goals-controls').scrollIntoView({ block: 'center' });
+          search.focus({ preventScroll: true });
+        });
+      });
+      search.addEventListener('input', renderGoals);
+    });
+  </script>
+</body>
+</html>

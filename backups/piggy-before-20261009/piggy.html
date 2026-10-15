@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Dashboard financeiro | Piggy</title>
+  
+  <meta name="description" content="Acompanhe gastos, economias, transações e metas financeiras no dashboard Piggy.">
+  
+  <meta name="theme-color" content="#07121f">
+  
+  <meta property="og:title" content="Dashboard financeiro | Piggy">
+  
+  <meta property="og:description" content="Acompanhe gastos, economias, transações e metas financeiras no dashboard Piggy.">
+  
+  <meta property="og:type" content="website">
+
+  <!-- LINKS -->
+
+  <link rel="stylesheet" href="../../../global.css">
+
+  <link rel="stylesheet" href="../Dashboard/dashboard.css">
+  <link rel="stylesheet" href="piggy.css">
+
+  <link rel="icon" href="../../../PIGGY-logo.png" type="image/png">
+</head>
+
+<body class="page page--dashboard">
+
+  <!--- SIDEBAR -->
+  <aside class="sidebar">
+
+    <header class="sidebar-header">
+      
+      <a href="" class="logo">
+        <img src="" alt="">
+      </a>
+
+      <button class="collapse-btn"><i data-lucide="chevron-left" class="sidebar-icon"></i></button>
+
+    </header>
+
+    <nav class="sidebar-navigation">
+      
+      <div class="overview-group">
+
+        <h2 class="sidebar-group_name">VISÃO GERAL</h2>
+      
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Dashboard/index.html">
+              <span class="sidebar-icon_container"><i data-lucide="home" class="sidebar-icon"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Analyses/analyses.html">
+              <span class="sidebar-icon_container"><i data-lucide="bar-chart-2" class="sidebar-icon"></i></span>
+              <span>Análises</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="finance-group">
+
+        <h2 class="sidebar-group_name">FINANÇAS</h2>
+
+        <ul class="sidebar-items">
+          <li>
+            <a href="../Transactions/transitions.html">
+              <span class="sidebar-icon_container"><i data-lucide="credit-card" class="sidebar-icon"></i></span>
+              <span>Transações</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Invoices/invoices.html">
+              <span class="sidebar-icon_container"><i data-lucide="file-text" class="sidebar-icon"></i></span>
+              <span>Faturas</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Categories/categorias.html">
+              <span class="sidebar-icon_container"><i data-lucide="pie-chart" class="sidebar-icon"></i></span>
+              <span>Categorias</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Recurrent/recurrent.html">
+              <span class="sidebar-icon_container"><i data-lucide="repeat" class="sidebar-icon"></i></span>
+              <span>Recorrentes</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="planning-group">
+        
+        <h2 class="sidebar-group_name">PLANEJAMENTO</h2>
+
+        <ul class="sidebar-items">
+          <li class="active">
+            <a href="../Piggy/piggy.html" aria-current="page">
+              <span class="sidebar-icon_container"><i data-lucide="piggy-bank" class="sidebar-icon"></i></span>
+              <span>Piggy</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="../Goals/goals.html">
+              <span class="sidebar-icon_container"><i data-lucide="target" class="sidebar-icon"></i></span>
+              <span>Metas</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <footer class="sidebar-footer">
+      <ul class="sidebar-items">
+        <li>
+          <a href="../Settings/settings.html">
+            <span class="sidebar-icon_container"><i data-lucide="settings" class="sidebar-icon"></i></span>
+            <span>Configurações</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="../Help/help.html">
+            <span class="sidebar-icon_container"><i data-lucide="help-circle" class="sidebar-icon"></i></span>
+            <span>Ajuda</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="profile">
+        <img src="../../../images/sidebar/avatar.jpg" alt="Avatar" class="avatar">
+
+        <div class="profile-info">
+        
+            <p class="profile-user">Davi</p>
+            <p class="profile-email">davi@example.com</p>
+
+        </div>
+      </button>
+    </footer>
+
+  </aside>
+
+  <div class="content-area">
+
+    <header class="header">
+
+      <div class="header-title">
+        
+        <h1 class="page-title">Dashboard</h1>
+        <p class="page-title-description">Visão geral das suas finanças</p>
+
+      </div>
+
+      <div class="header-actions">
+
+        <button class="header-btn">
+          Período 
+          <span class="header-btn-icon-container">
+          <i data-lucide="chevron-down" class="header-action-icon"></i>
+          </span>
+      </button>
+        
+        <button class="header-btn">
+          <span class="header-btn-icon-container">
+            <i data-lucide="plus" class="header-action-icon"></i>
+          </span>
+          Nova transação
+        </button>
+        
+        <button class="search">
+          <i data-lucide="search" class="header-action-icon"></i>
+        </button>
+        
+        <button class="notifications">
+          <i data-lucide="bell" class="header-action-icon"></i>
+        </button>
+
+        <button class="language">
+          <i data-lucide="globe" class="header-action-icon"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+    <main class="main">
+
+      <div class="content content--dashboard"></div>
+
+      <section class="KPIS"></section>
+
+      <div class="987x485"></div>
+
+    </main>
+
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" integrity="sha384-uTYyvsSSUZeaPhb5RbKlQa0zY/WpX/QHfvg2mczXyBQOpkWPEDy9lczyp+w7SKXu" crossorigin="anonymous" defer></script>
+  <script src="../../../js/script.js" defer></script>
+  <script src="../../../js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.lucide?.createIcons();
+    });
+  </script>
+</body>
+</html>

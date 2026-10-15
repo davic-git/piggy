@@ -1,0 +1,105 @@
+/* Piggy / Desktop — layout específico do conteúdo 633:2745.
+   Cards, botões, badges, fontes e estrutura da página vêm de global.css. */
+.page--piggy .content--piggy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-inline: auto;
+  padding-block: 10px;
+  color: var(--panel-text);
+  font-family: var(--font-ui);
+  font-variation-settings: "CRSV" 0, "SHRP" 0;
+}
+.content--piggy *,
+.content--piggy *::before,
+.content--piggy *::after { box-sizing: border-box; }
+.content--piggy :is(h2, h3, p) { margin: 0; }
+.content--piggy img { display: block; flex-shrink: 0; }
+.content--piggy section { width: 100%; }
+.content--piggy h2 { font-size: 24px; line-height: 32px; font-weight: 700; color: #fff; }
+.page--piggy .piggy-create { background: var(--primary); font-size: 14px; padding-inline: 24px; }
+.page--piggy .header-title { gap: 2px; }
+.page--piggy .page-title,
+.page--piggy .page-title-description { margin: 0; }
+
+/* Banner. */
+.content--piggy .piggy-hero {
+  width: min(100%, 1441px);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 27px 39px;
+}
+.piggy-hero-copy { width: 620px; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-hero); }
+.content--piggy .piggy-hero h2 { display: flex; align-items: center; height: 50px; font-size: 28px; line-height: 36px; }
+.piggy-hero-copy p { font-size: 15px; line-height: 22px; }
+.piggy-hero-visual { width: 420px; height: 144px; display: flex; align-items: flex-start; justify-content: flex-end; gap: 5px; }
+.piggy-hero-mascot { height: 144px; width: auto; aspect-ratio: 590 / 483; object-fit: cover; }
+.piggy-edit { background: var(--panel-border); flex-shrink: 0; }
+
+/* Indicadores. */
+.piggy-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; height: 128px; }
+.piggy-kpi { display: flex; flex-direction: column; gap: 6px; padding: 19px; }
+.content--piggy .piggy-kpi h2 { display: flex; align-items: center; height: 24px; font-size: 13px; line-height: 18px; font-weight: 600; color: var(--panel-muted); white-space: nowrap; }
+.piggy-kpi strong { font-size: 28px; line-height: 34px; font-weight: 700; color: var(--panel-positive); }
+.piggy-kpi p { font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap; }
+.piggy-kpi--active { flex-direction: row; align-items: center; gap: 16px; border-radius: 15px; }
+.piggy-kpi--active > div { display: flex; flex-direction: column; gap: 6px; }
+.piggy-kpi--active strong { color: #fff; }
+.piggy-kpi-icon { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; flex-shrink: 0; border-radius: 10px; border: 1px solid var(--panel-border); background: rgb(37 99 235 / 20%); }
+.piggy-icon-flipped img { transform: scaleY(-1); }
+
+/* A faixa mantém os cinco cards e o recorte presentes no Figma.
+   A rolagem fica restrita aos cofrinhos. */
+.piggy-accounts { position: relative; display: flex; flex-direction: column; gap: 16px; }
+.piggy-section-heading { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.piggy-section-heading > div:first-child { display: flex; flex-direction: column; gap: 2px; }
+.content--piggy .piggy-section-heading h2 { line-height: 26px; }
+.piggy-section-heading p { font-size: 13px; line-height: 18px; }
+.piggy-filters { display: flex; gap: 8px; }
+.piggy-filter-input:focus-visible ~ .piggy-section-heading label { outline: none; }
+#piggy-all:focus-visible ~ .piggy-section-heading label[for="piggy-all"],
+#piggy-brl:focus-visible ~ .piggy-section-heading label[for="piggy-brl"],
+#piggy-international:focus-visible ~ .piggy-section-heading label[for="piggy-international"] { outline: 2px solid var(--border-color-focus); outline-offset: 3px; }
+#piggy-brl:checked ~ .piggy-accounts-track [data-currency]:not([data-currency="BRL"]),
+#piggy-international:checked ~ .piggy-accounts-track [data-currency="BRL"] { display: none; }
+.piggy-accounts-track { display: flex; gap: 16px; width: 100%; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
+.piggy-accounts-track::-webkit-scrollbar { display: none; }
+.piggy-accounts-track:focus-visible { outline: 2px solid var(--border-color-focus); outline-offset: 3px; border-radius: 16px; }
+.piggy-account { display: flex; flex-direction: column; gap: 16px; width: 308px; height: 395px; flex-shrink: 0; scroll-snap-align: start; }
+.piggy-account-header { display: flex; align-items: center; justify-content: space-between; width: 100%; height: 28px; flex-shrink: 0; }
+.piggy-currency-flag { width: 16px; height: 16px; border-radius: 50%; object-fit: cover; }
+.piggy-more { width: 28px; min-height: 28px; height: 28px; border: 0; background: transparent; }
+.piggy-account-art { display: flex; align-items: center; justify-content: center; position: relative; width: 100%; height: 84px; flex-shrink: 0; }
+.piggy-wordmark { display: flex; align-items: center; justify-content: center; width: 243px; font-size: 80px; font-weight: 700; font-style: italic; line-height: 1; color: #fff; font-variation-settings: "CRSV" 1, "SHRP" 0; }
+.piggy-wordmark-gap { width: 104px; flex-shrink: 0; }
+.piggy-wordmark-icon { position: absolute; left: 51.13%; top: 12.31%; transform: scaleY(-1); }
+.piggy-currency-mascot { position: relative; display: block; height: 84px; }
+.piggy-currency-mascot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.piggy-currency-mascot--us { aspect-ratio: 686 / 541; }
+.piggy-currency-mascot--uy { aspect-ratio: 676 / 514; }
+.piggy-currency-mascot--eu { aspect-ratio: 249 / 196; }
+.piggy-account-balance,
+.piggy-account-yield { display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; width: 100%; }
+.content--piggy .piggy-account-balance h3 { display: flex; align-items: center; height: 25px; font-size: 16px; line-height: 22px; font-weight: 300; color: #fff; }
+.piggy-account-balance > strong { display: flex; align-items: center; height: 25px; font-size: 24px; line-height: 30px; font-weight: 700; color: #fff; }
+.piggy-account-yield > span,
+.piggy-account-yield > strong { display: flex; align-items: center; height: 25px; }
+.piggy-account-yield > span { font-size: 12px; line-height: 16px; }
+.piggy-account-yield > strong { color: var(--success-strong); font-size: 13px; font-weight: 600; }
+.piggy-account-today { display: flex; align-items: center; justify-content: space-between; width: 185px; height: 15px; flex-shrink: 0; font-size: 12px; white-space: nowrap; }
+.piggy-account-today strong { font-weight: 600; color: var(--panel-positive); }
+.piggy-account-actions { display: flex; gap: 12px; width: 266px; height: 40px; flex-shrink: 0; }
+.piggy-account-actions .ui-button { flex: 1; }
+
+/* Exploração. */
+.piggy-explore { display: flex; flex-direction: column; gap: 16px; }
+.piggy-explore-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.piggy-explore-card { height: 120px; display: flex; align-items: center; gap: 16px; padding: 19px; }
+.piggy-explore-icon { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; flex-shrink: 0; border-radius: 50%; background: #07121f; }
+.piggy-explore-copy { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.content--piggy .piggy-explore-copy h3 { display: flex; align-items: center; height: 38px; font-size: 18px; line-height: 24px; font-weight: 600; color: #fff; white-space: nowrap; }
+.piggy-explore-copy p { font-size: 13px; line-height: 18px; color: var(--panel-muted); }
+.piggy-explore-arrow { background: rgb(37 99 235 / 20%); border-color: var(--panel-border); flex-shrink: 0; }
+.piggy-explore-arrow img { transform: rotate(-90deg); }
