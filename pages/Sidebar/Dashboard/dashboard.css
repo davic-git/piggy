@@ -226,30 +226,55 @@
 .dashboard-content .dashboard-budget .dashboard-note { font-size: 11px; line-height: 14px; font-weight: 400; }
 .dashboard-content .dashboard-budget .dashboard-card-link { height: 16px; }
 
-@media (max-width: 720px) {
-  .page--dashboard {
-    flex-direction: column;
-  }
+/* As camadas originais do gráfico acompanham a largura do card. */
+.dashboard-content .dashboard-chart { width: 100%; min-width: 0; }
+.dashboard-content .dashboard-chart-plot { flex: 1; width: auto; min-width: 0; }
+.dashboard-content .dashboard-grid-horizontal { width: 100%; }
+.dashboard-content .dashboard-chart-area { width: 91.667%; height: 125.033px; }
+.dashboard-content .dashboard-chart-line { left: 2.089%; width: 95.808%; height: 136.414px; }
+.dashboard-content .dashboard-chart-months { padding-left: 54px; }
+.dashboard-content .dashboard-savings-insight { max-width: 100%; min-height: 58px; height: auto; padding: 10px 12px; }
+.dashboard-content .dashboard-savings-insight p { width: auto; flex: 1; }
+.dashboard-content .dashboard-card-heading { flex-wrap: wrap; height: auto; min-height: 35px; }
+.dashboard-content .dashboard-transactions-table { min-width: 540px; }
+.dashboard-content .dashboard-payment-info { min-width: 0; }
 
-  .page--dashboard .sidebar {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    height: auto;
-  }
+@media (max-width: 1600px) {
+  .dashboard-content .dashboard-row--overview { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+  .dashboard-content .dashboard-row--activity { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-content .dashboard-transactions { grid-column: 1 / -1; height: auto; }
+  .dashboard-content .dashboard-row--planning { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-content .dashboard-kpi-value strong, .dashboard-content .dashboard-kpi--balance .dashboard-kpi-value strong { font-size: 26px; }
+  .dashboard-content .dashboard-kpi-heading { height: auto; min-height: 25px; }
+  .dashboard-content .dashboard-payment { flex-wrap: wrap; height: auto; min-height: 58px; gap: 8px; padding-block: 6px; }
+  .dashboard-content .dashboard-payment-status { margin-left: auto; }
+  .dashboard-content .dashboard-payment-amount { width: auto; }
+  .dashboard-content :is(.dashboard-categories, .dashboard-savings, .dashboard-payments, .dashboard-budget) { height: auto; min-height: 300px; }
+}
 
-  .page--dashboard .sidebar-navigation {
-    height: auto;
-  }
+@media (max-width: 1100px) {
+  .dashboard-content .dashboard-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-content :is(.dashboard-row--overview, .dashboard-row--activity, .dashboard-row--planning) { grid-template-columns: minmax(0, 1fr); }
+  .dashboard-content .dashboard-piggy-copy p { font-size: 13px; line-height: 20px; }
+  .dashboard-content .dashboard-piggy-copy h3 { height: auto; }
+}
 
-  .page--dashboard .content-area {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-
-  .page--dashboard .header-actions {
-    justify-content: flex-start;
-    margin-left: 0;
-  }
+@media (max-width: 480px) {
+  .dashboard-content .dashboard-kpis { grid-template-columns: minmax(0, 1fr); }
+  .dashboard-content .dashboard-kpi { height: 170px; }
+  .dashboard-content .dashboard-card-heading { gap: 8px; }
+  .dashboard-content .dashboard-categories .dashboard-card-heading,
+  .dashboard-content .dashboard-savings .dashboard-card-heading,
+  .dashboard-content :is(.dashboard-payments, .dashboard-budget) .dashboard-card-heading { height: auto; }
+  .dashboard-content .dashboard-periods { flex-wrap: wrap; gap: 8px; }
+  .dashboard-content .dashboard-chart-months { font-size: 9px; }
+  .dashboard-content .dashboard-payment { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; }
+  .dashboard-content .dashboard-payment-date { grid-row: span 2; }
+  .dashboard-content .dashboard-payment-info { grid-column: 2 / -1; }
+  .dashboard-content .dashboard-payment-status { margin: 0; padding: 0; }
+  .dashboard-content .dashboard-piggy-body { flex-wrap: wrap; }
+  .dashboard-content .dashboard-piggy-mascot { width: 92px; height: 134px; }
+  .dashboard-content .dashboard-primary-link { max-width: 100%; }
+  .dashboard-content .dashboard-goals-body { gap: 8px; }
+  .dashboard-content .dashboard-goal-summary { flex: 0 0 112px; }
 }

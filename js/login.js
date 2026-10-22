@@ -108,7 +108,7 @@
 
     // Vai para o dashboard original do projeto
     setTimeout(() => {
-      window.location.href = 'index.html';
+      window.location.href = 'Sidebar/Dashboard/index.html';
     }, 1000);
   });
 })();

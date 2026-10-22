@@ -103,3 +103,40 @@
 .piggy-explore-copy p { font-size: 13px; line-height: 18px; color: var(--panel-muted); }
 .piggy-explore-arrow { background: rgb(37 99 235 / 20%); border-color: var(--panel-border); flex-shrink: 0; }
 .piggy-explore-arrow img { transform: rotate(-90deg); }
+
+/* Layout fluido, mantendo a rolagem apenas na faixa de cofrinhos. */
+.content--piggy .piggy-hero { min-height: 200px; height: auto; gap: 24px; }
+.piggy-hero-copy { flex: 1; width: auto; min-width: 0; }
+.content--piggy .piggy-hero h2 { height: auto; }
+.piggy-hero-visual { width: auto; flex: 0 0 auto; }
+.piggy-summary { height: auto; }
+.piggy-kpi { min-height: 128px; }
+.content--piggy .piggy-kpi h2, .piggy-kpi p { height: auto; white-space: normal; }
+.piggy-section-heading { height: auto; min-height: 52px; gap: 16px; flex-wrap: wrap; }
+.piggy-filters { flex-wrap: wrap; }
+.piggy-account { max-width: 100%; }
+.piggy-account-actions { width: 100%; }
+.piggy-explore-card { height: auto; min-height: 120px; flex-wrap: wrap; }
+.content--piggy .piggy-explore-copy h3 { height: auto; white-space: normal; }
+
+@media (max-width: 1600px) {
+  .piggy-kpi--active { gap: 10px; }
+  .piggy-kpi-icon { width: 44px; height: 44px; }
+  .piggy-kpi strong { font-size: 26px; }
+  .piggy-explore-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1100px) {
+  .piggy-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .piggy-summary, .piggy-explore-grid { grid-template-columns: minmax(0, 1fr); }
+  .content--piggy .piggy-hero { padding: 20px; flex-direction: column; align-items: stretch; }
+  .content--piggy .piggy-hero h2 { font-size: 24px; line-height: 32px; }
+  .piggy-hero-visual { align-self: center; }
+  .piggy-filters .ui-button { min-height: 44px; }
+  .piggy-accounts-track { padding-bottom: 8px; scrollbar-width: thin; }
+  .piggy-accounts-track::-webkit-scrollbar { display: block; height: 6px; }
+  .piggy-accounts-track::-webkit-scrollbar-thumb { background: var(--border-color-strong); border-radius: 6px; }
+}

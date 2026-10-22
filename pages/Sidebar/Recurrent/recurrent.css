@@ -120,3 +120,40 @@
 .recurrent-pagination .ui-button { width: 24px; height: 24px; min-height: 24px; padding: 0; border-radius: 4px; font-size: 12px; font-weight: 700; }
 .recurrent-pagination [aria-current="page"] { background: var(--primary); }
 .recurrent-pagination button:first-child img { transform: scaleX(-1); }
+
+/* Mantém todas as colunas acessíveis, com rolagem própria da tabela. */
+.recurrent-kpi { height: auto; min-height: 128px; }
+.recurrent-kpi h2 { height: auto; min-height: 20px; }
+.recurrent-kpi p { white-space: normal; }
+.recurrent-overview { height: auto; }
+.recurrent-upcoming, .recurrent-forecast { min-height: 334px; }
+.recurrent-card-header, .recurrent-forecast .recurrent-card-header { height: auto; min-height: 40px; flex-wrap: wrap; gap: 12px; }
+.recurrent-upcoming-row { flex-wrap: wrap; }
+.recurrent-upcoming-identity { width: auto; flex: 1; min-width: 100px; }
+.recurrent-upcoming-identity strong { line-height: 22px; }
+.recurrent-amount { width: auto; }
+.recurrent-section-header, .recurrent-controls, .recurrent-filters, .recurrent-search-sort, .recurrent-sorts { height: auto; flex-wrap: wrap; gap: 12px; }
+.recurrent-section-header { min-height: 52px; }
+.recurrent-controls { align-items: flex-start; }
+.recurrent-search-sort { flex: 1 1 480px; justify-content: flex-end; }
+.recurrent-search-sort .ui-search { flex: 1 1 200px; }
+.recurrent-table { min-width: 1120px; }
+.recurrent-table-footer { height: auto; min-height: 40px; flex-wrap: wrap; gap: 16px; }
+
+@media (max-width: 1600px) {
+  .recurrent-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .recurrent-overview { grid-template-columns: minmax(0, 1fr); }
+  .recurrent-kpi-space { width: 40px; }
+}
+
+@media (max-width: 600px) {
+  .recurrent-summary { grid-template-columns: minmax(0, 1fr); }
+  .recurrent-search-sort, .recurrent-sorts { justify-content: flex-start; }
+  .recurrent-filters .ui-button, .recurrent-sorts .ui-button { min-height: 44px; }
+  .recurrent-upcoming-row { display: grid; grid-template-columns: 45px 45px minmax(0, 1fr); gap: 8px; padding-block: 8px; }
+  .recurrent-upcoming-identity { min-width: 0; }
+  .recurrent-type { grid-column: 2; }
+  .recurrent-amount { grid-column: 3; justify-self: end; }
+  .recurrent-upcoming-list { gap: 12px; }
+  .recurrent-pagination .ui-button { width: 40px; height: 44px; }
+}

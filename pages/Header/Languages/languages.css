@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@400&display=swap');
+
+.languages-page { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body); }
+.languages-page *, .languages-page *::before, .languages-page *::after { box-sizing: border-box; }
+.languages-page .material-symbols-rounded { font-family: 'Material Symbols Rounded'; font-weight: normal; font-style: normal; font-size: 22px; line-height: 1; letter-spacing: normal; text-transform: none; white-space: nowrap; font-feature-settings: 'liga'; }
+.languages-page .header { min-height: 84px; height: auto; padding: 16px 24px; gap: 16px; flex-wrap: wrap; }
+.header__logo { display: flex; align-items: center; }
+.header__logo-img { width: 140px; height: auto; }
+.header__actions { display: flex; align-items: center; gap: 8px; }
+.header__action-btn, .header__lang-btn, .header__action-profile { display: flex; align-items: center; justify-content: center; width: 44px; min-height: 44px; padding: 0; border: var(--border-default); border-radius: 10px; background: transparent; color: var(--text); text-decoration: none; }
+.header__profile-img { width: 36px; height: 36px; object-fit: cover; border-radius: 50%; }
+.header__profile-alternate { display: none; }
+.languages-page .layout { display: flex; min-height: calc(100dvh - 84px); align-items: flex-start; }
+.languages-page .sidebar { flex: 0 0 248px; width: 248px; position: sticky; top: 0; height: calc(100dvh - 84px); overflow-y: auto; padding: 24px 16px; }
+.sidebar__nav, .sidebar__group { display: flex; flex-direction: column; gap: 8px; }
+.sidebar__nav { gap: 24px; }
+.sidebar__group-label { margin: 0 0 4px; padding-inline: 12px; font-size: 11px; color: var(--text-muted); }
+.sidebar__item, .sidebar__collapse-btn { display: flex; align-items: center; gap: 12px; min-height: 44px; width: 100%; padding: 10px 12px; border: 0; border-radius: 10px; background: transparent; color: var(--text-secondary); font: 500 14px/20px var(--font-body); text-decoration: none; text-align: left; cursor: pointer; }
+.sidebar__item:hover, .sidebar__collapse-btn:hover { background: var(--nav-bg-hover); }
+.languages-page .main { min-width: 0; flex: 1; height: auto; padding: 32px; }
+.page-header__title { margin: 0; font: 600 28px/36px var(--font-display); }
+.language-intro, .language-selection, .lg-header { width: min(100%, 960px); margin-inline: auto; }
+.language-intro h2 { margin: 0; font-size: 22px; line-height: 30px; text-align: center; }
+.lg-header { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 24px; }
+.lg-header .region { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 24px; }
+.language-selection__title { margin: 0; padding: 24px 0 16px; border-bottom: var(--border-subtle); font-size: 22px; line-height: 30px; }
+.language-selector { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-top: 16px; }
+.language-selector__button { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; min-height: 112px; padding: 20px; border: 1px solid transparent; border-radius: 12px; background: transparent; color: var(--text); font: 500 18px/24px var(--font-body); text-align: left; cursor: pointer; }
+.language-selector__button span { font-size: 15px; color: var(--text-secondary); }
+.language-selector__button:hover, .language-selector__button[aria-pressed='true'] { background: var(--bg-card-default); border-color: var(--primary); }
+.languages-page :is(a, button):focus-visible { outline: 2px solid var(--focus-color); outline-offset: 2px; }
+@media (min-width: 1025px) {
+  .languages-page.sidebar-collapsed .sidebar { width: 88px; flex-basis: 88px; }
+  .sidebar-collapsed .sidebar__item-label, .sidebar-collapsed .sidebar__group-label, .sidebar-collapsed .sidebar__collapse-label { display: none; }
+}
+@media (max-width: 1024px) {
+  .languages-page .sidebar { height: 100dvh; position: fixed; width: min(300px, calc(100vw - 48px)); }
+  .languages-page .sidebar__collapse-btn { display: none; }
+  .languages-page .main { padding: 24px; }
+  .languages-page .mobile-menu-btn { order: -1; }
+  .header__logo { flex: 1; }
+  .language-selector { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .languages-page .header { padding: 16px; gap: 12px; }
+  .header__actions { flex-basis: 100%; justify-content: flex-end; }
+  .languages-page .main { padding: 16px; }
+  .language-selector { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .language-selector__button { min-height: 88px; padding: 16px; }
+}

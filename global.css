@@ -995,3 +995,62 @@
 .ui-search input::placeholder { color: var(--panel-text); opacity: 1; }
 .ui-search:focus-within { outline: 2px solid var(--border-color-focus); outline-offset: 2px; }
 .ui-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+/* Estrutura fluida comum às páginas, sem esconder conteúdo que transborda. */
+.page { min-height: 100vh; }
+.page .header { padding-block: 20px; }
+.page .header-title { min-width: 0; }
+.page .page-title, .page .page-title-description { margin: 0; }
+.page .sidebar { position: sticky; top: 0; height: 100dvh; overflow-y: auto; }
+.page .main { height: auto; }
+.mobile-menu-btn, .sidebar-close, .sidebar-backdrop { display: none; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 200; padding: 12px; background: var(--primary); color: #fff; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+.table-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; }
+.table-scroll:focus-visible { outline: 2px solid var(--focus-color); outline-offset: 2px; }
+.table-scroll-hint { display: none; font: 400 12px/18px var(--font-body); color: var(--text-secondary); }
+@media (max-width: 1600px) { .page--recurrent .table-scroll-hint { display: block; } }
+@media (max-width: 600px) { .page--dashboard .table-scroll-hint { display: block; } }
+.app-toast { position: fixed; z-index: 150; bottom: 20px; left: 50%; transform: translate(-50%, 20px); width: max-content; max-width: calc(100% - 32px); padding: 12px 16px; border: var(--border-default); border-radius: 12px; background: var(--bg-card-elevated); color: var(--text); opacity: 0; pointer-events: none; }
+.app-toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .page .sidebar { flex-basis: 248px; width: 248px; padding-inline: 12px; }
+  .page .main, .page .header { padding-inline: 24px; }
+}
+
+@media (max-width: 1024px) {
+  .page { flex-direction: column; }
+  .page .content-area { width: 100%; flex: 1 1 auto; }
+  .page .header { gap: 16px; padding: 20px 24px; }
+  .page .header-title { flex: 1; }
+  .page .header-actions { flex-basis: 100%; justify-content: flex-start; margin: 0; padding: 0; }
+  .page .main { padding: 24px; }
+  .mobile-menu-btn, .sidebar-close {
+    display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px;
+    width: 44px; height: 44px; padding: 0; border: var(--border-default); border-radius: 10px;
+    background: var(--bg-sidebar); color: var(--text); font: inherit; cursor: pointer;
+  }
+  .mobile-menu-btn svg, .sidebar-close svg { width: 22px; height: 22px; }
+  .page .sidebar, .languages-page .sidebar {
+    position: fixed; z-index: 100; inset: 0 auto 0 0; width: min(300px, calc(100vw - 48px));
+    max-width: none; min-width: 0; height: 100dvh; min-height: 0; padding: 20px 16px;
+    overflow-y: auto; overscroll-behavior: contain; visibility: hidden; transform: translateX(-100%);
+  }
+  .sidebar-open .sidebar { visibility: visible; transform: translateX(0); }
+  .sidebar-open { overflow: hidden; }
+  .sidebar-close { align-self: flex-end; flex-shrink: 0; }
+  .sidebar .collapse-btn, .sidebar .sidebar__collapse-btn { display: none; }
+  .sidebar-open .sidebar-backdrop { display: block; position: fixed; z-index: 90; inset: 0; width: 100%; height: 100%; border: 0; background: var(--bg-overlay); }
+  .mobile-menu-btn:focus-visible, .sidebar-close:focus-visible { outline: 2px solid var(--focus-color); outline-offset: 3px; }
+}
+
+@media (max-width: 480px) {
+  .page .main { padding: 16px; }
+  .page .header { padding: 16px; gap: 12px; }
+  .page .page-title { font-size: 22px; line-height: 28px; }
+  .page .page-title-description { font-size: 13px; line-height: 20px; }
+  .page .header-actions { gap: 8px; }
+  .page .header-actions > :is(button, a) { min-height: 44px; }
+  .page .ui-card { padding: 16px; }
+}

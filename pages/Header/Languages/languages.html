@@ -9,16 +9,17 @@
   <meta property="og:title" content="Idioma e região | Piggy">
   <meta property="og:description" content="Escolha o idioma e a região da sua experiência no Piggy.">
   <meta property="og:type" content="website">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./PIGGY-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../../global.css">
+    <link rel="stylesheet" href="languages.css">
+    <link rel="icon" href="../../../PIGGY-logo.png" type="image/png">
 </head>
 <body class="languages-page">
   <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
       <!-- HEADER -->
   <header class="header">
-    <a href="index.html" class="header__logo" aria-label="Piggy — ir para o dashboard">
-      <img src="./PIGGY-logo.png" alt="Piggy" class="header__logo-img" width="140" height="36" decoding="async">
+    <a href="../../Sidebar/Dashboard/index.html" class="header__logo" aria-label="Piggy — ir para o dashboard">
+      <img src="../../../PIGGY-logo.png" alt="Piggy" class="header__logo-img" width="140" height="36" decoding="async">
     </a>
 
     <button type="button" class="mobile-menu-btn" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false">
@@ -27,12 +28,12 @@
 
     <div class="header__actions">
       <a href="languages.html" class="header__lang-btn header__action-link" aria-label="Alterar idioma e região">
-        <img src="./menu-bandeiras/bandeiradobrasi.webp" alt="" class="header__lang-img" width="28" height="20" decoding="async">
+        <img src="../../../menu-bandeiras/bandeiradobrasi.webp" alt="" class="header__lang-img" width="28" height="20" decoding="async">
       </a>
       <button type="button" class="header__action-btn" aria-label="Mensagens"><span class="material-symbols-rounded icon-size-24" aria-hidden="true">mail</span></button>
       <button type="button" class="header__action-btn" aria-label="Notificações"><span class="material-symbols-rounded icon-size-24" aria-hidden="true">notifications</span></button>
-      <a href="login.html" class="header__action-profile header__action-link" aria-label="Abrir perfil">
-        <img src="./images/pawel-nolbert-P60WHK5CvUE-unsplash.jpg" alt="" class="header__profile-img" width="60" height="60" decoding="async">
+      <a href="../../login.html" class="header__action-profile header__action-link" aria-label="Abrir perfil">
+        <img src="../../../images/sidebar/avatar.jpg" alt="" class="header__profile-img" width="60" height="60" decoding="async">
         <span class="header__profile-alternate" aria-hidden="true"><span class="material-symbols-rounded icon-size-20" aria-hidden="true">unfold_more</span></span>
       </a>
     </div>
@@ -40,20 +41,21 @@
 
   <div class="layout">
     <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <button type="button" class="sidebar-close" aria-label="Fechar menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
       <nav class="sidebar__nav">
         <div class="sidebar__group" role="list">
           <p class="sidebar__group-label">PRINCIPAL</p>
-          <a href="index.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">home</span><span class="sidebar__item-label">Dashboard</span></a>
+          <a href="../../Sidebar/Dashboard/index.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">home</span><span class="sidebar__item-label">Dashboard</span></a>
           <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">analytics</span><span class="sidebar__item-label">Análises</span></button>
-          <a href="transitions.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">swap_horiz</span><span class="sidebar__item-label">Transações</span></a>
+          <a href="../../Sidebar/Transactions/transitions.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">swap_horiz</span><span class="sidebar__item-label">Transações</span></a>
           <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">track_changes</span><span class="sidebar__item-label">Metas</span></button>
-          <a href="piggy.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">savings</span><span class="sidebar__item-label">Piggy</span></a>
+          <a href="../../Sidebar/Piggy/piggy.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">savings</span><span class="sidebar__item-label">Piggy</span></a>
           <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">receipt_long</span><span class="sidebar__item-label">Faturas</span></button>
         </div>
 
         <div class="sidebar__group" role="list">
           <p class="sidebar__group-label">GERENCIAMENTO</p>
-          <a href="categorias.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">grid_view</span><span class="sidebar__item-label">Categorias</span></a>
+          <a href="../../Sidebar/Categories/categorias.html" class="sidebar__item"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">grid_view</span><span class="sidebar__item-label">Categorias</span></a>
           <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">layers</span><span class="sidebar__item-label">Assinaturas</span></button>
           <button type="button" class="sidebar__item" data-placeholder-action="true"><span class="material-symbols-rounded icon-size-22" aria-hidden="true">sync</span><span class="sidebar__item-label">Recorrente</span></button>
         </div>
@@ -137,9 +139,10 @@
             
             <button type="button" class="language-selector__button">United Kingdom <span>English</span></button>
         </div>
+      </div>
     </main>
     </div>
     
-  <script src="./js/main.js" defer></script>
+  <script src="../../../js/main.js" defer></script>
 </body>
 </html>
