@@ -1,0 +1,19 @@
+/* =========================================
+   FONTS
+   ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Schibsted+Grotesk:wght@400..700&display=swap");
+
+
+*, *::before, *::after { box-sizing: border-box; }
+
+
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background-color: var(--bg);
+}

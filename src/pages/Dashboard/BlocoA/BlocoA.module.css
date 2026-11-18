@@ -1,0 +1,34 @@
+/* O Bloco A tem cores PRÓPRIAS. No design ele é sempre escuro: no tema claro
+   vira um bloco Ardósia, para se ler como uma unidade (spec 2.3).
+   Variáveis CSS são herdadas, então as três colunas enxergam essas --a-*. */
+.bloco {
+  --a-bg: #212D3B;
+  --a-linha: #36475B;
+  --a-interno: #2A3747;
+  --a-texto: #EEEBE5;
+  --a-texto-2: #A3AFBD;
+  --a-controle: #6B7B8E;
+  --a-alerta: #D08A78;              /* Terracota */
+  --a-alerta-bg: rgba(208, 138, 120, 0.16);
+  --a-patrono: #C08D57;             /* bronze: exclusivo do Patrono */
+  --a-area: rgba(238, 235, 229, 0.07);
+
+  display: flex;
+  flex-wrap: wrap; /* em tela estreita as colunas descem em vez de espremer */
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--a-bg);
+  color: var(--a-texto);
+}
+
+/* :global() porque o atributo está no <html>, fora deste módulo. */
+:global(:root[data-theme="light"]) .bloco {
+  --a-bg: #1E2A38;
+  --a-linha: #334255;
+  --a-interno: #263342;
+}
+
+.bloco :is(button, a):focus-visible {
+  outline: 2px solid var(--a-texto);
+  outline-offset: 2px;
+}

@@ -1,0 +1,166 @@
+.coluna {
+  flex: 5 1 380px; /* proporção 5 : 4 : 3 entre as colunas */
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 24px 18px;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rotulo {
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--a-texto-2);
+}
+
+/* 44 px de área de toque, com margem negativa para não empurrar o layout */
+.olho {
+  width: 44px;
+  height: 44px;
+  margin: -10px -10px -10px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--a-texto-2);
+  cursor: pointer;
+}
+.olho:hover { color: var(--a-texto); }
+
+/* Número grande isolado: SEM tabular-nums (spec 11) */
+.destaque {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.015em;
+}
+
+.previsto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+}
+
+.previstoRotulo {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--a-texto-2);
+}
+
+.previstoValor {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.alerta { color: var(--a-alerta); }
+
+.diferenca {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  font-variant-numeric: tabular-nums;
+  color: var(--a-texto-2);
+}
+
+.conta {
+  margin: 4px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--a-interno);
+  font-size: 13px;
+  line-height: 18px;
+}
+.conta div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 3px 0;
+}
+.conta dt { color: var(--a-texto-2); }
+.conta dd { margin: 0; font-variant-numeric: tabular-nums; }
+.contaTotal {
+  margin-top: 4px;
+  padding-top: 7px !important;
+  border-top: 1px solid var(--a-linha);
+  font-weight: 600;
+}
+.contaTotal dt { color: var(--a-texto); }
+
+.rodape {
+  margin-top: auto; /* empurra o rodapé para o fim da coluna */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.linkBotao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--a-texto);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.linkBotao span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tabelaWrap {
+  max-height: 210px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 18px;
+  font-variant-numeric: tabular-nums; /* números em coluna: tabular */
+}
+.tabela th {
+  position: sticky;
+  top: 0;
+  background: var(--a-bg);
+  text-align: left;
+  font-weight: 500;
+  color: var(--a-texto-2);
+  padding: 6px 8px 6px 0;
+}
+.tabela td {
+  padding: 6px 8px 6px 0;
+  border-top: 1px solid var(--a-linha);
+}
+.tabela :is(th, td):nth-child(2) { text-align: right; }
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

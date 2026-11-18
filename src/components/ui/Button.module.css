@@ -1,0 +1,37 @@
+.button {
+  height: 48px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* Contorno — padrão */
+.secondary {
+  border: 1px solid var(--border-color-strong);
+  background: var(--bg-card-default);
+  color: var(--text);
+}
+.secondary:hover { background: var(--bg-card-hover); }
+
+/* Cheio — só um por tela (Pedra no escuro, Ardósia no claro) */
+.primary {
+  padding: 0 18px;
+  border: none;
+  background: var(--bg-btn-primary);
+  color: var(--text-btn-primary);
+}
+.primary:hover  { background: var(--bg-btn-primary-hover); }
+.primary:active { background: var(--bg-btn-primary-pressed); }

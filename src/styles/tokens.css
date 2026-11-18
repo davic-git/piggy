@@ -1,0 +1,951 @@
+/* =============================================================================
+   PIGGY · tokens.css
+   -----------------------------------------------------------------------------
+   Paleta oficial (Manual de marca p. 16-18, revisao 1.2 do Color & Typography)
+   nos dois temas. Substitui a paleta generica que veio da migracao para React.
+
+   Escuro em :root (padrao). Claro em :root[data-theme="light"], com
+   especificidade maior - a ordem dos blocos nao importa.
+
+   REMOVIDOS nesta versao (nenhum estava em uso e todos contrariam o manual):
+     6 cores de categoria arco-iris + 6 aliases --cat-*  -> categoria se
+       identifica pelo nome da linha, nao pela cor; barras usam uma cor so
+     --accent-cyan        -> nao existe ciano na marca
+     --favorite-* (4)     -> sem ambar; o bronze e exclusivo do Patrono
+     --priority-* (2)     -> idem
+
+   VOCABULARIO UNICO: --panel-*, --dashboard-* e --font-ui/--font-hero foram
+   eliminados; os usos nas paginas agora apontam direto para estes tokens.
+   ============================================================================= */
+
+
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+
+  /* =========================================================
+     BACKGROUNDS / SURFACES
+     ========================================================= */
+
+  --bg:                     #121A23; /* Fundo da página */
+  --bg-sidebar:             #1A2532; /* Superfície — o manual usa Superfície para "cards, barras" */
+  --bg-card-default:        #1A2532; /* Superfície — cards do Bloco B */
+  --bg-card-elevated:       #212D3B; /* Superfície 2 — Bloco A, blocos e campos internos */
+  --bg-card-hover:          #212D3B; /* Superfície 2 */
+  --bg-card-selected:       #263342; /* Ativo — menu ativo, chips, linha selecionada */
+  --bg-disabled:            #212D3B;
+
+  --bg-modal:               #1A2532;
+  --bg-dropdown:            #212D3B;
+  --bg-input:               #121A23;
+  --bg-input-disabled:      #1A2532;
+
+  --bg-overlay:             rgba(18, 26, 35, 0.72); /* Ardósia, não preto puro */
+
+
+  /* =========================================================
+     TEXT COLORS
+     ========================================================= */
+
+  --text:                   #EEEBE5; /* Pedra — títulos, valores, prioridade */
+  --text-secondary:         #A3AFBD; /* Texto 2 — descrições e apoio */
+  --text-muted:             #8795A8; /* Labels, datas, placeholders */
+  --text-disabled:          #5F6E80;
+
+  --text-on-primary:        #1E2A38; /* Ardósia sobre botão Pedra */
+
+  --text-link:              #EEEBE5; /* Link = Pedra + sublinhado. A marca não tem cor de link */
+  --text-link-hover:        #FFFFFF;
+
+  --text-positive:          #7FA791; /* Sálvia — RECEITA (dado), nunca "sucesso" */
+  --text-negative:          #A48BAA; /* Ameixa-grafite — DESPESA (dado), nunca "erro" */
+  --text-warning:           #A3AFBD; /* Aviso é neutro por especificação */
+  --text-info:              #A3AFBD;
+  --text-alert:             #D08A78; /* Terracota — desvio, atraso, vencido */
+
+
+  /* =========================================================
+     BRAND / PRIMARY COLORS
+     ========================================================= */
+
+  /* [ATENÇÃO] --primary mudou de significado. Era azul #2563EB; agora é a cor
+     do ÚNICO botão cheio da tela. No escuro isso é Pedra, pelo mesmo motivo que
+     o logotipo é sempre Pedra no escuro. Faça um grep por --primary: onde ele
+     estiver pintando ícone, borda ou acento, troque por --accent-blue-light. */
+  --primary:                #EEEBE5;
+  --primary-hover:          #F7F5F1;
+  --primary-pressed:        #D8D0C2;
+
+  --accent-blue:            #728296; /* Azul-pedra médio */
+  --accent-blue-light:      #A3AFBD; /* Azul-pedra claro */
+
+  --success:                #7FA791; /* [ATENÇÃO] só para RECEITA. Meta concluída
+                                        usa selo neutro: Sálvia é receita, não estado */
+  --success-strong:         #7FA791;
+
+  --danger:                 #D08A78; /* [ATENÇÃO] Terracota = desvio/erro.
+                                        DESPESA não usa esta cor: usa --finance-expense */
+  --danger-strong:          #9A4E3E; /* Terracota cheia — ação destrutiva */
+  --danger-hover:           #82402F;
+  --danger-pressed:         #6B3426;
+
+  --warning:                #A3AFBD; /* Aviso neutro */
+  --info:                   #A3AFBD;
+
+  /* Bronze — EXCLUSIVO do Patrono e das cruzes.
+     Proibido em botão, gráfico, ícone de sistema e no logotipo. */
+  --patrono:                #C08D57;
+  --patrono-text:           #C08D57; /* no escuro o bronze de texto é o próprio tom */
+  --patrono-bg:             #212D3B;
+
+
+  /* =========================================================
+     BUTTON COLORS — PRIMARY
+     ========================================================= */
+
+  --bg-btn-primary:          #EEEBE5;
+  --bg-btn-primary-hover:    #F7F5F1;
+  --bg-btn-primary-pressed:  #D8D0C2;
+  --bg-btn-primary-disabled: #212D3B;
+
+  --text-btn-primary:        #1E2A38;
+  --text-btn-disabled:       #5F6E80;
+
+
+  /* =========================================================
+     BUTTON COLORS — SECONDARY / OUTLINED
+     ========================================================= */
+
+  --bg-btn-secondary:          transparent;
+  --bg-btn-secondary-hover:    #212D3B;
+  --bg-btn-secondary-pressed:  #263342;
+  --bg-btn-secondary-disabled: transparent;
+
+  --text-btn-secondary:          #EEEBE5;
+  --text-btn-secondary-hover:    #FFFFFF;
+  --text-btn-secondary-disabled: #5F6E80;
+
+  --border-btn-secondary:          #728296; /* 3,95:1 — passa o mínimo de contorno */
+  --border-btn-secondary-hover:    #A3AFBD;
+  --border-btn-secondary-pressed:  #728296;
+  --border-btn-secondary-disabled: #2E3C4C;
+
+
+  /* =========================================================
+     BUTTON COLORS — GHOST
+     ========================================================= */
+
+  --bg-btn-ghost:          transparent;
+  --bg-btn-ghost-hover:    #212D3B;
+  --bg-btn-ghost-pressed:  #263342;
+
+  --text-btn-ghost:        #A3AFBD;
+  --text-btn-ghost-hover:  #EEEBE5;
+
+
+  /* =========================================================
+     BUTTON COLORS — DANGER
+     ========================================================= */
+
+  --bg-btn-danger:         #9A4E3E;
+  --bg-btn-danger-hover:   #82402F;
+  --bg-btn-danger-pressed: #6B3426;
+
+  --text-btn-danger:       #F7F5F1;
+
+
+  /* =========================================================
+     BORDERS
+     ========================================================= */
+
+  --border-color-subtle:   #212D3B;
+  --border-color-default:  #2E3C4C; /* Linha — bordas e a Malha */
+  --border-color-strong:   #728296;
+  --border-color-focus:    #EEEBE5;
+  --border-color-error:    #D08A78;
+
+  --border-default:        1px solid #2E3C4C;
+  --border-subtle:         1px solid #212D3B;
+  --border-strong:         1px solid #728296;
+  --border-focus:          2px solid #EEEBE5;
+  --border-error:          1px solid #D08A78;
+
+
+  /* =========================================================
+     INPUTS / FORM CONTROLS
+     ========================================================= */
+
+  --input-bg:                 #121A23;
+  --input-bg-disabled:        #1A2532;
+
+  --input-text:               #EEEBE5;
+  --input-placeholder:        #8795A8;
+  --input-text-disabled:      #5F6E80;
+
+  --input-border:             #2E3C4C;
+  --input-border-hover:       #728296;
+  --input-border-focus:       #EEEBE5;
+  --input-border-error:       #D08A78;
+  --input-border-disabled:    #212D3B;
+
+  --input-label:              #A3AFBD;
+  --input-helper:             #8795A8;
+  --input-error-text:         #D08A78;
+
+
+  /* =========================================================
+     TABS / FILTERS
+     ========================================================= */
+
+  --tab-bg:                 transparent;
+  --tab-bg-hover:           #212D3B;
+  --tab-bg-active:          #263342; /* Ativo — não é o botão cheio */
+
+  --tab-text:               #A3AFBD;
+  --tab-text-hover:         #EEEBE5;
+  --tab-text-active:        #EEEBE5;
+
+  --tab-border:             #2E3C4C;
+  --tab-border-hover:       #728296;
+
+
+  /* =========================================================
+     BADGES / STATUS
+     Fundo único (Superfície 2); a cor vive no texto e no ícone.
+     Só existem dois níveis de alerta: grave (Terracota) e aviso (neutro).
+     ========================================================= */
+
+  /* Receita — DADO, não estado */
+  --status-success-bg:      #212D3B;
+  --status-success-text:    #7FA791; /* 5,21:1 */
+
+  /* Grave — vencido, estourou o limite, previsto negativo */
+  --status-danger-bg:       #212D3B;
+  --status-danger-text:     #D08A78; /* 5,05:1 */
+
+  /* Aviso */
+  --status-warning-bg:      #212D3B;
+  --status-warning-text:    #A3AFBD; /* 6,27:1 */
+
+  /* Informativo / em andamento */
+  --status-info-bg:         #212D3B;
+  --status-info-text:       #A3AFBD;
+
+  /* Neutro — encerrado, arquivado, META CONCLUÍDA */
+  --status-neutral-bg:      #212D3B;
+  --status-neutral-text:    #A3AFBD;
+
+  /* Despesa — DADO */
+  --status-expense-bg:      #212D3B;
+  --status-expense-text:    #A48BAA; /* 4,56:1 */
+
+
+  /* =========================================================
+     FINANCIAL SEMANTICS
+     ========================================================= */
+
+  --finance-income:         #7FA791; /* Sálvia */
+  --finance-expense:        #A48BAA; /* Ameixa-grafite */
+  --finance-neutral:        #EEEBE5;
+  --finance-balance:        #A3AFBD; /* Azul-pedra */
+  --finance-savings:        #A3AFBD; /* Reservas = tons de Azul-pedra */
+  --finance-projection:     #728296; /* Projeção: sempre tracejada */
+
+
+  /* =========================================================
+     TABLES
+     ========================================================= */
+
+  --table-bg:               #1A2532;
+  --table-header-bg:        #1A2532;
+
+  --table-header-text:      #A3AFBD;
+  --table-row-text:         #EEEBE5;
+
+  --table-row-hover:        #212D3B;
+  --table-row-selected:     #263342;
+
+  --table-border:           #2E3C4C;
+  --table-divider:          #212D3B;
+
+
+  /* =========================================================
+     CHARTS / GRAPHS
+     Grade contínua (tracejado é reservado para projeção).
+     Receita × despesa NUNCA se distinguem só pela cor — validado:
+     ΔE 10,8 em visão normal e 5,2 no pior daltonismo, ambos reprovam.
+     Use posição fixa, rótulo direto ou ênfase.
+     ========================================================= */
+
+  --chart-surface:          #1A2532;
+  --chart-income:           #7FA791;
+  --chart-expense:          #A48BAA;
+  --chart-balance:          #A3AFBD;
+  --chart-savings:          #A3AFBD;
+  --chart-projection:       #728296;
+
+  --chart-area-line:        #A3AFBD;
+  --chart-area-fill:        rgba(163, 175, 189, 0.10); /* 10% do matiz da série */
+
+  --chart-axis-text:        #A3AFBD;
+  --chart-grid:             #2E3C4C;
+
+  --chart-tooltip-bg:       #212D3B;
+  --chart-tooltip-border:   #2E3C4C;
+  --chart-tooltip-text:     #EEEBE5;
+
+
+  /* =========================================================
+     CATEGORIAS
+     [ATENÇÃO] As 6 cores de categoria saíram. O manual proíbe cor nova em
+     gráfico e a lista de medidores identifica a categoria pelo NOME da linha,
+     não pela cor — então todas as barras usam a mesma cor.
+     A rampa abaixo existe só para barra segmentada e pequenos múltiplos,
+     onde as partes se tocam e têm valor impresso.
+     ========================================================= */
+
+  --category-bar:           #A48BAA; /* uma cor para todas as barras */
+  --category-track:         #4B3F51; /* trilho: tom escuro de Ameixa */
+
+  /* Rampa sequencial de Ameixa-grafite (escuro), do claro ao escuro.
+     Luminosidade decresce em ordem: 0,67 · 0,59 · 0,51 · 0,45 · 0,39.
+     Os dois últimos degraus têm contraste 2,05:1 e 1,57:1 contra a superfície —
+     só use com valor impresso dentro ou ao lado, nunca sozinhos. */
+  --category-1:             #A48BAA;
+  --category-2:             #8A7290;
+  --category-3:             #715D77;
+  --category-4:             #5E4F64;
+  --category-5:             #4B3F51;
+  --category-other:         #3A4757; /* "Outras" / contexto */
+
+  /* Rampa de Azul-pedra (escuro) — Reservas e séries neutras */
+  --ramp-stone-1:           #A3AFBD;
+  --ramp-stone-2:           #728296;
+  --ramp-stone-3:           #4C5C70;
+
+  /* Aliases antigos — apontam para a rampa para nada quebrar.
+     Os nomes mentem sobre o matiz; troque pelos --category-N quando puder. */
+
+
+  /* =========================================================
+     PROGRESS BARS / PROGRESS RINGS
+     ========================================================= */
+
+  --progress-track:         #4B3F51; /* tom escuro de Ameixa, por especificação */
+  --progress-track-neutral: #2E3C4C; /* trilho fora de orçamento */
+
+  --progress-default:       #A48BAA;
+  --progress-success:       #A3AFBD; /* neutro: concluído é estado, não receita */
+  --progress-warning:       #A3AFBD;
+  --progress-danger:        #D08A78; /* acima do limite */
+
+  --progress-text:          #EEEBE5;
+
+
+  /* =========================================================
+     LINKS
+     ========================================================= */
+
+  --link:                   #EEEBE5;
+  --link-hover:             #FFFFFF;
+
+
+  /* =========================================================
+     DROPDOWNS / POPOVERS / MENUS
+     ========================================================= */
+
+  --dropdown-bg:            #212D3B;
+  --dropdown-border:        #2E3C4C;
+
+  --dropdown-item-bg:       transparent;
+  --dropdown-item-text:     #A3AFBD;
+
+  --dropdown-item-hover-bg:   #263342;
+  --dropdown-item-hover-text: #EEEBE5;
+
+  --dropdown-item-active-bg:   #263342;
+  --dropdown-item-active-text: #EEEBE5;
+
+  --dropdown-item-danger-text: #D08A78;
+
+
+  /* =========================================================
+     MODALS
+     ========================================================= */
+
+  --modal-bg:               #1A2532;
+  --modal-border:           #2E3C4C;
+  --modal-overlay:          rgba(18, 26, 35, 0.72);
+
+
+  /* =========================================================
+     FEEDBACK / ALERTS / TOASTS
+     Dois níveis reais: grave e aviso. Os quatro tokens continuam
+     existindo para compatibilidade, mas três deles são neutros.
+     ========================================================= */
+
+  --alert-success-bg:       #212D3B;
+  --alert-success-border:   #2E3C4C;
+  --alert-success-icon:     #7FA791;
+
+  --alert-error-bg:         #212D3B;
+  --alert-error-border:     #9A4E3E;
+  --alert-error-icon:       #D08A78;
+
+  --alert-warning-bg:       #212D3B;
+  --alert-warning-border:   #2E3C4C;
+  --alert-warning-icon:     #A3AFBD;
+
+  --alert-info-bg:          #212D3B;
+  --alert-info-border:      #2E3C4C;
+  --alert-info-icon:        #A3AFBD;
+
+  --alert-text:             #EEEBE5;
+
+
+  /* =========================================================
+     ICON COLORS
+     ========================================================= */
+
+  --icon-primary:           #EEEBE5;
+  --icon-secondary:         #A3AFBD;
+  --icon-muted:             #8795A8;
+  --icon-disabled:          #5F6E80;
+
+  --icon-positive:          #7FA791; /* receita */
+  --icon-negative:          #A48BAA; /* despesa */
+  --icon-alert:             #D08A78; /* desvio, vencido */
+  --icon-warning:           #A3AFBD;
+  --icon-info:              #A3AFBD;
+
+
+  /* =========================================================
+     NAVIGATION / SIDEBAR
+     ========================================================= */
+
+  --nav-bg:                 transparent;
+  --nav-bg-hover:           #212D3B;
+  --nav-bg-active:          #263342; /* Ativo — o manual nomeia este tom "menu ativo" */
+
+  --nav-text:               #A3AFBD;
+  --nav-text-hover:         #EEEBE5;
+  --nav-text-active:        #EEEBE5;
+  --nav-text-disabled:      #5F6E80;
+
+  --nav-icon:               #A3AFBD;
+  --nav-icon-hover:         #EEEBE5;
+  --nav-icon-active:        #EEEBE5;
+  --nav-icon-disabled:      #5F6E80;
+
+  --nav-section-label:      #8795A8;
+
+
+  /* =========================================================
+     FOCUS / ACCESSIBILITY
+     ========================================================= */
+
+  --focus-color:            #EEEBE5;
+  --focus-ring:             rgba(238, 235, 229, 0.25);
+
+
+  /* =========================================================
+     BASE COLORS
+     ========================================================= */
+
+  --white:                  #FFFFFF;
+  --black:                  #000000;
+
+  --ardosia:                #1E2A38;
+  --pedra:                  #EEEBE5;
+  --pedra-clara:            #F7F5F1;
+  --areia:                  #D8D0C2;
+
+
+  /* =========================================================
+     FONTES OFICIAIS
+     Manual p. 19: Schibsted Grotesk nos títulos, Inter na interface e em
+     TODOS os números. Schibsted Grotesk não tem peso abaixo de 400 — foi
+     desenhada para manchete. O fallback da display é Inter, não a genérica:
+     se a Schibsted demorar, o título cai em algo parecido.
+     ========================================================= */
+
+  --font-body:    "Inter", system-ui, sans-serif;
+  --font-display: "Schibsted Grotesk", "Inter", sans-serif;
+
+
+}
+
+
+:root[data-theme="light"],
+:root.theme-light {
+  color-scheme: light;
+
+
+  /* =========================================================
+     BACKGROUNDS / SURFACES
+     ========================================================= */
+
+  --bg:                     #EEEBE5; /* Pedra — fundo da página */
+  --bg-sidebar:             #F7F5F1; /* Pedra clara — superfícies e barras */
+  --bg-card-default:        #F7F5F1; /* Pedra clara — cards do Bloco B */
+  --bg-card-elevated:       #FFFFFF; /* [DESVIO] o manual só tem duas superfícies
+                                        claras. O Bloco A precisa de um degrau
+                                        acima dos cards; branco é a extensão
+                                        natural. Alternativa quente: #FDFCFA */
+  --bg-card-hover:          #ECE8E1; /* Pedra com um toque de Areia */
+  --bg-card-selected:       #E6E1D7;
+  --bg-disabled:            #ECE8E1;
+
+  --bg-modal:               #F7F5F1;
+  --bg-dropdown:            #FFFFFF;
+  --bg-input:               #FFFFFF;
+  --bg-input-disabled:      #ECE8E1;
+
+  --bg-overlay:             rgba(30, 42, 56, 0.50); /* Ardósia, não preto puro */
+
+
+  /* =========================================================
+     TEXT COLORS
+     [DESVIO] O claro tem um degrau de texto a menos que o escuro.
+     Não existe tom de marca entre Azul-pedra e Areia que passe AA:
+     #7F8FA3 dá 2,78:1 e #5F7187 dá 4,20:1, ambos abaixo de 4,5:1.
+     Então --text-muted = --text-secondary; separe label de descrição
+     por tamanho e peso, não por cor.
+     ========================================================= */
+
+  --text:                   #1E2A38; /* Ardósia */
+  --text-secondary:         #4A5D73; /* Azul-pedra */
+  --text-muted:             #4A5D73;
+  --text-disabled:          #8E9AA8; /* desabilitado é isento de contraste mínimo */
+
+  --text-on-primary:        #F7F5F1; /* Pedra clara sobre botão Ardósia */
+
+  --text-link:              #4A5D73;
+  --text-link-hover:        #1E2A38;
+
+  --text-positive:          #456E5A; /* Sálvia — RECEITA (dado), nunca "sucesso" */
+  --text-negative:          #6B5470; /* Ameixa-grafite — DESPESA (dado), nunca "erro" */
+  --text-warning:           #4A5D73; /* Aviso é neutro por especificação */
+  --text-info:              #4A5D73;
+  --text-alert:             #9A4E3E; /* Terracota — desvio, atraso, vencido */
+
+
+  /* =========================================================
+     BRAND / PRIMARY COLORS
+     ========================================================= */
+
+  /* --primary é a cor do ÚNICO botão cheio da tela. No claro é Ardósia,
+     conforme a spec do dashboard ("+ Nova transação", único botão cheio). */
+  --primary:                #1E2A38;
+  --primary-hover:          #16202B;
+  --primary-pressed:        #0F1720;
+
+  --accent-blue:            #4A5D73;
+  --accent-blue-light:      #7F8FA3;
+
+  --success:                #456E5A; /* só para RECEITA; meta concluída usa selo neutro */
+  --success-strong:         #456E5A;
+
+  --danger:                 #9A4E3E; /* Terracota = desvio/erro. DESPESA usa --finance-expense */
+  --danger-strong:          #9A4E3E;
+  --danger-hover:           #82402F;
+  --danger-pressed:         #6B3426;
+
+  --warning:                #4A5D73;
+  --info:                   #4A5D73;
+
+  /* Bronze — EXCLUSIVO do Patrono e das cruzes.
+     O manual fixa #A8743F para a faixa e #8A5C2E para texto em bronze. */
+  --patrono:                #A8743F;
+  --patrono-text:           #8A5C2E;
+  --patrono-bg:             #F7F5F1;
+
+
+  /* =========================================================
+     BUTTON COLORS — PRIMARY
+     ========================================================= */
+
+  --bg-btn-primary:          #1E2A38;
+  --bg-btn-primary-hover:    #16202B;
+  --bg-btn-primary-pressed:  #0F1720;
+  --bg-btn-primary-disabled: #E6E1D7;
+
+  --text-btn-primary:        #F7F5F1;
+  --text-btn-disabled:       #8E9AA8;
+
+
+  /* =========================================================
+     BUTTON COLORS — SECONDARY / OUTLINED
+     [DESVIO] Areia (#D8D0C2) é a cor de borda do manual, mas dá 1,41:1
+     sobre Pedra clara e reprova o mínimo de 3:1 para contorno de controle.
+     Areia fica nos divisores; o contorno de botão usa Azul-pedra (6,21:1).
+     ========================================================= */
+
+  --bg-btn-secondary:          transparent;
+  --bg-btn-secondary-hover:    #ECE8E1;
+  --bg-btn-secondary-pressed:  #E6E1D7;
+  --bg-btn-secondary-disabled: transparent;
+
+  --text-btn-secondary:          #1E2A38;
+  --text-btn-secondary-hover:    #1E2A38;
+  --text-btn-secondary-disabled: #8E9AA8;
+
+  --border-btn-secondary:          #4A5D73;
+  --border-btn-secondary-hover:    #1E2A38;
+  --border-btn-secondary-pressed:  #4A5D73;
+  --border-btn-secondary-disabled: #D8D0C2;
+
+
+  /* =========================================================
+     BUTTON COLORS — GHOST
+     ========================================================= */
+
+  --bg-btn-ghost:          transparent;
+  --bg-btn-ghost-hover:    #ECE8E1;
+  --bg-btn-ghost-pressed:  #E6E1D7;
+
+  --text-btn-ghost:        #4A5D73;
+  --text-btn-ghost-hover:  #1E2A38;
+
+
+  /* =========================================================
+     BUTTON COLORS — DANGER
+     ========================================================= */
+
+  --bg-btn-danger:         #9A4E3E;
+  --bg-btn-danger-hover:   #82402F;
+  --bg-btn-danger-pressed: #6B3426;
+
+  --text-btn-danger:       #F7F5F1;
+
+
+  /* =========================================================
+     BORDERS
+     ========================================================= */
+
+  --border-color-subtle:   #E3DCCF;
+  --border-color-default:  #D8D0C2; /* Areia — bordas e detalhes, e a Malha */
+  --border-color-strong:   #4A5D73; /* contorno de controle (passa 3:1) */
+  --border-color-focus:    #1E2A38;
+  --border-color-error:    #9A4E3E;
+
+  --border-default:        1px solid #D8D0C2;
+  --border-subtle:         1px solid #E3DCCF;
+  --border-strong:         1px solid #4A5D73;
+  --border-focus:          2px solid #1E2A38;
+  --border-error:          1px solid #9A4E3E;
+
+
+  /* =========================================================
+     INPUTS / FORM CONTROLS
+     A borda de campo é contorno de controle: usa #7F8FA3 (3,03:1),
+     não Areia. Areia só em divisor decorativo.
+     ========================================================= */
+
+  --input-bg:                 #FFFFFF;
+  --input-bg-disabled:        #ECE8E1;
+
+  --input-text:               #1E2A38;
+  --input-placeholder:        #4A5D73;
+  --input-text-disabled:      #8E9AA8;
+
+  --input-border:             #7F8FA3;
+  --input-border-hover:       #4A5D73;
+  --input-border-focus:       #1E2A38;
+  --input-border-error:       #9A4E3E;
+  --input-border-disabled:    #E3DCCF;
+
+  --input-label:              #4A5D73;
+  --input-helper:             #4A5D73;
+  --input-error-text:         #9A4E3E;
+
+
+  /* =========================================================
+     TABS / FILTERS
+     ========================================================= */
+
+  --tab-bg:                 transparent;
+  --tab-bg-hover:           #ECE8E1;
+  --tab-bg-active:          #E6E1D7;
+
+  --tab-text:               #4A5D73;
+  --tab-text-hover:         #1E2A38;
+  --tab-text-active:        #1E2A38;
+
+  --tab-border:             #D8D0C2;
+  --tab-border-hover:       #7F8FA3;
+
+
+  /* =========================================================
+     BADGES / STATUS
+     Fundo único; a cor vive no texto e no ícone.
+     Dois níveis de alerta: grave (Terracota) e aviso (neutro).
+     ========================================================= */
+
+  /* Receita — DADO, não estado */
+  --status-success-bg:      #ECE8E1;
+  --status-success-text:    #456E5A;
+
+  /* Grave — vencido, estourou o limite, previsto negativo */
+  --status-danger-bg:       #ECE8E1;
+  --status-danger-text:     #9A4E3E;
+
+  /* Aviso */
+  --status-warning-bg:      #ECE8E1;
+  --status-warning-text:    #4A5D73;
+
+  /* Informativo / em andamento */
+  --status-info-bg:         #ECE8E1;
+  --status-info-text:       #4A5D73;
+
+  /* Neutro — encerrado, arquivado, META CONCLUÍDA */
+  --status-neutral-bg:      #ECE8E1;
+  --status-neutral-text:    #4A5D73;
+
+  /* Despesa — DADO */
+  --status-expense-bg:      #ECE8E1;
+  --status-expense-text:    #6B5470;
+
+
+  /* =========================================================
+     FINANCIAL SEMANTICS
+     ========================================================= */
+
+  --finance-income:         #456E5A; /* Sálvia */
+  --finance-expense:        #6B5470; /* Ameixa-grafite */
+  --finance-neutral:        #1E2A38;
+  --finance-balance:        #4A5D73; /* Azul-pedra */
+  --finance-savings:        #4A5D73; /* Reservas = tons de Azul-pedra */
+  --finance-projection:     #7F8FA3; /* Projeção: sempre tracejada */
+
+
+  /* =========================================================
+     TABLES
+     ========================================================= */
+
+  --table-bg:               #F7F5F1;
+  --table-header-bg:        #F7F5F1;
+
+  --table-header-text:      #4A5D73;
+  --table-row-text:         #1E2A38;
+
+  --table-row-hover:        #ECE8E1;
+  --table-row-selected:     #E6E1D7;
+
+  --table-border:           #D8D0C2;
+  --table-divider:          #E3DCCF;
+
+
+  /* =========================================================
+     CHARTS / GRAPHS
+     Grade contínua (tracejado é reservado para projeção).
+     Receita × despesa NUNCA se distinguem só pela cor — validado:
+     ΔE 10,9 em visão normal e 5,0 no pior daltonismo, ambos reprovam.
+     Use posição fixa, rótulo direto ou ênfase.
+     ========================================================= */
+
+  --chart-surface:          #F7F5F1;
+  --chart-income:           #456E5A;
+  --chart-expense:          #6B5470;
+  --chart-balance:          #4A5D73;
+  --chart-savings:          #4A5D73;
+  --chart-projection:       #7F8FA3;
+
+  --chart-area-line:        #4A5D73;
+  --chart-area-fill:        rgba(74, 93, 115, 0.10); /* 10% do matiz da série */
+
+  --chart-axis-text:        #4A5D73;
+  --chart-grid:             #E3DCCF;
+
+  --chart-tooltip-bg:       #FFFFFF;
+  --chart-tooltip-border:   #D8D0C2;
+  --chart-tooltip-text:     #1E2A38;
+
+
+  /* =========================================================
+     CATEGORIAS
+     Categoria se identifica pelo NOME da linha, não pela cor:
+     todas as barras da lista de medidores usam a mesma cor.
+     A rampa existe só para barra segmentada e pequenos múltiplos.
+     ========================================================= */
+
+  --category-bar:           #6B5470; /* uma cor para todas as barras */
+  --category-track:         #D2C6D4; /* trilho: tom claro de Ameixa */
+
+  /* Rampa sequencial de Ameixa-grafite (claro), do escuro ao claro.
+     Luminosidade cresce em ordem: 0,48 · 0,58 · 0,67 · 0,75 · 0,84.
+     Os três últimos degraus dão 2,77:1, 2,05:1 e 1,51:1 contra a superfície —
+     só use com valor impresso dentro ou ao lado, nunca sozinhos. */
+  --category-1:             #6B5470;
+  --category-2:             #86718B;
+  --category-3:             #A08FA5;
+  --category-4:             #B9A8BD;
+  --category-5:             #D2C6D4;
+  --category-other:         #C9C1B3; /* "Outras" / contexto */
+
+  /* Rampa de Azul-pedra (claro) — Reservas e séries neutras */
+  --ramp-stone-1:           #4A5D73;
+  --ramp-stone-2:           #7F8FA3;
+  --ramp-stone-3:           #B5C0CC;
+
+  /* Aliases antigos — apontam para a rampa para nada quebrar. */
+
+
+  /* =========================================================
+     PROGRESS BARS / PROGRESS RINGS
+     ========================================================= */
+
+  --progress-track:         #D2C6D4; /* tom claro de Ameixa, por especificação */
+  --progress-track-neutral: #E3DCCF;
+
+  --progress-default:       #6B5470;
+  --progress-success:       #4A5D73; /* neutro: concluído é estado, não receita */
+  --progress-warning:       #4A5D73;
+  --progress-danger:        #9A4E3E;
+
+  --progress-text:          #1E2A38;
+
+
+  /* =========================================================
+     LINKS
+     ========================================================= */
+
+  --link:                   #4A5D73;
+  --link-hover:             #1E2A38;
+
+
+  /* =========================================================
+     DROPDOWNS / POPOVERS / MENUS
+     ========================================================= */
+
+  --dropdown-bg:            #FFFFFF;
+  --dropdown-border:        #D8D0C2;
+
+  --dropdown-item-bg:       transparent;
+  --dropdown-item-text:     #4A5D73;
+
+  --dropdown-item-hover-bg:   #ECE8E1;
+  --dropdown-item-hover-text: #1E2A38;
+
+  --dropdown-item-active-bg:   #E6E1D7;
+  --dropdown-item-active-text: #1E2A38;
+
+  --dropdown-item-danger-text: #9A4E3E;
+
+
+  /* =========================================================
+     MODALS
+     ========================================================= */
+
+  --modal-bg:               #F7F5F1;
+  --modal-border:           #D8D0C2;
+  --modal-overlay:          rgba(30, 42, 56, 0.50);
+
+
+  /* =========================================================
+     FEEDBACK / ALERTS / TOASTS
+     Dois níveis reais: grave e aviso. Os quatro tokens continuam
+     existindo para compatibilidade, mas três deles são neutros.
+     ========================================================= */
+
+  --alert-success-bg:       #ECE8E1;
+  --alert-success-border:   #D8D0C2;
+  --alert-success-icon:     #456E5A;
+
+  --alert-error-bg:         #ECE8E1;
+  --alert-error-border:     #9A4E3E;
+  --alert-error-icon:       #9A4E3E;
+
+  --alert-warning-bg:       #ECE8E1;
+  --alert-warning-border:   #D8D0C2;
+  --alert-warning-icon:     #4A5D73;
+
+  --alert-info-bg:          #ECE8E1;
+  --alert-info-border:      #D8D0C2;
+  --alert-info-icon:        #4A5D73;
+
+  --alert-text:             #1E2A38;
+
+
+  /* =========================================================
+     ICON COLORS
+     ========================================================= */
+
+  --icon-primary:           #1E2A38;
+  --icon-secondary:         #4A5D73;
+  --icon-muted:             #4A5D73;
+  --icon-disabled:          #8E9AA8;
+
+  --icon-positive:          #456E5A; /* receita */
+  --icon-negative:          #6B5470; /* despesa */
+  --icon-alert:             #9A4E3E; /* desvio, vencido */
+  --icon-warning:           #4A5D73;
+  --icon-info:              #4A5D73;
+
+
+  /* =========================================================
+     NAVIGATION / SIDEBAR
+     ========================================================= */
+
+  --nav-bg:                 transparent;
+  --nav-bg-hover:           #ECE8E1;
+  --nav-bg-active:          #E6E1D7;
+
+  --nav-text:               #4A5D73;
+  --nav-text-hover:         #1E2A38;
+  --nav-text-active:        #1E2A38;
+  --nav-text-disabled:      #8E9AA8;
+
+  --nav-icon:               #4A5D73;
+  --nav-icon-hover:         #1E2A38;
+  --nav-icon-active:        #1E2A38;
+  --nav-icon-disabled:      #8E9AA8;
+
+  --nav-section-label:      #4A5D73;
+
+
+  /* =========================================================
+     FOCUS / ACCESSIBILITY
+     ========================================================= */
+
+  --focus-color:            #1E2A38;
+  --focus-ring:             rgba(30, 42, 56, 0.22);
+
+
+  /* =========================================================
+     BASE COLORS
+     ========================================================= */
+
+  --white:                  #FFFFFF;
+  --black:                  #000000;
+
+  --ardosia:                #1E2A38;
+  --pedra:                  #EEEBE5;
+  --pedra-clara:            #F7F5F1;
+  --areia:                  #D8D0C2;
+}
+
+
+/* =============================================================================
+   FONTES
+   Não entram aqui: tipografia não muda entre claro e escuro.
+   Continuam no :root do tema escuro, com o conflito DM Sans/Space Grotesk
+   vs. Inter/Schibsted Grotesk ainda em aberto.
+   ============================================================================= */
+
+
+/* =============================================================================
+   TROCA DE TEMA — supressão de transição
+   O script põe [data-trocando-tema] no <html> por dois frames. Sem isso, cada
+   propriedade anima no seu próprio tempo e a tela "derrete" na troca.
+   Se preferir a troca animada, apague este bloco.
+   ============================================================================= */
+
+:root[data-trocando-tema] *,
+:root[data-trocando-tema] *::before,
+:root[data-trocando-tema] *::after {
+  transition: none !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+}

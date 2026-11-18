@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* -- Título -- */
+.titleGroup {
+  flex: 1 1 0;
+  min-width: 180px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-secondary);
+}
+
+/* -- Barra do Patrono (centro) -- */
+.patrono {
+  flex: 0 1 400px;
+  min-width: 260px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 0 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color-strong);
+  background: var(--bg-card-default);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  cursor: text;
+}
+.patrono:hover { background: var(--bg-card-hover); }
+
+.patronoIcon {
+  flex-shrink: 0;
+  color: var(--patrono); /* bronze: exclusivo do Patrono */
+}
+
+.patronoLabel { flex: 1; }
+
+.kbd {
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-default);
+  background: var(--bg-card-elevated);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* -- Ações (direita) -- */
+.actions {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconBtn {
+  position: relative;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--border-color-strong);
+  background: var(--bg-card-default);
+  color: var(--text);
+  cursor: pointer;
+}
+.iconBtn:hover { background: var(--bg-card-hover); }
+
+.badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--bg-btn-primary);
+  color: var(--text-btn-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.patrono:focus-visible,
+.iconBtn:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}

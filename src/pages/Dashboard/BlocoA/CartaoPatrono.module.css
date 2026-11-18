@@ -1,0 +1,85 @@
+.cartao {
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--a-interno);
+}
+
+.faixa {
+  height: 4px;
+  background: var(--a-patrono);
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px 12px;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--a-patrono);
+}
+
+.rotulo {
+  margin: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.assinatura {
+  margin: 0 0 0 auto; /* margin-left: auto empurra para a direita */
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--a-texto-2);
+}
+
+.texto {
+  margin: 0;
+  font-size: 15px;
+  line-height: 23px;
+}
+.texto strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.botao,
+.dispensar {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.botao {
+  border: 1px solid var(--a-controle);
+  background: transparent;
+  color: var(--a-texto);
+}
+.botao:hover { border-color: var(--a-texto); }
+
+.dispensar {
+  padding: 0 12px;
+  border: none;
+  background: transparent;
+  color: var(--a-texto-2);
+}
+.dispensar:hover { color: var(--a-texto); }

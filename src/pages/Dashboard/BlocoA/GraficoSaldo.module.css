@@ -1,0 +1,58 @@
+/* Em SVG a cor vem de fill (preenchimento) e stroke (contorno),
+   e dá para controlar os dois pelo CSS. */
+.grafico {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-body);
+}
+
+.grade { stroke: var(--a-linha); stroke-width: 1; }
+
+.eixo {
+  fill: var(--a-texto-2);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.area { fill: var(--a-area); }
+
+.linhaReal {
+  fill: none;
+  stroke: var(--a-texto);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.linhaPrevista {
+  fill: none;
+  stroke: var(--a-texto-2);
+  stroke-width: 2;
+  stroke-dasharray: 4 4;
+  stroke-linejoin: round;
+}
+
+.hoje { stroke: var(--a-controle); stroke-width: 1; }
+
+.hojeTexto {
+  fill: var(--a-texto);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pontoHoje {
+  fill: var(--a-texto);
+  stroke: var(--a-bg);
+  stroke-width: 2;
+}
+
+.pontoFinal {
+  fill: var(--a-bg);
+  stroke: var(--a-texto-2);
+  stroke-width: 2;
+}
+
+.cruz {
+  stroke: var(--a-patrono);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
